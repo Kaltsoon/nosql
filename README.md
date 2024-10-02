@@ -25,6 +25,6 @@ Opintojakson suoritettuaan opiskelija osaa...
 ## Sisältö
 
 1. Johdanto NoSQL-tietokantoihin
-2. MongoDB-tietokannan käyttöönotto
+2. MongoDB-tietomalli ja tietokannan käyttöönotto
 3. Tietokantaoperaatiot MongoDB-tietokannassa
 4. MongoDB-tietokannan käyttö Python-ohjelmointikielellä
