@@ -1,4 +1,6 @@
-# Johdanto NoSQL-tietokantoihin
+# Johdanto NoSQL-tietokantajärjestelmiin
+
+Tutustu NoSQL-tietokantajärjestelmiin lukemalla artikkeli [What is NoSQL?](https://www.mongodb.com/resources/basics/databases/nosql-explained). Osoita sen jälkeen osaamisesi vastaamalla tähän kyselyyn Moodlessa.
 
 - Understanding the Basics
 - Comparison Between Relational Databases and NoSQL Databases
@@ -12,3 +14,4 @@
     - Use Cases of NoSQL Databases
     - NoSQL in Big Data and Real-Time Web Apps
     - Future Trends in NoSQL Databases
+- https://www.mongodb.com/resources/basics/databases/nosql-explained

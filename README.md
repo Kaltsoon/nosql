@@ -1,12 +1,14 @@
 # NoSQL
 
-## Esitietovaatimukset
+Mitä ovat NoSQL-tietokantajärjestelmät ja miten ne eroavat SQL-tietokantajärjestelmistä? Mikä on MongoDB-tietokantajärjestelmä ja miten sitä voi hyödyntää tiedon tallentamiseen ja tietokantaoperaatioihin? Miten MongoDB-tietokantajärjestelmää ja Python-ohjelmointikieltä voidaan hyödyntää sovelluskehityksessä? Tämän opintojakson tarkoitus on vastata muun muassa näihin kysymyksiin.
 
-Opiskelija on suorittanut opintojaksot Tietokannat ja tiedonhallinta (SOF001AS2A) ja Python-ohjelmointi (SOF004AS2A) tai hänellä on näitä vastaavat tiedot ja taidot
+Opintojakson aikana tutustutaan NoSQL-tietokantajärjestelmien toimintaperiaatteisiin, niiden eroihin SQL-tietokantajärjestelmiin nähden, niihin liittyviin hyötyihin ja haasteisiin sekä käytännön sovelluksiin. Opintojakso käsittelee laajemmin suuren suosion saavuttanutta MongoDB-tietokantajärjestelmää ja sen hyödyntämissä sovelluskehityksessä Python-ohjelmointikielen avulla.
 
-## Arviointi
+Opintojakson laajuus on 2 opintopisteettä. Sen esitietovaatimuksena ovat opintojaksot Tietokannat ja tiedonhallinta (SOF001AS2A) ja Python-ohjelmointi (SOF004AS2A) tai niitä vastaavat tiedot ja taidot. Suoritusmuodoltaan opintojakso on täysin itsenäistä opiskelua, jota tuetaan materiaalin ja harjoitusten muodossa. Opittuja tietoja ja taitoja sovelletaan käytännössä myös harjoitustyön muodossa.
 
-Harjoitustehtävät ja harjoitustyö
+Opintojakso arvostellaan hyväksy/hylätty-skaalalla. Hyväksyttyyn suoritukseen vaaditaan kaikkien harjoitustehtävien ja laajuudeltaan sopivan harjoitustyön tekemistä. Opintojaksolla voi edetä omaan tahtiin ja suoritusmerkintää voi pyytää kun harjoitustehtävät ja harjoitustyö on tehty.
+
+## 
 
 ## Oppimistavoitteet
 
@@ -16,15 +18,17 @@ Opintojakson suoritettuaan opiskelija osaa...
 - Selittää merkittävimmät käsitteelliset erot NoSQL-ratkaisujen ja relaatiotietokantaratkaisujen välillä
 - Antaa esimerkkejä NoSQL-ratkaisujen pääsovellusalueista
 - Selittää NoSQL-ratkaisujen merkittävimmät vahvuudet ja heikkoudet
-- Selittää MongoDB:n tietomallin periaatteet
-- Ottaa MongoDB-ympäristön käyttöön
-- Luoda tietokannan MongoDB-ympäristössä
-- Suorittaa tietokantahakuja ja päivityksiä MongoDB-ympäristössä
-- Käsitellä tietokannan sisältöä Python-ohjelmointikielellä MongoDB-ympäristössä
+- Selittää MongoDB-tietokantajärjestelmän tietomallin periaatteet
+- Ottaa MongoDB-tietokantajärjestelmä käyttöön
+- Luoda tietokannan MongoDB-tietokantajärjestelmässä
+- Suorittaa tietokantahakuja ja päivityksiä MongoDB-tietokantajärjestelmässä
+- Käsitellä tietokannan sisältöä Python-ohjelmointikielellä MongoDB-tietokantajärjestelmässä
 
 ## Sisältö
 
-1. Johdanto NoSQL-tietokantoihin
-2. MongoDB-tietomalli ja tietokannan käyttöönotto
-3. Tietokantaoperaatiot MongoDB-tietokannassa
-4. MongoDB-tietokannan käyttö Python-ohjelmointikielellä
+Opintojakso etenee seuraavassa järjestyksessä. Edellinen osio tulee suorittaa kokonaisuudessaan ennen siirtymistä seuraavaan.
+
+1. Johdanto NoSQL-tietokantajärjestelmiin
+2. Johdanto MongoDB-tietokantajärjestelmään
+3. Tietokantaoperaatiot MongoDB-tietokantajärjestelmässä
+4. MongoDB-tietokantajärjestelmän käyttö Python-ohjelmointikielellä
