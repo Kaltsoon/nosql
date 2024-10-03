@@ -1,4 +1,12 @@
-# Tietokantaoperaatiot MongoDB-tietokannassa
+# Tietokantaoperaatiot MongoDB-tietokantajärjestelmässä
+
+Opintojakson kolmannessa osiossa tutustutaan tietokantaoperaatiohin MongoDB-tietokantajärjestelmässä. Tämän osion aikana opit mm. TODO.
+
+## CRUD-operaatiot
+
+
+
+## Aggregointi-operaatiot
 
 - Creating Collections and Documents
 - Retrieval and Update Commands

@@ -2,7 +2,7 @@
 
 - PyMongo (https://pymongo.readthedocs.io/en/stable/installation.html)
 - Harjoitustyö
-- Vähintään kolme tietokohdetta (collection)
+- Vähintään kolme kokoelmaa (collection)
 - CRUD-operaatioiden käyttöä
 - Aggregaatio-operaatioiden käyttöä
 - Esimerkkisovelluksia:
