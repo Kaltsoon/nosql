@@ -1,6 +1,10 @@
 # Johdanto NoSQL-tietokantajärjestelmiin
 
+Opintojakson ensimmäisessä osiossa tutustutaan NoSQL-tietokantajärjestelmän perusteisiin. Tämän osion aikana opit mm. TODO. 
+
 Tutustu NoSQL-tietokantajärjestelmiin lukemalla artikkeli [What is NoSQL?](https://www.mongodb.com/resources/basics/databases/nosql-explained). Osoita sen jälkeen osaamisesi vastaamalla tähän kyselyyn Moodlessa.
+
+⏭️ [Siirry seuraavaan osioon](./2-mongo-johdanto.md)
 
 - Understanding the Basics
 - Comparison Between Relational Databases and NoSQL Databases

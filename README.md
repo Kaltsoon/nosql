@@ -8,7 +8,7 @@ Opintojakson laajuus on 2 opintopisteettä. Sen esitietovaatimuksena ovat opinto
 
 Opintojakso arvostellaan hyväksy/hylätty-skaalalla. Hyväksyttyyn suoritukseen vaaditaan kaikkien harjoitustehtävien ja laajuudeltaan sopivan harjoitustyön tekemistä. Opintojaksolla voi edetä omaan tahtiin ja suoritusmerkintää voi pyytää kun harjoitustehtävät ja harjoitustyö on tehty.
 
-## 
+👉 [Aloita opintojakso](./materiaali/1-nosql-johdanto.md)
 
 ## Oppimistavoitteet
 
@@ -28,7 +28,7 @@ Opintojakson suoritettuaan opiskelija osaa...
 
 Opintojakso etenee seuraavassa järjestyksessä. Edellinen osio tulee suorittaa kokonaisuudessaan ennen siirtymistä seuraavaan.
 
-1. Johdanto NoSQL-tietokantajärjestelmiin
-2. Johdanto MongoDB-tietokantajärjestelmään
-3. Tietokantaoperaatiot MongoDB-tietokantajärjestelmässä
-4. MongoDB-tietokantajärjestelmän käyttö Python-ohjelmointikielellä
+1. [Johdanto NoSQL-tietokantajärjestelmiin](./materiaali/1-nosql-johdanto.md)
+2. [Johdanto MongoDB-tietokantajärjestelmään](./materiaali/2-mongo-johdanto.md)
+3. [Tietokantaoperaatiot MongoDB-tietokantajärjestelmässä](./materiaali/3-mongo-operaatiot.md)
+4. [MongoDB-tietokantajärjestelmän käyttö Python-ohjelmointikielellä](./materiaali/4-mongo-python.md)
