@@ -18,9 +18,9 @@ Jotta pääsemme harjoittelemaan MongoDB:n käyttöä käytännössä, tulee tie
 - MongoDB Vs Code extension https://www.mongodb.com/products/tools/vs-code
 
 1. Avaa MongoDB Compass -ohjelma ja luo tietokantayhteys
-2. Luo tietokanta (database) `people` ja luo tietokantaan kokoelma (collection) `person`
+2. Luo tietokanta (database) `library` ja luo tietokantaan kokoelma (collection) `book`
 3. Vie tietokantaan tämän CSV-tiedoston sisältö seuraamalla [Import and Export Data](https://www.mongodb.com/docs/compass/current/import-export/) -ohjeen ohjeita
-4. Avaa tietokanta `people` MongoDB Shell:issä klikkaamalla tietokannan nimeä ja sen jälkeen "Open MongoDB Shell" painiketta
-5. Selvitä, miten dokumentteja haetaan tietokannasta lukemalla [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-documents/) -ohje. Valitse ohjesivulta "Select your language" pudotusvalikosta "MongoDB Shell". Suorita sen jälkeen MongoDB Shell:issä kysely, joka hakee kaikki dokumentit kokoelmasta `person`
+4. Avaa tietokanta `library` MongoDB Shell:issä klikkaamalla tietokannan nimeä ja sen jälkeen "Open MongoDB Shell" painiketta
+5. Selvitä, miten dokumentteja haetaan tietokannasta lukemalla [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-documents/) -ohje. Valitse ohjesivulta "Select your language"-pudotusvalikosta "MongoDB Shell". Suorita sen jälkeen MongoDB Shell:issä kysely, joka hakee kaikki dokumentit kokoelmasta `book`
 
 ⏭️ [Siirry seuraavaan osioon](./3-mongo-operaatiot.md)
