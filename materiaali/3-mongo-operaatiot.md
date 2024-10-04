@@ -27,9 +27,9 @@ Lisää vielä seuraavat dokumentit yhtäaikaisesti käyttämällä `insertMany`
 
 | title                   | author                      | year | genres                                                     | copies |
 | ----------------------- | --------------------------- | ---- | ---------------------------------------------------------- | ------ |
-| "War and Peace"         | "Leo Tolstoy"               | 1868 | ["Historical Fiction", "Classic", "Philosophical Fiction"] | 84     |
+| "War and Peace"         | "Leo Tolstoy"               | 1869 | ["Historical Fiction", "Classic", "Philosophical Fiction"] | 84     |
 | "The Lord of the Rings" | "John Ronald Reuel Tolkien" | 1954 | ["Fantasy", "Adventure", "Epic"]                           | 0      |
-| "Brave New World"       | "Aldous Huxley"             | 1932 | ["Dystopian", "Science Fiction", "Classic"]                | 11     |
+| "Brave New World"       | "Aldous Huxley"             | 1931 | ["Dystopian", "Science Fiction", "Classic"]                | 11     |
 | "The Hobbit" | "John Ronald Reuel Tolkien" | 1937 | ["Fantasy", "Classic"]                           | 17      |
 
 Listaa tämän jälkeen kaikki `book`-kokoelman dokumentit.
@@ -48,14 +48,21 @@ Lue ohje [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-do
 
 Lue ohje [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-documents/). Toteuta sen jälkeen seuraavat komennot:
 
-1. Muuta kirjan "War and Peace" julkaisupäiväksi 1869
+1. Muuta kirjan "Brave New World" julkaisuvuodeksi 1932
 2. Aseta kaikkien kirjailijan "John Ronald Reuel Tolkien"-kirjailijan kirjojen kopioiden määräksi 0
-3. Kasvata kaikkien vuoden 1900 jälkeen julkaistujen kirjojen kopioiden määrää yhdellä. Vihje: [$inc](https://www.mongodb.com/docs/manual/reference/operator/update/inc/)-operaattori
+3. Kasvata kaikkien vuoden 1900 jälkeen julkaistujen kirjojen kopioiden määrää kahdella. Vihje: [$inc](https://www.mongodb.com/docs/manual/reference/operator/update/inc/)-operaattori
 4. Lisää kirjalle "The Hobbit" genre "Adventure". Vihje: [$push](https://www.mongodb.com/docs/manual/reference/operator/update/push/#mongodb-update-up.-push)-operaattori
 
 ### Dokumenttien poistaminen
 
+Lue ohje [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-documents/). Toteuta sen jälkeen seuraavat komennot:
 
+1. Poista kirja "Pride and Prejudice"
+2. Poista kirjat, joiden kopioiden määrä on 0
+
+## Embedded Data Versus References
+
+https://www.mongodb.com/docs/manual/data-modeling/concepts/embedding-vs-references/
 
 ## Aggregointi-operaatiot
 
