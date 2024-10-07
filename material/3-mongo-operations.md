@@ -64,16 +64,17 @@ Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-
 
 Let's consider the case where we would need to store more author-related information to the `book` collection, such as the author's nationality and year of birth. We would need to consider whether adding new attributes to the `book` collection or adding a new `author` collection and referencing it from the `book` collection documents. The latter approach would resemble a foreign key referencing a primary key in a relational database schema.
 
-```
+```mermaid
 erDiagram
-    Author ||--o{ Book
+    Author ||--o{ Book : writes
+
     Author {
         ObjectId _id
         string name
         string nationality
         int birthYear
     }
-    Book }o--|| Author
+
     Book {
         ObjectId _id
         string name
