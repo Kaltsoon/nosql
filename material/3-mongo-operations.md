@@ -19,7 +19,7 @@ Read the [Insert Documents](https://www.mongodb.com/docs/manual/tutorial/insert-
 | --------------------- | ------------- | ---- | --------------------------------- | ------ |
 | "Pride and Prejudice" | "Jane Austen" | 1813 | ["Romance", "Classic", "Fiction"] | 3      |
 
-Then, list all documents in the `book` collection. You'll notice that each document has an automatically generated `_id` attribute which act as a primary key. These values are [ObjectId](https://www.mongodb.com/docs/manual/reference/method/ObjectId/) objects, such as `ObjectId("507f1f77bcf86cd799439011")`. 
+Then, list all documents in the `book` collection. You'll notice that each document has an automatically generated `_id` attribute which act as a primary key. These values are [ObjectId](https://www.mongodb.com/docs/manual/reference/method/ObjectId/) objects, such as `ObjectId("507f1f77bcf86cd799439011")`.
 
 Insert the following documents using the `insertMany` method:
 
@@ -28,7 +28,7 @@ Insert the following documents using the `insertMany` method:
 | "War and Peace"         | "Leo Tolstoy"               | 1869 | ["Historical Fiction", "Classic", "Philosophical Fiction"] | 84     |
 | "The Lord of the Rings" | "John Ronald Reuel Tolkien" | 1954 | ["Fantasy", "Adventure", "Epic"]                           | 0      |
 | "Brave New World"       | "Aldous Huxley"             | 1931 | ["Dystopian", "Science Fiction", "Classic"]                | 11     |
-| "The Hobbit" | "John Ronald Reuel Tolkien" | 1937 | ["Fantasy", "Classic"]                           | 17      |
+| "The Hobbit"            | "John Ronald Reuel Tolkien" | 1937 | ["Fantasy", "Classic"]                                     | 17     |
 
 Then, list the all the documents in the `book` collection.
 
@@ -37,9 +37,9 @@ Then, list the all the documents in the `book` collection.
 Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-documents/) guide. Then, implement and execute the following queries in MongoDB Shell:
 
 1. Find the book, which name is "War and Peace"
-2. Find out what's the `_id` attribute value of the book "War and Peace". Then, find the book based on that `_id`. Note that `ObjectId("507f1f77bcf86cd799439011")` is an `ObjectId` object whereas `"507f1f77bcf86cd799439011"` is a string 
+2. Find out what's the `_id` attribute value of the book "War and Peace". Then, find the book based on that `_id`. Note that `ObjectId("507f1f77bcf86cd799439011")` is an `ObjectId` object whereas `"507f1f77bcf86cd799439011"` is a string
 3. Find books which are published after year 1900
-4. Find available books (books with more than 0 copies). Note that `0` is a number whereas `"0"` is a string
+4. Find books with more than 0 copies. Note that `0` is a number whereas `"0"` is a string
 5. Find the books written by author "John Ronald Reuel Tolkien" before year 1950
 6. Find the books in "Fantasy" genre. Hint: [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/)
 
@@ -60,12 +60,24 @@ Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-
 1. Delete the book "Pride and Prejudice"
 2. Delete all the books which have 0 copies
 
-## Embedded Data Versus References
+## Embedding data or using references
 
-https://www.mongodb.com/docs/manual/data-modeling/concepts/embedding-vs-references/
+Let's consider the case where we would need to store more author-related information to the `book` collection, such as the author's nationality and year of birth. We would need to consider whether adding new attributes to the `book` collection or adding a new `author` collection and referencing it from the `book` collection documents. The latter approach would resemble a foreign key referencing a primary key in a relational database schema.
+
+Read the [Embedded Data Versus References
+](https://www.mongodb.com/docs/manual/data-modeling/concepts/embedding-vs-references/) guide. Then, create a new `author` collection with the following documents:
+
+| name                        | birthYear | nationality |
+| --------------------------- | --------- | ----------- |
+| "Leo Tolstoy"               | 1828      | "Russian"   |
+| "John Ronald Reuel Tolkien" | 1892      | "British"   |
+| "Aldous Huxley"             | 1894      | "British"   |
+| "Jane Austen"               | 1775      | "British"   |
+
+Then, update the documents in the `book` collection so that the `author` attribute is an `ObjectId` object referencing the corresponding document's `_id` attribute in the `author` collection.
 
 ## Aggregointi-operaatiot
 
 TODO
 
-⏭️ [Siirry seuraavaan osioon](./4-mongo-python.md)
+⏭️ [Move on to the next section](./4-mongo-python.md)
