@@ -1,16 +1,16 @@
 # NoSQL
 
-Mitä ovat NoSQL-tietokantajärjestelmät ja miten ne eroavat SQL-tietokantajärjestelmistä? Mikä on MongoDB-tietokantajärjestelmä ja miten sitä voi hyödyntää tiedon tallentamiseen ja tietokantaoperaatioihin? Miten MongoDB-tietokantajärjestelmää ja Python-ohjelmointikieltä voidaan hyödyntää sovelluskehityksessä? Tämän opintojakson tarkoitus on vastata muun muassa näihin kysymyksiin.
+What are NoSQL database management systems and how do they differ from relational database management systems? What is MongoDB database management system and how can it be used to store and manage data? How can MongoDB be used with the Python programming language to implement a database application? The purpose of this course is answer these and many other questions related to NoSQL database management systems.
 
-Opintojakson aikana tutustutaan NoSQL-tietokantajärjestelmien toimintaperiaatteisiin, niiden eroihin SQL-tietokantajärjestelmiin nähden, niihin liittyviin hyötyihin ja haasteisiin sekä käytännön sovelluksiin. Opintojakso käsittelee laajemmin suuren suosion saavuttanutta MongoDB-tietokantajärjestelmää ja sen hyödyntämissä sovelluskehityksessä Python-ohjelmointikielen avulla.
+During this course we will learn the principles of NoSQL database management systems, how they differ from relational database management systems, what are their benefits and challenges, and practical applications. The course covers in more detail the principles of a widely adopted MongoDB database management system and how to use it in database application development with the Python programming language.
 
-Opintojakson laajuus on 2 opintopisteettä. Sen esitietovaatimuksena ovat opintojaksot Tietokannat ja tiedonhallinta (SOF001AS2A) ja Python-ohjelmointi (SOF004AS2A) tai niitä vastaavat tiedot ja taidot. Suoritusmuodoltaan opintojakso on täysin itsenäistä opiskelua, jota tuetaan materiaalin ja harjoitusten muodossa. Opittuja tietoja ja taitoja sovelletaan käytännössä myös harjoitustyön muodossa.
+The scope of the course is 2 credits. The prerequisites for the course are the [Data Management and Databases](https://opinto-opas.haaga-helia.fi/course_unit/SOF001AS2AE) (SOF001AS2AE) and [Python Programming](https://opinto-opas.haaga-helia.fi/course_unit/SOF001AS2AE) (SOF004AS2AE) courses or similar knowledge and skills. The course has no lessons, instead the course is completed by studying the material and completing the compulsory exercises independently. On top of the exercises, the acquired knowledge and skills are applied in practice by developing a simple programming project with Python.
 
-Opintojakso arvostellaan hyväksy/hylätty-skaalalla. Hyväksyttyyn suoritukseen vaaditaan kaikkien harjoitustehtävien ja laajuudeltaan sopivan harjoitustyön tekemistä. Opintojaksolla voi edetä omaan tahtiin ja suoritusmerkintää voi pyytää kun harjoitustehtävät ja harjoitustyö on tehty.
+The course is assesment is either approved or rejected. An approved completion of the course requires completing the exercises and implementing a project of an appropriate scope of complexity. The four sections of the course describe the requirements of completing the section in more detail. You can complete the course at your own pace and request the credits once the requirements are met.
 
-👉 [Aloita opintojakso](./materiaali/1-nosql-johdanto.md)
+👉 [Start the course](./material/1-nosql-introduction.md)
 
-## Oppimistavoitteet
+## Learning objectives
 
 Opintojakson suoritettuaan opiskelija osaa...
 
@@ -24,11 +24,11 @@ Opintojakson suoritettuaan opiskelija osaa...
 - Suorittaa tietokantahakuja ja päivityksiä MongoDB-tietokantajärjestelmässä
 - Käsitellä tietokannan sisältöä Python-ohjelmointikielellä MongoDB-tietokantajärjestelmässä
 
-## Sisältö
+## Contents
 
-Opintojakso etenee seuraavassa järjestyksessä. Edellinen osio tulee suorittaa kokonaisuudessaan ennen siirtymistä seuraavaan.
+The course advances through four sections in the following order. Complete the previous section before moving on the the next session.
 
-1. [Johdanto NoSQL-tietokantajärjestelmiin](./materiaali/1-nosql-johdanto.md)
-2. [Johdanto MongoDB-tietokantajärjestelmään](./materiaali/2-mongo-johdanto.md)
-3. [Tietokantaoperaatiot MongoDB-tietokantajärjestelmässä](./materiaali/3-mongo-operaatiot.md)
-4. [MongoDB-tietokantajärjestelmän käyttö Python-ohjelmointikielellä](./materiaali/4-mongo-python.md)
+1. [Introduction to NoSQL database management systems](./material/1-nosql-introduction.md)
+2. [Introduction to MongoDB database management system](./material/2-mongo-introduction.md)
+3. [Database operations in MongoDB](./material/3-mongo-operations.md)
+4. [MongoDB with Python](./material/4-mongo-python.md)
