@@ -7,4 +7,4 @@
 - Example projects
     - Shopping list application
     - Todo application
-    - 
+- Command-line application or just e.g. test data inserts and queries?

@@ -6,8 +6,6 @@ In the third section of the course we learn the basic database operation in the 
 
 The [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations (create, read, update, delete) are the most common database operations in any database management system. Next, let's practice their usage in MongoDB. Before starting the exercises, oven the MongoDB Compass application we used during the previous section and open the `library` database in MongoDB Shell.
 
-TODO: https://chatgpt.com/share/66ffb828-3890-8006-9e05-2f0914ca8c80
-
 ### Inserting documents
 
 > [!IMPORTANT]  
@@ -80,9 +78,8 @@ erDiagram
         string name
         ObjectId author
         int year
-        int copies 
+        int copies
     }
-    
 ```
 
 Read the [Embedded Data Versus References
@@ -95,10 +92,27 @@ Read the [Embedded Data Versus References
 | "Aldous Huxley"             | 1894      | "British"   |
 | "Jane Austen"               | 1775      | "British"   |
 
-Then, update the documents in the `book` collection so that the `author` attribute is an `ObjectId` object referencing the corresponding document's `_id` attribute in the `author` collection.
+Then, update the documents in the `book` collection so that the `author` attribute is an `ObjectId` object referencing the corresponding document's `_id` attribute in the `author` collection. Remember to use an `ObjectId` object (e.g. `ObjectId("507f1f77bcf86cd799439011")`) instead of the string representation (e.g. `"507f1f77bcf86cd799439011"`) when referencing a `ObjectId` value.
 
-## Aggregointi-operaatiot
+## Aggregation operations
 
-TODO
+MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and aggregation functions such as `COUNT` and `SUM`. Read the [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) guide. Then, implement and execute the following aggregations in MongoDB Shell:
 
-⏭️ [Move on to the next section](./4-mongo-python.md)
+1. Display the total number of books in the library. Hint: [$count](https://www.mongodb.com/docs/manual/reference/operator/aggregation/count-accumulator/) operator
+2. Display the total number of book copies in the libary. Hint: [$sum](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/) operator
+3. Display the number of books by each author. Hint: [$group] operator
+4. Display the number of book copies by each author. 
+5. Display the number of book copies by author "John Ronald Reuel Tolkien" Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
+
+## Designing data model for the project
+
+Now that we know about the MongoDB data model and the basic database operations, it is time to design a small database of our own. The database should consist of at least two collections. Here's a couple examples for inspiration:
+
+- Your fellow students need a database for storing information about the courses they have taken. Students have a first name, last name, city (e.g. "Helsinki"), major subject (e.g. "Computer science") and one or more minor subjects. Students have taken many courses during their studies. Courses have a name, instructor, credits, year, semester (e.g. "Spring") and grade
+- Your friend forgot to buy the drinks for the party again and they could use a shopping list database. Shopping lists have a name, description, status (either "complete" or "incomplete") and shopper (name of the shopper). Shopping list contains many items the shopper should buy from the store. Items have a name (e.g. "Milk"), quantity (e.g. 2), one or more categories (e.g. "Dairy products") and a purchased status (is the item purchased or not)
+
+Come up with your own database or use the ideas above. Feel free to do any modifications. Once you have designed the database schema, insert some data to the database with the MongoDB Shell.
+
+TODO: https://chatgpt.com/share/66ffb828-3890-8006-9e05-2f0914ca8c80
+
+⏭️ [Move on to the final section](./4-mongo-python.md)
