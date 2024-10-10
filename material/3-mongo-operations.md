@@ -93,17 +93,23 @@ Read the [Embedded Data Versus References
 | "Aldous Huxley"             | 1894      | "British"   |
 | "Jane Austen"               | 1775      | "British"   |
 
-Then, update the documents in the `book` collection so that the `author` attribute is an `ObjectId` object referencing the corresponding document's `_id` attribute in the `author` collection. Remember to use an `ObjectId` object (e.g. `ObjectId("507f1f77bcf86cd799439011")`) instead of the string representation (e.g. `"507f1f77bcf86cd799439011"`) when referencing a `ObjectId` value.
+Then, update the documents in the `book` collection so that the `author` attribute is an `ObjectId` object referencing the corresponding document's `_id` attribute in the `author` collection. For example:
+
+| title        | author                               | year | genres                 | copies |
+| ------------ | ------------------------------------ | ---- | ---------------------- | ------ |
+| "The Hobbit" | ObjectId("507f1f77bcf86cd799439011") | 1937 | ["Fantasy", "Classic"] | 17     |
+
+Remember to use an `ObjectId` object (e.g. `ObjectId("507f1f77bcf86cd799439011")`) instead of the string representation (e.g. `"507f1f77bcf86cd799439011"`) when referencing a `ObjectId` value.
 
 ## Aggregation operations
 
 MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and aggregation functions such as `COUNT` and `SUM`. Read the [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) guide. Then, implement and execute the following aggregations in MongoDB Shell:
 
-1. Display the total number of books in the library. Hint: [$count](https://www.mongodb.com/docs/manual/reference/operator/aggregation/count-accumulator/) operator
+1. Display the total number of books in the library. Hint: [$group](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/) (take a look at the [examples](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/#examples)) and [$count](https://www.mongodb.com/docs/manual/reference/operator/aggregation/count-accumulator/) operators
 2. Display the total number of book copies in the libary. Hint: [$sum](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/) operator
-3. Display the number of books by each author. Hint: [$group](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/) operator
-4. Display the number of book copies by each author. 
-5. Display the number of book copies by author "John Ronald Reuel Tolkien" Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
+3. Display the number of books by each author
+4. Display the number of book copies by each author
+5. Display the number of book copies in the "Fantasy" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
 
 ## Designing data model for the project
 
@@ -113,7 +119,5 @@ Now that we know about the MongoDB data model and the basic database operations,
 - Your friend forgot to buy the drinks for the party again and they could use a shopping list database. Shopping lists have a name, description, status (either "complete" or "incomplete") and shopper (name of the shopper). Shopping list contains many items the shopper should buy from the store. Items have a name (e.g. "Milk"), quantity (e.g. 2), one or more categories (e.g. "Dairy products") and a purchased status (is the item purchased or not)
 
 Come up with your own database or use the ideas above. Feel free to do any modifications. Once you have designed the database schema, insert some data to the database with the MongoDB Shell.
-
-TODO: https://chatgpt.com/share/66ffb828-3890-8006-9e05-2f0914ca8c80
 
 ⏭️ [Move on to the final section](./4-mongo-python.md)
