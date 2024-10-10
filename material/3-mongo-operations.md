@@ -79,6 +79,7 @@ erDiagram
         ObjectId author
         int year
         int copies
+        string[] genres
     }
 ```
 
@@ -100,7 +101,7 @@ MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and a
 
 1. Display the total number of books in the library. Hint: [$count](https://www.mongodb.com/docs/manual/reference/operator/aggregation/count-accumulator/) operator
 2. Display the total number of book copies in the libary. Hint: [$sum](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/) operator
-3. Display the number of books by each author. Hint: [$group] operator
+3. Display the number of books by each author. Hint: [$group](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/) operator
 4. Display the number of book copies by each author. 
 5. Display the number of book copies by author "John Ronald Reuel Tolkien" Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
 
@@ -108,7 +109,7 @@ MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and a
 
 Now that we know about the MongoDB data model and the basic database operations, it is time to design a small database of our own. The database should consist of at least two collections. Here's a couple examples for inspiration:
 
-- Your fellow students need a database for storing information about the courses they have taken. Students have a first name, last name, city (e.g. "Helsinki"), major subject (e.g. "Computer science") and one or more minor subjects. Students have taken many courses during their studies. Courses have a name, instructor, credits, year, semester (e.g. "Spring") and grade
+- Your fellow students need a database for storing information about the courses they have completed. Students have a first name, last name, city (e.g. "Helsinki"), major subject (e.g. "Computer science") and one or more minor subjects. Students have many course completions. Course completions have a name, instructor, credits, year, semester (e.g. "Spring") and grade
 - Your friend forgot to buy the drinks for the party again and they could use a shopping list database. Shopping lists have a name, description, status (either "complete" or "incomplete") and shopper (name of the shopper). Shopping list contains many items the shopper should buy from the store. Items have a name (e.g. "Milk"), quantity (e.g. 2), one or more categories (e.g. "Dairy products") and a purchased status (is the item purchased or not)
 
 Come up with your own database or use the ideas above. Feel free to do any modifications. Once you have designed the database schema, insert some data to the database with the MongoDB Shell.
