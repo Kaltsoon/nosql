@@ -1,1 +1,64 @@
-[]
+[
+    {
+        "title": "Anna Karenina",
+        "author": "Leo Tolstoy",
+        "year": 1877,
+        "categories": ["Romance", "Russian Literature", "Classics", "Drama"],
+        "copies": 29
+    },
+    {
+        "title": "The Death of Ivan Ilyich",
+        "author": "Leo Tolstoy",
+        "year": 1886,
+        "categories": ["Philosophy", "Psychology", "Russian Literature", "Classics"],
+        "copies": 0
+    },
+    {
+        "title": "The Lord of the Rings: The Two Towers",
+        "author": "John Ronald Reuel Tolkien",
+        "year": 1954,
+        "categories": ["Fantasy", "Adventure", "Epic", "High Fantasy"],
+        "copies": 0
+    },
+    {
+        "title": "The Lord of the Rings: The Return of the King",
+        "author": "John Ronald Reuel Tolkien",
+        "year": 1955,
+        "categories": ["Fantasy", "Adventure", "Epic", "High Fantasy"],
+        "copies": 18
+    },
+    {
+        "title": "Point Counter Point",
+        "author": "Aldous Huxley",
+        "year": 1928,
+        "categories": ["Philosophy", "Satire", "Modernist Literature", "Fiction"],
+        "copies": 0
+    },
+    {
+        "title": "The Doors of Perception",
+        "author": "Aldous Huxley",
+        "year": 1954,
+        "categories": ["Philosophy", "Psychology", "Memoir", "Non-fiction"]
+    },
+    {
+        "title": "Sense and Sensibility",
+        "author": "Jane Austen",
+        "year": 1811,
+        "categories": ["Romance", "Classics", "British Literature", "Drama"],
+        "copies": 0
+    },
+    {
+        "title": "Emma",
+        "author": "Jane Austen",
+        "year": 1815,
+        "categories": ["Romance", "Classics", "British Literature", "Comedy"],
+        "copies": 8
+    },
+    {
+        "title": "Mansfield Park",
+        "author": "Jane Austen",
+        "year": 1814,
+        "categories": ["Romance", "Classics", "British Literature", "Drama"],
+        "copies": 14
+    }
+]
