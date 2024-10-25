@@ -1,18 +1,28 @@
 print("📖 Welcome to the library application!")
-print("Commands:")
-print("\t1) List books")
-print("\t2) Add a book")
-print("\t3) Edit a book")
-print("\t4) Delete a book")
-print("\t5) List authors")
-print("\t6) Add an author")
-print("\t7) Exit application")
+
+def print_commands():
+    print("Commands:")
+    print("\t1) List books")
+    print("\t2) Add a book")
+    print("\t3) Edit a book")
+    print("\t4) Delete a book")
+    print("\t5) List authors")
+    print("\t6) Add an author")
+    print("\t7) Exit application")
 
 def list_books():
     pass
 
 def add_book():
-    pass
+    name = input("Name:")
+    year = input("Year:")
+    genres = input("Genres (comma separated):")
+    copies = input("Number of copies:")
+    author = input("Author ID:")
+    
+    # Save the book to the database
+    
+    print(f"Book {name} has been added!")
 
 def edit_book():
     pass
@@ -25,6 +35,8 @@ def list_authors():
 
 def add_author():
     pass
+
+print_commands()
 
 while True:
     command = input("Type in the command number:")
