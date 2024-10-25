@@ -23,6 +23,6 @@ MongoDB Compass should be installed along with the MongoDB database management s
 5. Find out how to implement a query which lists all documents in a collection by reading the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-documents/) guide. While you are reading the MongoDB documentation, choose the language as "MongoDB Shell" from the "Select your language" menu. Then, execute a query which list all the documents in the `book` collection using the MongoDB Shell
 
 > [!IMPORTANT]  
-> Save the query in step 5 and its result to a file for a later submission.
+> Create a file `part2` (for example a Word document) and add the query in step 5 and its result to the file for a later submission.
 
 ⏭️ [Move on to the next section](./3-mongo-operations.md)

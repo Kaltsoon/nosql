@@ -6,6 +6,9 @@ In the third section of the course we learn the basic database operation in the 
 
 The [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations (create, read, update, delete) are the most common database operations in any database management system. Next, let's practice their usage in MongoDB. Before starting the exercises, oven the MongoDB Compass application we used during the previous section and open the `library` database in MongoDB Shell.
 
+> [!IMPORTANT]  
+> Create a file `part3` (for example a Word document) for the exercises. Add the information mentioned in the exercises to the file for a later submission.
+
 ### Inserting documents
 
 > [!IMPORTANT]  
@@ -31,7 +34,7 @@ Insert the following documents using the `insertMany` method:
 Then, list the all the documents in the `book` collection.
 
 > [!IMPORTANT]  
-> Save the mentioned queries to a file for a later submission.
+> Save the mentioned queries to the file.
 
 ### Querying documents
 
@@ -45,7 +48,7 @@ Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-do
 6. Find the books in "Fantasy" genre. Hint: [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/)
 
 > [!IMPORTANT]  
-> Save the mentioned queries to a file for a later submission.
+> Save the mentioned queries to the file.
 
 ### Updating documents
 
@@ -58,7 +61,7 @@ Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-
 5. Remove the genre "Classic" from the book "War and Peace". Hint: [$pull](https://www.mongodb.com/docs/manual/reference/operator/update/pull/) operator
 
 > [!IMPORTANT]  
-> Save the mentioned queries to a file for a later submission.
+> Save the mentioned queries to the file.
 
 ### Deleting documents
 
@@ -68,7 +71,7 @@ Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-
 2. Delete all the books which have 0 copies
 
 > [!IMPORTANT]  
-> Save the mentioned queries to a file for a later submission.
+> Save the mentioned queries to a file.
 
 ## Embedding data or using references
 
@@ -116,7 +119,7 @@ Remember to use an `ObjectId` object (e.g. `ObjectId("507f1f77bcf86cd799439011")
 Finally, list the all the documents in the `book` collection.
 
 > [!IMPORTANT]  
-> Save the list of documents in the `book` collection to a file for a later submission.
+> Save the list of documents in the `book` collection to a file.
 
 ## Aggregation operations
 
@@ -129,7 +132,7 @@ MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and a
 5. Display the number of book copies in the "Fantasy" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
 
 > [!IMPORTANT]  
-> Save the mentioned queries to a file for a later submission.
+> Save the mentioned queries to a file.
 
 ## Designing data model for the project
 
@@ -139,5 +142,8 @@ Now that we know about the MongoDB data model and the basic database operations,
 - Your friend forgot to buy the drinks for the party again and they could use a shopping list database. Shopping lists have a name, description, status (either "complete" or "incomplete") and shopper (name of the shopper). Shopping list contains many items the shopper should buy from the store. Items have a name (e.g. "Milk"), quantity (e.g. 2), one or more categories (e.g. "Dairy products") and a purchased status (is the item purchased or not)
 
 Come up with your own database or use the ideas above. Feel free to do any modifications. Once you have designed the database schema, insert some data to the database with the MongoDB Shell.
+
+> [!IMPORTANT]  
+> Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) for your project's data model in the format you prefer. Include the name of the entities, their attributes and data types. Add an image of the diagram to the file.
 
 ⏭️ [Move on to the final section](./4-mongo-python.md)
