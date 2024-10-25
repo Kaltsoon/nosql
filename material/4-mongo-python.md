@@ -32,7 +32,26 @@ If you want to expand your application here's some ideas for optional requiremen
 - Filtering information (e.g. searching books based on name, author, category or other properties)
 - Statistics (e.g. number of books of each author)
 
-## The end
+## Submitting the course work
+
+We are done, good job! 🎉 The last thing to do is to submit the exercises and the project. There are two ways to do it:
+
+1. Create a _public_ [GitHub](https://github.com/) repository for the exercises and the project. This is the recommended way because it adds another cool project for your portfolio. But, if you don't know anything about Git, you don't have to learn it for this course. Add the link to the GitHub repository to the Moodle submission
+2. Add the exercises and project to folder and create a compressed zip folder. Add the zip folder to the Moodle submission
+
+Regardless of the way you want to submit the exercises and the project, use the following folder structure:
+
+```
+exercises/ <- all exercise-related files goes to this folder
+  part2.pdf
+  part3.pdf
+project/ <- all project-related files goes to this folder
+  ...
+```
 
 TODO
+The exercise files can be either PDF or Markdown files. The exercises and the project are submitted to [this]() Moodle submission. Once you have done the submission, your work will be reviewed as soon as possible. If it takes more than two weeks for you submission to be reviewed, contact the teacher. After the review, if there are no problems with your work, you'll get the credits. Otherwise, you'll be asked to make changes and re-submit your work.
+
+
+
 
