@@ -37,7 +37,7 @@ If you want to expand your application here's some ideas for optional requiremen
 We are done, good job! 🎉 The last thing to do is to submit the exercises and the project. There are two ways to do it:
 
 1. Create a _public_ [GitHub](https://github.com/) repository for the exercises and the project. This is the recommended way because it adds another cool project for your portfolio. But, if you don't know anything about Git, you don't have to learn it for this course. Add the link to the GitHub repository to the Moodle submission
-2. Add the exercises and project to folder and create a compressed zip folder. Add the zip folder to the Moodle submission
+2. Add the exercises and the project to a folder and turn it into a compressed zip folder. Add the zip folder to the Moodle submission
 
 Regardless of the way you want to submit the exercises and the project, use the following folder structure:
 
