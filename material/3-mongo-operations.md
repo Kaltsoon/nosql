@@ -30,6 +30,9 @@ Insert the following documents using the `insertMany` method:
 
 Then, list the all the documents in the `book` collection.
 
+> [!IMPORTANT]  
+> Save the mentioned queries to a file for a later submission.
+
 ### Querying documents
 
 Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-documents/) guide. Then, implement and execute the following queries in MongoDB Shell:
@@ -41,6 +44,9 @@ Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-do
 5. Find the books written by author "John Ronald Reuel Tolkien" before year 1950
 6. Find the books in "Fantasy" genre. Hint: [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/)
 
+> [!IMPORTANT]  
+> Save the mentioned queries to a file for a later submission.
+
 ### Updating documents
 
 Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-documents/) guide. Then, implement and execute the following queries in MongoDB Shell:
@@ -51,12 +57,18 @@ Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-
 4. Add a genre "Adventure" for the book "The Hobbit". Hint: [$push](https://www.mongodb.com/docs/manual/reference/operator/update/push/#mongodb-update-up.-push) operator
 5. Remove the genre "Classic" from the book "War and Peace". Hint: [$pull](https://www.mongodb.com/docs/manual/reference/operator/update/pull/) operator
 
+> [!IMPORTANT]  
+> Save the mentioned queries to a file for a later submission.
+
 ### Deleting documents
 
 Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-documents/) guide. Then, implement and execute the following queries in MongoDB Shell:
 
 1. Delete the book "Pride and Prejudice"
 2. Delete all the books which have 0 copies
+
+> [!IMPORTANT]  
+> Save the mentioned queries to a file for a later submission.
 
 ## Embedding data or using references
 
@@ -101,6 +113,11 @@ Then, update the documents in the `book` collection so that the `author` attribu
 
 Remember to use an `ObjectId` object (e.g. `ObjectId("507f1f77bcf86cd799439011")`) instead of the string representation (e.g. `"507f1f77bcf86cd799439011"`) when referencing a `ObjectId` value.
 
+Finally, list the all the documents in the `book` collection.
+
+> [!IMPORTANT]  
+> Save the list of documents in the `book` collection to a file for a later submission.
+
 ## Aggregation operations
 
 MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and aggregation functions such as `COUNT` and `SUM`. Read the [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) guide. Then, implement and execute the following aggregations in MongoDB Shell:
@@ -110,6 +127,9 @@ MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and a
 3. Display the number of books by each author
 4. Display the number of book copies by each author
 5. Display the number of book copies in the "Fantasy" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
+
+> [!IMPORTANT]  
+> Save the mentioned queries to a file for a later submission.
 
 ## Designing data model for the project
 
