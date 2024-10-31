@@ -19,8 +19,9 @@ After completing this course you know how to...
 - Provide examples of the main application areas of NoSQL databases
 - Explain the principles of the data model in the MongoDB database management system
 - Install the MongoDB database management system and the MongoDB Compass tool
+- Create a database in the MongoDB database management system 
 - Perform database operations in the MongoDB database
-- Implement a simple Python application which operates on a MongoDB database
+- Implement a Python application which operates on a MongoDB database
 
 ## Contents
 
