@@ -12,17 +12,15 @@ The course is assesment is either approved or rejected. An approved completion o
 
 ## Learning objectives
 
-Opintojakson suoritettuaan opiskelija osaa...
+After completing this course you know how to...
 
-- Selittää NoSQL-tietomallien päätyypit yleisellä tasolla
-- Selittää merkittävimmät käsitteelliset erot NoSQL-ratkaisujen ja relaatiotietokantaratkaisujen välillä
-- Antaa esimerkkejä NoSQL-ratkaisujen pääsovellusalueista
-- Selittää NoSQL-ratkaisujen merkittävimmät vahvuudet ja heikkoudet
-- Selittää MongoDB-tietokantajärjestelmän tietomallin periaatteet
-- Ottaa MongoDB-tietokantajärjestelmä käyttöön
-- Luoda tietokannan MongoDB-tietokantajärjestelmässä
-- Suorittaa tietokantahakuja ja päivityksiä MongoDB-tietokantajärjestelmässä
-- Käsitellä tietokannan sisältöä Python-ohjelmointikielellä MongoDB-tietokantajärjestelmässä
+- Explain the main characteristics of NoSQL databases
+- Explain the main differences between NoSQL and relational databases
+- Provide examples of the main application areas of NoSQL databases
+- Explain the principles of the data model in the MongoDB database management system
+- Install the MongoDB database management system and the MongoDB Compass tool
+- Perform database operations in the MongoDB database
+- Implement a simple Python application which operates on a MongoDB database
 
 ## Contents
 
