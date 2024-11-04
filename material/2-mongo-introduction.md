@@ -1,5 +1,7 @@
 # Introduction to MongoDB database management system
 
+> MongoDB is a document database with the scalability and flexibility that you want with the querying and indexing that you need.
+
 In the second section of the course we will learn the principles of the MongoDB database management system which is one of the most widely adopted NoSQL database management systems. During this section your will learn e.g. TODO.
 
 The MongoDB database management system is a widely adopted NoSQL database management system. Based on the [State of Database](https://stateofdb.com/) survey in 2023, MongoDB was among three of most well-known and widely used database management systems along with PostgreSQL and MySQL. MongoDB is a documented-oriented database.
