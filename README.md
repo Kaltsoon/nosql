@@ -10,7 +10,7 @@ The course is assesment is either approved or rejected. An approved completion o
 
 👉 [Start the course](./material/1-nosql-introduction.md)
 
-## Learning objectives
+## 🎓 Learning objectives
 
 After completing this course you know how to...
 
@@ -23,7 +23,7 @@ After completing this course you know how to...
 - Perform database operations in the MongoDB database
 - Implement a Python application which operates on a MongoDB database
 
-## Contents
+## 📖 Contents
 
 The course advances through four sections in the following order. Complete the previous section before moving on the the next session.
 
