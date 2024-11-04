@@ -1,6 +1,6 @@
 # Database operations in MongoDB
 
-In the third section of the course we learn the basic database operation in the MongoDB database management system. During this section your will learn how to perform database operations in the MongoDB database.
+In the third section of the course we learn the basic database operation in the MongoDB database management system. During this section your will learn how to perform database operations in the MongoDB database and how to implement relationships between collections.
 
 ## CRUD operations
 
