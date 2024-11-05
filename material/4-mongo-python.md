@@ -25,7 +25,7 @@ Execute the program after each step and see that there's no errors.
 Now that we know the basics of PyMongo, let's implement a database application for our project. At this point you should have already designed the database schema and inserted some test data to the database. Use Python and PyMongo to implement a simple database application which uses the database. These are the requiremenets for the application:
 
 - Some kind of user interface. The easiest way is to implement a command-line user interface which reads user input from the command-line with the `input` function and prints information with the `print` function. You can use [this](./application.py) Python program as a starting point. If you want, you can also do something fancier, like a web application using [Flask](https://flask.palletsprojects.com/en/3.0.x/quickstart/)
-- Usage of all CRUD operations for at least one collection
+- Usage of all CRUD operations for at least one collection and some operations for one more collection
 
 If you want to expand your application here's some ideas for optional requirements:
 
@@ -36,8 +36,8 @@ If you want to expand your application here's some ideas for optional requiremen
 
 We are done, good job! 🎉 The last thing to do is to submit the exercises and the project. There are two ways to do it:
 
-1. Create a _public_ [GitHub](https://github.com/) repository for the exercises and the project. This is the recommended way because it adds another cool project for your portfolio. But, if you don't know anything about Git, you don't have to learn it for this course. Add the link to the GitHub repository to the Moodle submission
-2. Add the exercises and the project to a folder and turn it into a compressed zip folder. Add the zip folder to the Moodle submission
+1. Create a _public_ [GitHub](https://github.com/) repository for the exercises and the project. This is the recommended way because it adds another cool project for your portfolio. But, if you don't know anything about Git, you don't have to learn it for this course. Add the link to the GitHub repository to the Moodle submission (link below)
+2. Add the exercises and the project to a folder and turn it into a compressed zip folder. Add the zip folder to the Moodle submission (link below)
 
 Regardless of the way you want to submit the exercises and the project, use the following folder structure:
 
