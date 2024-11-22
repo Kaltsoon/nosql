@@ -42,7 +42,7 @@ Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-do
 
 1. Find the book named "War and Peace"
 2. Find out what's the `_id` attribute value of the book "War and Peace". Then, find the book based on that `_id`. Note that `ObjectId("507f1f77bcf86cd799439011")` is an `ObjectId` object whereas `"507f1f77bcf86cd799439011"` is a string
-3. Find books which are published after year 1900
+3. Find books which are published after year 1900. Hint: [Comparison operators](https://www.mongodb.com/docs/manual/reference/operator/query-comparison/#std-label-query-selectors-comparison)
 4. Find books with more than 0 copies. Note that `0` is a number whereas `"0"` is a string
 5. Find the books written by author "John Ronald Reuel Tolkien" before year 1950
 6. Find the books in "Fantasy" genre. Hint: [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/)
