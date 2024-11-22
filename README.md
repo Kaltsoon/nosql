@@ -1,6 +1,6 @@
 # NoSQL
 
-What are NoSQL database management systems and how do they differ from relational database management systems? What is MongoDB database management system and how can it be used to store and manage data? How can MongoDB be used with the Python programming language to implement a database application? The purpose of this course is answer these and many other questions related to NoSQL database management systems.
+What are NoSQL database management systems and how do they differ from relational database management systems? What is MongoDB database management system and how can it be used to store and manage data? How can MongoDB be used with the Python programming language to implement a database application? The purpose of this course is answer these and other questions related to NoSQL database management systems.
 
 During this course we will learn the principles of NoSQL database management systems, how they differ from relational database management systems, what are their benefits and challenges, and practical applications. The course covers in more detail the principles of a widely adopted MongoDB database management system and how to use it in database application development with the Python programming language.
 
