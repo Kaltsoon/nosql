@@ -123,19 +123,6 @@ Finally, list the all the documents in the `book` collection.
 > [!IMPORTANT]  
 > Save the list of documents in the `book` collection to a file.
 
-## Aggregation operations
-
-MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and aggregation functions such as `COUNT` and `SUM`. Read the [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) guide. Then, implement and execute the following aggregations in MongoDB Shell:
-
-1. Display the total number of books in the library. Hint: [$group](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/) (take a look at the [examples](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/#examples)) and [$count](https://www.mongodb.com/docs/manual/reference/operator/aggregation/count-accumulator/) operators
-2. Display the total number of book copies in the libary. Hint: [$sum](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/) operator
-3. Display the number of books by each author
-4. Display the number of book copies by each author
-5. Display the number of book copies in the "Fantasy" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
-
-> [!IMPORTANT]  
-> Save the mentioned queries to a file.
-
 ## Designing data model for the project
 
 Now that we know about the MongoDB data model and the basic database operations, it is time to design a small database of our own. The database should consist of at least two collections. Here's a couple examples for inspiration:
@@ -147,5 +134,15 @@ Come up with your own database or use the ideas above. Feel free to do any modif
 
 > [!IMPORTANT]  
 > Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) for your project's data model in the format you prefer. Include the name of the entities, their attributes and data types. Add an image of the diagram to the file.
+
+## ⭐ Bonus: Aggregation operations
+
+MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and aggregation functions such as `COUNT` and `SUM`. Read the [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) guide. Then, implement and execute the following aggregations in MongoDB Shell:
+
+1. Display the total number of books in the library. Hint: [$group](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/) (take a look at the [examples](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/#examples)) and [$count](https://www.mongodb.com/docs/manual/reference/operator/aggregation/count-accumulator/) operators
+2. Display the total number of book copies in the libary. Hint: [$sum](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/) operator
+3. Display the number of books by each author
+4. Display the number of book copies by each author
+5. Display the number of book copies in the "Fantasy" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
 
 ⏭️ [Move on to the final section](./4-mongo-python.md)
