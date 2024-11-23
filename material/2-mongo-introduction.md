@@ -27,4 +27,8 @@ MongoDB Compass should be installed along with the MongoDB database management s
 > [!IMPORTANT]  
 > Create a file `part2` (for example a Word document) and add the query and its result in step 5 to the file for a later submission.
 
+## ⭐ Bonus: MongODB database in the cloud
+
+[MongoDB Atlas](https://www.mongodb.com/atlas) is a cloud-based database service provided by MongoDB, Inc., that allows users to deploy, manage, and scale MongoDB databases with ease. It provides a free plan for hosting MongoDB database in the cloud which accessible to the outside world. This is useful while developing for example a web application used by multiple users.
+
 ⏭️ [Move on to the next section](./3-mongo-operations.md)
