@@ -65,6 +65,16 @@ Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-
 > [!IMPORTANT]  
 > Save the mentioned queries to the file.
 
+## Aggregation operations
+
+MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and aggregation functions such as `COUNT` and `SUM`. Read the [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) guide. Then, implement and execute the following aggregations in MongoDB Shell:
+
+1. Display the total number of books in the library. Hint: [$group](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/) (take a look at the [examples](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/#examples)) and [$count](https://www.mongodb.com/docs/manual/reference/operator/aggregation/count-accumulator/) operators
+2. Display the total number of book copies in the libary. Hint: [$sum](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/) operator
+3. Display the number of books by each author
+4. Display the number of book copies by each author
+5. Display the number of book copies in the "Fantasy" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
+
 ### Deleting documents
 
 Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-documents/) guide. Then, implement and execute the following queries in MongoDB Shell:
@@ -101,27 +111,22 @@ erDiagram
 ```
 
 Read the [Embedded Data Versus References
-](https://www.mongodb.com/docs/manual/data-modeling/concepts/embedding-vs-references/) guide. Then, create a new `author` collection with the following documents:
+](https://www.mongodb.com/docs/manual/data-modeling/concepts/embedding-vs-references/) guide. Then, let's consider how we could implement the reference between the `author` and the `book` collection in our database. Let's assume that we have the following documents in the `author` collection:
 
-| name                        | birthYear | nationality |
-| --------------------------- | --------- | ----------- |
-| "Leo Tolstoy"               | 1828      | "Russian"   |
-| "John Ronald Reuel Tolkien" | 1892      | "British"   |
-| "Aldous Huxley"             | 1894      | "British"   |
-| "Jane Austen"               | 1775      | "British"   |
+| _id | name                        | birthYear | nationality |
+| -- | --------------------------- | --------- | ----------- |
+| ObjectId("6741744df83cf4ce0abb1e9c") | "Leo Tolstoy"               | 1828      | "Russian"   |
+| ObjectId("507f1f77bcf86cd799439011") | "John Ronald Reuel Tolkien" | 1892      | "British"   |
+| ObjectId("6741745dd39e63730ea251b7") | "Aldous Huxley"             | 1894      | "British"   |
+| ObjectId("6741746bbc9c119bcafc58ee") | "Jane Austen"               | 1775      | "British"   |
 
-Then, update the documents in the `book` collection so that the `author` attribute is an `ObjectId` object referencing the corresponding document's `_id` attribute in the `author` collection. For example:
+Now, in the `book` collection the `author` attribute can be an `ObjectId` object referencing the corresponding document's `_id` attribute in the `author` collection. For example:
 
 | title        | author                               | year | genres                 | copies |
 | ------------ | ------------------------------------ | ---- | ---------------------- | ------ |
 | "The Hobbit" | ObjectId("507f1f77bcf86cd799439011") | 1937 | ["Fantasy", "Classic"] | 17     |
 
-Remember to use an `ObjectId` object (e.g. `ObjectId("507f1f77bcf86cd799439011")`) instead of the string representation (e.g. `"507f1f77bcf86cd799439011"`) when referencing a `ObjectId` value.
-
-Finally, list the all the documents in the `book` collection.
-
-> [!IMPORTANT]  
-> Save the list of documents in the `book` collection to a file.
+This is very similar implementation as having a foreign key referencing a primary key in a relational database. It is worth noting however, that MongoDB doesn't support [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) or join operations.
 
 ## Designing data model for the project
 
@@ -134,15 +139,5 @@ Come up with your own database or use the ideas above. Feel free to do any modif
 
 > [!IMPORTANT]  
 > Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) for your project's data model in the format you prefer. Include the name of the entities, their attributes and data types. Add an image of the diagram to the file.
-
-## ⭐ Bonus: Aggregation operations
-
-MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and aggregation functions such as `COUNT` and `SUM`. Read the [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) guide. Then, implement and execute the following aggregations in MongoDB Shell:
-
-1. Display the total number of books in the library. Hint: [$group](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/) (take a look at the [examples](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/#examples)) and [$count](https://www.mongodb.com/docs/manual/reference/operator/aggregation/count-accumulator/) operators
-2. Display the total number of book copies in the libary. Hint: [$sum](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/) operator
-3. Display the number of books by each author
-4. Display the number of book copies by each author
-5. Display the number of book copies in the "Fantasy" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
 
 ⏭️ [Move on to the final section](./4-mongo-python.md)
