@@ -27,7 +27,7 @@ Now that we know the basics of PyMongo, let's implement a database application f
 - _Some kind of user interface_. The easiest way is to implement a command-line user interface which reads user input from the command-line with the [input](https://www.w3schools.com/python/ref_func_input.asp) function and prints information with the [print](https://www.w3schools.com/python/ref_func_print.asp) function. You can use [this](./application.py) Python program as a starting point. If you want, you can also do something fancier, like a web application using [Flask](https://flask.palletsprojects.com/en/3.0.x/quickstart/)
 - Usage of _all CRUD operations_ for at least two collections
 
-If you want to expand your application here's some ideas for optional requirements:
+⭐ Bonus: if you want to expand your application here's some ideas for optional requirements:
 
 - Filtering information (e.g. searching books based on name, author, category or other properties)
 - Statistics (e.g. number of books of each author)
