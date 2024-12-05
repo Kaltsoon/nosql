@@ -141,6 +141,6 @@ Now that we know about the MongoDB data model and the basic database operations,
 Come up with your own database or use the ideas above. Feel free to do any modifications. Once you have designed the database schema, insert some data to the database with the MongoDB Shell.
 
 > [!IMPORTANT]  
-> Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) for your project's data model in the format you prefer. Include the name of the entities, their attributes and data types. Add an image of the diagram to the file.
+> Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) for your project's data model in the format you prefer. Include the name of the entities, their relationships, their attributes and data types. Add an image of the diagram to the file.
 
 ⏭️ [Move on to the final section](./4-mongo-python.md)

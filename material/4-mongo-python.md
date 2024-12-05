@@ -31,6 +31,7 @@ If you want to expand your application here's some ideas for optional requiremen
 
 - Filtering information (e.g. searching books based on name, author, category or other properties)
 - Statistics (e.g. number of books of each author)
+- Instead of local MongoDB database, create a database in the [MongoDB Atlas](https://www.mongodb.com/products/platform/cloud) and [connect to it in your application](https://pymongo.readthedocs.io/en/stable/atlas.html). NB: If you are going to publish the source code of your project (e.g. in GitHub), make sure to use an [envinronment variable](https://www.geeksforgeeks.org/using-python-environment-variables-with-python-dotenv/) for the database connection string
 
 ## Submitting the course work
 
