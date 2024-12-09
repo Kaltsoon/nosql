@@ -8,7 +8,7 @@ PyMongo is a Python library containing tools for working with MongoDB, and is th
 
 First things first, let's install PyMongo by following [these](https://pymongo.readthedocs.io/en/stable/installation.html) instructions. Follow the "Installing with pip" instructions.
 
-> [!IMPORTANT]  
+> [!TIP]  
 > Try `python` command instead of `python3` command, if it doesn't work. The correct command depends on the Python installation.
 
 Next, go through the [tutorial](https://pymongo.readthedocs.io/en/stable/tutorial.html) in _small steps_:
