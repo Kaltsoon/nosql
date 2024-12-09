@@ -22,6 +22,9 @@ Read the [Insert Documents](https://www.mongodb.com/docs/manual/tutorial/insert-
 
 Then, list all documents in the `book` collection. You'll notice that each document has an automatically generated `_id` attribute which act as a primary key. These values are [ObjectId](https://www.mongodb.com/docs/manual/reference/method/ObjectId/) objects, such as `ObjectId("507f1f77bcf86cd799439011")`.
 
+> [!WARNING]  
+> Let MongoDB automatically generate an unique value for the `_id` attribute. The attribute will act as a primary key for the document.
+
 Insert the following documents using the `insertMany` method:
 
 | title                   | author                      | year | genres                                                     | copies |
@@ -131,6 +134,8 @@ This is very similar implementation as having a foreign key referencing a primar
 > [!WARNING] 
 > It is worth noting however, that MongoDB doesn't support [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) or join operations. We could for example delete an `author` document without any error and the referencing documents in the `book` collection would have an an `ObjectId` in the `author` attribute, which doesn't have a corresponding document in the `author` collection.
 
+<!-- TODO: deleting collection with reference. What happens now and what would heppen in RDMS? -->
+
 ## Designing data model for the project
 
 Now that we know about the MongoDB data model and the basic database operations, it is time to design a small database of our own. The database should consist of at least two collections. Here's a couple examples for inspiration:
@@ -139,6 +144,9 @@ Now that we know about the MongoDB data model and the basic database operations,
 - Your friend forgot to buy the drinks for the party again and they could use a shopping list database. Shopping lists have a name, description, status (either "complete" or "incomplete") and shopper (name of the shopper). Shopping list contains many items the shopper should buy from the store. Items have a name (e.g. "Milk"), quantity (e.g. 2), one or more categories (e.g. "Dairy products") and a purchased status (is the item purchased or not)
 
 Come up with your own database or use the ideas above. Feel free to do any modifications. Once you have designed the database schema, insert some data to the database with the MongoDB Shell.
+
+> [!WARNING]  
+> The library database used in the previous exercises isn't suitable for the project.
 
 > [!IMPORTANT]  
 > Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) for your project's data model in the format you prefer. Include the name of the entities, their relationships, their attributes and data types. Add an image of the diagram to the file.
