@@ -37,8 +37,8 @@ Consider how you establish connections between collections. For example, creatin
 from bson.objectid import ObjectId
 
 def add_book():
-  author = input("Author ID:")
   # Request other attributes from the user...
+  author = input("Author ID:")
 
   book = {
     # Other attributes...
