@@ -37,13 +37,13 @@ Consider how you establish connections between collections. For example, creatin
 from bson.objectid import ObjectId
 
 def add_book():
-  author_id = input("Author ID:")
+  author = input("Author ID:")
   # Request other attributes from the user...
 
   book = {
     # Other attributes...
     # We need to use an ObjectId object as the author attribute value
-    "author": ObjectId(author_id)
+    "author": ObjectId(author)
   }
 
   db.book.insert_one(book)
