@@ -36,16 +36,17 @@ Consider how you establish connections between collections. For example, creatin
 ```python
 from bson.objectid import ObjectId
 
-author_id = input("Author ID:")
-# Request other attributes from the user...
+def add_book():
+  author_id = input("Author ID:")
+  # Request other attributes from the user...
 
-book = {
-  # Other attributes...
-  # We need to use an ObjectId object as the author attribute value
-  "author": ObjectId(author_id)
-}
+  book = {
+    # Other attributes...
+    # We need to use an ObjectId object as the author attribute value
+    "author": ObjectId(author_id)
+  }
 
-db.book.insert_one(book)
+  db.book.insert_one(book)
 ```
 
 ### ⭐ Bonus: ideas for additional features
