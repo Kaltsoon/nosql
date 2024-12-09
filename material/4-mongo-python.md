@@ -34,7 +34,10 @@ Implement the application _one simple feature at a time_ and confirm that it wor
 Consider how you establish connections between collections. For example, creating a `book` with an `author` could be implemented in the following way:
 
 ```python
+from pymongo import MongoClient
 from bson.objectid import ObjectId
+
+# ...
 
 def add_book():
   # Request other attributes from the user...
