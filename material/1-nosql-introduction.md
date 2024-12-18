@@ -1,6 +1,6 @@
 # Introduction to NoSQL database management systems.
 
-> When people use the term "NoSQL database", they typically use it to refer to any non-relational database. Some say the term "NoSQL" stands for "non-SQL" while others say it stands for "not only SQL". Either way, most agree that NoSQL databases store data in a more natural and flexible way. NoSQL, as opposed to SQL, is a database management approach, whereas SQL is just a query language, similar to the query languages of NoSQL databases.
+> _"When people use the term "NoSQL database", they typically use it to refer to any non-relational database. Some say the term "NoSQL" stands for "non-SQL" while others say it stands for "not only SQL". Either way, most agree that NoSQL databases store data in a more natural and flexible way. NoSQL, as opposed to SQL, is a database management approach, whereas SQL is just a query language, similar to the query languages of NoSQL databases."_
 
 In the first section of the course we will learn the principles of the NoSQL database management systems. During this section your will learn about the  the main characteristics of NoSQL databases, the main differences between NoSQL and relational databases and the main application areas of NoSQL databases.
 

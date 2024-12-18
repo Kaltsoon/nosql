@@ -1,6 +1,6 @@
 # Introduction to MongoDB database management system
 
-> MongoDB is a document database with the scalability and flexibility that you want with the querying and indexing that you need.
+> _"MongoDB is a document database with the scalability and flexibility that you want with the querying and indexing that you need."_
 
 In the second section of the course we will learn the principles of the MongoDB database management system which is one of the most widely adopted NoSQL database management systems. During this section your will learn about the principles of the data model in the MongoDB database management system, how to install the MongoDB database management system and the MongoDB Compass tool and how to create a database in the MongoDB database management system.
 
