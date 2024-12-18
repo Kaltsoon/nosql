@@ -132,12 +132,15 @@ Now, in the `book` collection the `author` attribute can be an `ObjectId` object
 | ------------ | ------------------------------------ | ---- | ---------------------- | ------ |
 | "The Hobbit" | ObjectId("507f1f77bcf86cd799439011") | 1937 | ["Fantasy", "Classic"] | 17     |
 
-This is very similar implementation as having a foreign key referencing a primary key in a relational database. 
+This is very similar implementation as having a foreign key referencing a primary key in a relational database.
 
 > [!WARNING] 
 > It is worth noting however, that MongoDB doesn't support [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) or join operations. We could for example delete an `author` document without any error and the referencing documents in the `book` collection would have an an `ObjectId` in the `author` attribute, which doesn't have a corresponding document in the `author` collection.
 
-<!-- TODO: deleting collection with reference. What happens now and what would heppen in RDMS? -->
+<!--
+> [!IMPORTANT]  
+> Exercise 👨‍💻: Read the [Data consistency](https://www.mongodb.com/docs/manual/data-modeling/data-consistency/) documentation. What kind of problems could lack of [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) support causes in MongoDB for example in the previous example? What kind of application-level measures would be required to achive data consistency? Consider for example creating a `book` document and deleting an `author` document in the previous example.       
+-->
 
 ## Designing data model for the project
 
