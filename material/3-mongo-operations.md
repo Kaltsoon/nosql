@@ -68,6 +68,16 @@ Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-
 > [!IMPORTANT]  
 > Exercise 👨‍💻: Save the mentioned five queries to the file.
 
+### Deleting documents
+
+Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-documents/) guide. Then, implement and execute the following queries in MongoDB Shell:
+
+1. Delete the book "Pride and Prejudice"
+2. Delete all the books which have no copies
+
+> [!IMPORTANT]  
+> Exercise 👨‍💻: Save the mentioned two queries to a file.
+
 ## Aggregation operations
 
 MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and aggregation functions such as `COUNT` and `SUM`. Read the [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) guide. Then, implement and execute the following aggregations in MongoDB Shell:
@@ -77,13 +87,6 @@ MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and a
 3. Display the number of books by each author
 4. Display the number of book copies by each author
 5. Display the number of book copies in the "Fantasy" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
-
-### Deleting documents
-
-Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-documents/) guide. Then, implement and execute the following queries in MongoDB Shell:
-
-1. Delete the book "Pride and Prejudice"
-2. Delete all the books which have 0 copies
 
 > [!IMPORTANT]  
 > Exercise 👨‍💻: Save the mentioned two queries to a file.
