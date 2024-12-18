@@ -52,6 +52,9 @@ def add_book():
   db.book.insert_one(book)
 ```
 
+> [!IMPORTANT]  
+> Exercise 👨‍💻: Implement a Python database application based on the requirements.
+
 ### ⭐ Bonus: ideas for additional features
 
 If you want to expand your application here's some ideas for optional requirements:
@@ -79,3 +82,6 @@ project/ <- all project-related files goes to this folder
 
 TODO
 The exercise files can be either PDF or Markdown files. The exercises and the project are submitted to [this]() Moodle submission. Once you have done the submission, your work will be reviewed as soon as possible. If it takes more than two weeks for you submission to be reviewed, contact the teacher. After the review, if there are no problems with your work, you'll get the credits. Otherwise, you'll be asked to make changes and re-submit your work.
+
+> [!IMPORTANT]  
+> Exercise 👨‍💻: Submit your work to Moodle by following the instructions above.
