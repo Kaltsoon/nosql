@@ -15,11 +15,11 @@ Familiarize yourself with the document-oriented databases by reading the article
 
 So that we can start practicing the usage of MongoDB we need to install the database management system for our computer. Download the installation program [here](https://www.mongodb.com/try/download/community). Remember to choose the suitable platform based on your operating system (e.g. Windows or macOS).
 
-## User interfaces for using MongoDB
+## User interfaces for MongoDB
 
 [MongoDB Compass](https://www.mongodb.com/products/tools/compass) is a graphical user interface for operating MongoDB. Other user interfaces for the purpose are e.g. [MongoDB Shell](https://www.mongodb.com/docs/mongodb-shell/) and [MongoDB Vs Code extension]( https://www.mongodb.com/products/tools/vs-code). We will be using MongoDB Compass and the integrated MongoDB Shell in our examples.
 
-MongoDB Compass should be installed along with the MongoDB database management system installed previously. If not, you can install it [here](https://www.mongodb.com/try/download/compass). Once installed, do the following:
+MongoDB Compass should already be installed along with the MongoDB database management system installed previously. If not, you can install it [here](https://www.mongodb.com/try/download/compass). Once installed, do the following:
 
 1. Open the MongoDB Compass application and a new database connection. The default database connection setting should work for connecting the local MongoDB instance
 2. Create a database `library` and in that database create a collection `book`

@@ -139,7 +139,7 @@ This is very similar implementation as having a foreign key referencing a primar
 
 <!--
 > [!IMPORTANT]  
-> Exercise 👨‍💻: Read the [Data consistency](https://www.mongodb.com/docs/manual/data-modeling/data-consistency/) documentation. What kind of problems could lack of [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) support causes in MongoDB for example in the previous example? What kind of application-level measures would be required to achive data consistency? Consider for example creating a `book` document and deleting an `author` document in the previous example.       
+> Exercise 👨‍💻: Read the [Data consistency](https://www.mongodb.com/docs/manual/data-modeling/data-consistency/) documentation. Describe, what kind of problems could lack of [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) support cause in MongoDB for example in the previous example? What kind of application-level measures would be required to achive data consistency? Consider for example creating a `book` document and deleting an `author` document in the previous example.       
 -->
 
 ## Designing data model for the project
