@@ -135,7 +135,7 @@ Now, in the `book` collection the `author` attribute can be an `ObjectId` object
 This is very similar implementation as having a foreign key referencing a primary key in a relational database.
 
 > [!WARNING] 
-> It is worth noting however, that MongoDB doesn't support [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) or join operations. We could for example delete an `author` document without any error and the referencing documents in the `book` collection would have an an `ObjectId` in the `author` attribute, which doesn't have a corresponding document in the `author` collection.
+> It is worth noting however, that MongoDB doesn't support [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) or join operations. We could for example delete an `author` document without any error and the referencing documents in the `book` collection would have an an `ObjectId` in the `author` attribute, which doesn't have a corresponding document in the `author` collection. The [Data consistency](https://www.mongodb.com/docs/manual/data-modeling/data-consistency/) documentation covers the topic in more detail.
 
 <!--
 > [!IMPORTANT]  
