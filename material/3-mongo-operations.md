@@ -37,7 +37,7 @@ Insert the following documents using the `insertMany` method:
 Then, list the all the documents in the `book` collection.
 
 > [!IMPORTANT]  
-> Exercise 👨‍💻: Save the mentioned two insert queries to the file.
+> Exercise 👨‍💻: Save the mentioned two (`insert` and `insertMany`) queries to the file.
 
 ### Querying documents
 
@@ -89,7 +89,7 @@ MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and a
 5. Display the number of book copies in the "Fantasy" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
 
 > [!IMPORTANT]  
-> Exercise 👨‍💻: Save the mentioned two queries to a file.
+> Exercise 👨‍💻: Save the mentioned five queries to a file.
 
 ## Embedding data or using references
 
