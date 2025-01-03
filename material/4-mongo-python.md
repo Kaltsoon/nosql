@@ -21,7 +21,7 @@ Next, go through the [tutorial](https://pymongo.readthedocs.io/en/stable/tutoria
 Execute the program after each step and see that there are no errors.
 
 > [!IMPORTANT]  
-> Exercise 1 👨‍💻: Try out the database connection and the basic MongoDB operations using the `pymongo` library with the `library` database.
+> Exercise 1 👨‍💻: Try out the database connection and the basic MongoDB operations using the `pymongo` library with the `library` database. There's no need to include this prototyping code in the submission.
 
 ## Database application
 
