@@ -91,7 +91,7 @@ MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and a
 > [!IMPORTANT]  
 > Exercise 6 👨‍💻: Save the mentioned five queries to the file.
 
-## Embedding data or using references
+## Data modeling – embedding data or using references
 
 Let's consider the case where we would need to store more author-related information to the `book` collection, such as the author's nationality and year of birth. We would need to consider whether adding new attributes to the `book` collection or adding a new `author` collection and referencing it from the `book` collection documents. The first approach has issues with data duplication because we would have the same author information in multiple documents causing wasted storage space and high risk of data inconsistency. The latter approach would resemble a foreign key referencing a primary key in a relational database schema and would not introduce similar issues as with the first approach.
 
