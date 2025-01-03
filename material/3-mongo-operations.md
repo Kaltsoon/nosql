@@ -23,7 +23,7 @@ Read the [Insert Documents](https://www.mongodb.com/docs/manual/tutorial/insert-
 Then, list all documents in the `book` collection. You'll notice that each document has an automatically generated `_id` attribute which act as a primary key. These values are [ObjectId](https://www.mongodb.com/docs/manual/reference/method/ObjectId/) objects, such as `ObjectId("507f1f77bcf86cd799439011")`.
 
 > [!WARNING]  
-> Let MongoDB automatically generate an unique value for the `_id` attribute. The attribute will act as a primary key for the document.
+> Let MongoDB automatically generate a unique value for the `_id` attribute. The attribute will act as a primary key for the document.
 
 Insert the following documents using the `insertMany` method:
 
@@ -59,10 +59,10 @@ Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-do
 
 Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-documents/) guide. Then, implement and execute the following queries in MongoDB Shell:
 
-1. Change the publish year of the book "Brave New World" into 1932
+1. Change the publishing year of the book "Brave New World" to 1932
 2. Set the number of copies as 0 for all books written by the author "John Ronald Reuel Tolkien"
-3. Increase the number of copies for books published after 1900 by two. Hint: [$inc](https://www.mongodb.com/docs/manual/reference/operator/update/inc/) operator
-4. Add a genre "Adventure" for the book "The Hobbit". Hint: [$push](https://www.mongodb.com/docs/manual/reference/operator/update/push/#mongodb-update-up.-push) operator
+3. Increase the number of copies of books published after 1900 by two. Hint: [$inc](https://www.mongodb.com/docs/manual/reference/operator/update/inc/) operator
+4. Add the genre "Adventure" for the book "The Hobbit". Hint: [$push](https://www.mongodb.com/docs/manual/reference/operator/update/push/#mongodb-update-up.-push) operator
 5. Remove the genre "Classic" from the book "War and Peace". Hint: [$pull](https://www.mongodb.com/docs/manual/reference/operator/update/pull/) operator
 
 > [!IMPORTANT]  
@@ -76,7 +76,7 @@ Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-
 2. Delete all the books which have no copies
 
 > [!IMPORTANT]  
-> Exercise 5 👨‍💻: Save the mentioned two queries to a file.
+> Exercise 5 👨‍💻: Save the mentioned two queries to the file.
 
 ## Aggregation operations
 
@@ -89,11 +89,11 @@ MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and a
 5. Display the number of book copies in the "Fantasy" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
 
 > [!IMPORTANT]  
-> Exercise 6 👨‍💻: Save the mentioned five queries to a file.
+> Exercise 6 👨‍💻: Save the mentioned five queries to the file.
 
 ## Embedding data or using references
 
-Let's consider the case where we would need to store more author-related information to the `book` collection, such as the author's nationality and year of birth. We would need to consider whether adding new attributes to the `book` collection or adding a new `author` collection and referencing it from the `book` collection documents. The first approach has issues with data duplication, because we would have the same author information in multiple documents causing wasted storage space and high risk of data inconsistency. The latter approach would resemble a foreign key referencing a primary key in a relational database schema and would not introduce similar issues as with the first approach.
+Let's consider the case where we would need to store more author-related information to the `book` collection, such as the author's nationality and year of birth. We would need to consider whether adding new attributes to the `book` collection or adding a new `author` collection and referencing it from the `book` collection documents. The first approach has issues with data duplication because we would have the same author information in multiple documents causing wasted storage space and high risk of data inconsistency. The latter approach would resemble a foreign key referencing a primary key in a relational database schema and would not introduce similar issues as with the first approach.
 
 ```mermaid
 erDiagram
@@ -132,22 +132,22 @@ Now, in the `book` collection the `author` attribute can be an `ObjectId` object
 | ------------ | ------------------------------------ | ---- | ---------------------- | ------ |
 | "The Hobbit" | ObjectId("507f1f77bcf86cd799439011") | 1937 | ["Fantasy", "Classic"] | 17     |
 
-This is very similar implementation as having a foreign key referencing a primary key in a relational database.
+This is a very similar implementation to having a foreign key referencing a primary key in a relational database.
 
 > [!WARNING] 
-> It is worth noting however, that MongoDB doesn't support [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) or join operations. We could for example delete an `author` document without any error and the referencing documents in the `book` collection would have an an `ObjectId` in the `author` attribute, which doesn't have a corresponding document in the `author` collection. The [Data consistency](https://www.mongodb.com/docs/manual/data-modeling/data-consistency/) documentation covers the topic in more detail.
+> It is worth noting however, that MongoDB doesn't support [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) or join operations. We could for example delete an `author` document without any error and the referencing documents in the `book` collection would have an `ObjectId` in the `author` attribute, which doesn't have a corresponding document in the `author` collection. The [Data consistency](https://www.mongodb.com/docs/manual/data-modeling/data-consistency/) documentation covers the topic in more detail.
 
 <!--
 > [!IMPORTANT]  
-> Exercise 👨‍💻: Read the [Data consistency](https://www.mongodb.com/docs/manual/data-modeling/data-consistency/) documentation. Describe, what kind of problems could lack of [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) support cause in MongoDB for example in the previous example? What kind of application-level measures would be required to achive data consistency? Consider for example creating a `book` document and deleting an `author` document in the previous example.       
+> Exercise 7 👨‍💻: Read the [Data consistency](https://www.mongodb.com/docs/manual/data-modeling/data-consistency/) documentation. Describe, what kind of problems the lack of [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) support cause in MongoDB for example in the previous example? What kind of application-level measures would be required to achieve data consistency? Consider cases such as creating a `book` document and deleting an `author` document in the previous example.       
 -->
 
 ## Designing data model for the project
 
 Now that we know about the MongoDB data model and the basic database operations, it is time to design a small database of our own. The database should consist of at least two collections. Here's a couple examples for inspiration:
 
-- Your fellow students need a database for storing information about the courses they have completed. Students have a first name, last name, city (e.g. "Helsinki"), major subject (e.g. "Computer science") and one or more minor subjects. Students have many course completions. Course completions have a name, instructor, credits, year, semester (e.g. "Spring") and grade
-- Your friend forgot to buy the drinks for the party again and they could use a shopping list database. Shopping lists have a name, description, status (either "complete" or "incomplete") and shopper (name of the shopper). Shopping list contains many items the shopper should buy from the store. Items have a name (e.g. "Milk"), quantity (e.g. 2), one or more categories (e.g. "Dairy products") and a purchased status (is the item purchased or not)
+- Your fellow students need a database for storing information about the courses they have completed. Students have a first name, last name, city (e.g. "Helsinki"), major subject (e.g. "Computer science") and one or more minor subjects. Students have many course completions. Course completions have a name, instructor, credits, year, semester (e.g. "Spring"), and grade
+- Your friend forgot to buy the drinks for the party again and they could use a shopping list database. Shopping lists have a name, description, status (either "complete" or "incomplete") and shopper (name of the shopper). Shopping list contains many items the shopper should buy from the store. Items have a name (e.g. "Milk"), quantity (e.g. 2), one or more categories (e.g. "Dairy products"), and a purchased status (is the item purchased or not)
 
 Come up with your own database or use the ideas above. Feel free to do any modifications. Once you have designed the database schema, insert some data to the database with the MongoDB Shell.
 
@@ -155,6 +155,6 @@ Come up with your own database or use the ideas above. Feel free to do any modif
 > The library database used in the previous exercises isn't suitable for the project.
 
 > [!IMPORTANT]  
-> Exercise 7 👨‍💻: Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) for your project's data model in the format you prefer. Include the name of the entities, their relationships, their attributes and data types. Add an image of the diagram to the file.
+> Exercise 7 👨‍💻: Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) for your project's data model in the format you prefer. Include the name of the entities, their relationships, their attributes, and data types. Add an image of the diagram to the file.
 
 ⏭️ [Move on to the final section](./4-mongo-python.md)
