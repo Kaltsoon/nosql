@@ -7,7 +7,7 @@ In the third section of the course we learn the basic database operation in the 
 The [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations (create, read, update, delete) are the most common database operations in any database management system. Next, let's practice their usage in MongoDB. Before starting the exercises, oven the MongoDB Compass application we used during the previous section and open the `library` database in MongoDB Shell.
 
 > [!IMPORTANT]  
-> Exercise 1 👨‍💻: Create a file `part3` (for example a Word document) for the exercises in this section. Add the information mentioned in the exercises to the file for a later submission. You can include the database queries as text or [screenshots](https://www.take-a-screenshot.org/) of MongoDB Shell. Once you are done with the exercises in this section, submit the file to [this Moodle submission](TODO).
+> Exercise 1 👨‍💻: Create a file `part3` (for example a Word document) for the exercises in this section. Add the information mentioned in the exercises to the file for a later submission. You can include the database queries as text or [screenshots](https://www.take-a-screenshot.org/) of MongoDB Shell. Once you are done with the exercises in this section, submit the file to [this Moodle submission](#TODO).
 
 ### Inserting documents
 
