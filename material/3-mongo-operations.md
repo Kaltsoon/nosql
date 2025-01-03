@@ -7,7 +7,7 @@ In the third section of the course we learn the basic database operation in the 
 The [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations (create, read, update, delete) are the most common database operations in any database management system. Next, let's practice their usage in MongoDB. Before starting the exercises, oven the MongoDB Compass application we used during the previous section and open the `library` database in MongoDB Shell.
 
 > [!IMPORTANT]  
-> Exercise 👨‍💻: Create a file `part3` (for example a Word document) for the exercises in this section. Add the information mentioned in the exercises to the file for a later submission. You can include the database queries as text or [screenshots](https://www.take-a-screenshot.org/) of MongoDB Shell.
+> Exercise 1 👨‍💻: Create a file `part3` (for example a Word document) for the exercises in this section. Add the information mentioned in the exercises to the file for a later submission. You can include the database queries as text or [screenshots](https://www.take-a-screenshot.org/) of MongoDB Shell. Once you are done with the exercises in this section, submit the file to [this Moodle submission](TODO).
 
 ### Inserting documents
 
@@ -37,7 +37,7 @@ Insert the following documents using the `insertMany` method:
 Then, list the all the documents in the `book` collection.
 
 > [!IMPORTANT]  
-> Exercise 👨‍💻: Save the mentioned two (`insert` and `insertMany`) queries to the file.
+> Exercise 2 👨‍💻: Save the mentioned two (`insert` and `insertMany`) queries to the file.
 
 ### Querying documents
 
@@ -53,7 +53,7 @@ Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-do
 7. Find the books written by either the author "Jane Austen" or "Aldous Huxley"
 
 > [!IMPORTANT]  
-> Exercise 👨‍💻: Save the mentioned seven queries to the file.
+> Exercise 3 👨‍💻: Save the mentioned seven queries to the file.
 
 ### Updating documents
 
@@ -66,7 +66,7 @@ Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-
 5. Remove the genre "Classic" from the book "War and Peace". Hint: [$pull](https://www.mongodb.com/docs/manual/reference/operator/update/pull/) operator
 
 > [!IMPORTANT]  
-> Exercise 👨‍💻: Save the mentioned five queries to the file.
+> Exercise 4 👨‍💻: Save the mentioned five queries to the file.
 
 ### Deleting documents
 
@@ -76,7 +76,7 @@ Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-
 2. Delete all the books which have no copies
 
 > [!IMPORTANT]  
-> Exercise 👨‍💻: Save the mentioned two queries to a file.
+> Exercise 5 👨‍💻: Save the mentioned two queries to a file.
 
 ## Aggregation operations
 
@@ -89,7 +89,7 @@ MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and a
 5. Display the number of book copies in the "Fantasy" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
 
 > [!IMPORTANT]  
-> Exercise 👨‍💻: Save the mentioned five queries to a file.
+> Exercise 6 👨‍💻: Save the mentioned five queries to a file.
 
 ## Embedding data or using references
 
@@ -155,6 +155,6 @@ Come up with your own database or use the ideas above. Feel free to do any modif
 > The library database used in the previous exercises isn't suitable for the project.
 
 > [!IMPORTANT]  
-> Exercise 👨‍💻: Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) for your project's data model in the format you prefer. Include the name of the entities, their relationships, their attributes and data types. Add an image of the diagram to the file.
+> Exercise 7 👨‍💻: Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) for your project's data model in the format you prefer. Include the name of the entities, their relationships, their attributes and data types. Add an image of the diagram to the file.
 
 ⏭️ [Move on to the final section](./4-mongo-python.md)
