@@ -1,6 +1,6 @@
 # Database operations in MongoDB
 
-In the third section of the course we learn the basic database operation in the MongoDB database management system. During this section your will learn how to perform database operations in the MongoDB database and how to implement relationships between collections.
+In the third section of the course, we learn the basic database operation in the MongoDB database management system. During this section, your will learn how to perform database operations in the MongoDB database and how to implement relationships between collections.
 
 ## CRUD operations
 
@@ -34,7 +34,7 @@ Insert the following documents using the `insertMany` method:
 | "Brave New World"       | "Aldous Huxley"             | 1931 | ["Dystopian", "Science Fiction", "Classic"]                | 11     |
 | "The Hobbit"            | "John Ronald Reuel Tolkien" | 1937 | ["Fantasy", "Classic"]                                     | 17     |
 
-Then, list the all the documents in the `book` collection.
+Then, list all the documents in the `book` collection.
 
 > [!IMPORTANT]  
 > Exercise 2 👨‍💻: Save the mentioned two (`insert` and `insertMany`) queries to the file.
@@ -45,11 +45,11 @@ Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-do
 
 1. Find the book named "War and Peace"
 2. Find out what's the `_id` attribute value of the book "War and Peace". Then, find the book based on that `_id`. Note that `ObjectId("507f1f77bcf86cd799439011")` is an `ObjectId` object whereas `"507f1f77bcf86cd799439011"` is a string
-3. Find books which are published after year 1900. Hint: [Comparison Query Operators
+3. Find books which are published after the year 1900. Hint: [Comparison Query Operators
 ](https://www.mongodb.com/docs/manual/reference/operator/query-comparison/#std-label-query-selectors-comparison)
 4. Find books with more than 0 copies. Note that `0` is a number whereas `"0"` is a string
-5. Find the books written by author "John Ronald Reuel Tolkien" before year 1950
-6. Find the books in "Fantasy" genre. Hint: [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/)
+5. Find the books written by the author "John Ronald Reuel Tolkien" before the year 1950
+6. Find the books in the "Fantasy" genre. Hint: [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/)
 7. Find the books written by either the author "Jane Austen" or "Aldous Huxley"
 
 > [!IMPORTANT]  
@@ -83,7 +83,7 @@ Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-
 MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and aggregation functions such as `COUNT` and `SUM`. Read the [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) guide. Then, implement and execute the following aggregations in MongoDB Shell:
 
 1. Display the total number of books in the library. Hint: [$group](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/) (take a look at the [examples](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/#examples)) and [$count](https://www.mongodb.com/docs/manual/reference/operator/aggregation/count-accumulator/) operators
-2. Display the total number of book copies in the libary. Hint: [$sum](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/) operator
+2. Display the total number of book copies in the library. Hint: [$sum](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/) operator
 3. Display the number of books by each author
 4. Display the number of book copies by each author
 5. Display the number of book copies in the "Fantasy" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
