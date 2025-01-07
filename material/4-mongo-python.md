@@ -6,7 +6,7 @@ In the fourth section of the course, we learn how to use MongoDB with Python pro
 
 PyMongo is a Python library containing tools for working with MongoDB and is the recommended way to work with MongoDB from Python. With PyMongo, we can execute similar database operations as we did with the MongoDB Shell, but using Python. This is handy when we want to implement database applications instead of just executing queries.
 
-First things first, let's install PyMongo by following [these](https://pymongo.readthedocs.io/en/stable/installation.html) instructions. Follow the "Installing with pip" instructions.
+First things first, install PyMongo by following [these](https://pymongo.readthedocs.io/en/stable/installation.html) instructions. Follow the "Installing with pip" instructions.
 
 > [!TIP]  
 > Try `python` command instead of `python3` command, if it doesn't work. The correct command depends on the Python installation.

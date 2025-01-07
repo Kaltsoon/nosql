@@ -22,13 +22,13 @@ So that we can start practicing the usage of MongoDB we need to install the data
 MongoDB Compass should already be installed along with the MongoDB database management system installed previously. If not, you can install it [here](https://www.mongodb.com/try/download/compass). Once installed, do the following:
 
 1. Open the MongoDB Compass application and a new database connection. The default database connection setting should work for connecting the local MongoDB instance
-2. Create a database `library` and in that database create a collection `book`
+2. Create a database `library` and in that database create a collection `book` by following the [Manage Databases in Compass](https://www.mongodb.com/docs/compass/current/databases/) instructions
 3. Export the contents of [this](./library.json) JSON file to the `book` collection by following the [Import and Export Data](https://www.mongodb.com/docs/compass/current/import-export/) instructions
 4. Open the `library` database in MongoDB Shell by clicking the name of the database in the list of databases on the left and then clicking the "Open MongoDB Shell" button
 5. Find out how to implement a query which lists all documents in a collection by reading the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-documents/) guide. While you are reading the MongoDB documentation, choose the language as "MongoDB Shell" from the "Select your language" menu. Then, execute a query which list all the documents in the `book` collection using the MongoDB Shell
 
 > [!IMPORTANT]  
-> Exercise 2 👨‍💻: Create a file `part2` (for example a Word document) and include a [screenshot](https://www.take-a-screenshot.org/) of the query and its result in MongoDB Shell mentioned in step 5 to the file. Submit the file to [this Moodle submission](#TODO).
+> Exercise 2 👨‍💻: Create a file `part2` (for example a Word document) and include a [screenshot](https://www.take-a-screenshot.org/) of the query and its result in the MongoDB Shell mentioned in step 5 to the file. Submit the file to [this Moodle submission](#TODO).
 
 ## ⭐ Bonus: MongoDB database in the cloud
 
