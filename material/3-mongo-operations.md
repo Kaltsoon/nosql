@@ -4,10 +4,10 @@ In the third section of the course, we learn the basic database operation in the
 
 ## CRUD operations
 
-The [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations (create, read, update, delete) are the most common database operations in any database management system. Next, let's practice their usage in MongoDB. Before starting the exercises, oven the MongoDB Compass application we used during the previous section and open the `library` database in MongoDB Shell.
+The [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations (create, read, update, delete) are the most common database operations in any database management system. Next, let's practice their usage in MongoDB. Before starting the exercises, open the MongoDB Compass application we used during the previous section and open the `library` database in the MongoDB Shell.
 
 > [!IMPORTANT]  
-> Exercise 1 👨‍💻: Create a file `part3` (for example a Word document) for the exercises in this section. Add the information mentioned in the exercises to the file for a later submission. You can include the database queries as text or [screenshots](https://www.take-a-screenshot.org/) of MongoDB Shell. Once you are done with the exercises in this section, submit the file to [this Moodle submission](#TODO).
+> Exercise 1 👨‍💻: Create a file `part3` (for example a Word document) for the exercises in this section. Add the information mentioned in the exercises to the file for a later submission. You can include the database queries as text or [screenshots](https://www.take-a-screenshot.org/) of the MongoDB Shell. Once you are done with the exercises in this section, submit the file to [this Moodle submission](#TODO).
 
 ### Inserting documents
 
@@ -27,12 +27,12 @@ Then, list all documents in the `book` collection. You'll notice that each docum
 
 Insert the following documents using the `insertMany` method:
 
-| title                   | author                      | year | genres                                                     | copies |
-| ----------------------- | --------------------------- | ---- | ---------------------------------------------------------- | ------ |
-| "War and Peace"         | "Leo Tolstoy"               | 1869 | ["Historical Fiction", "Classic", "Philosophical Fiction"] | 84     |
+| title                                               | author                      | year | genres                                                     | copies |
+| --------------------------------------------------- | --------------------------- | ---- | ---------------------------------------------------------- | ------ |
+| "War and Peace"                                     | "Leo Tolstoy"               | 1869 | ["Historical Fiction", "Classic", "Philosophical Fiction"] | 84     |
 | "The Lord of the Rings: The Fellowship of the Ring" | "John Ronald Reuel Tolkien" | 1954 | ["Fantasy", "Adventure", "Epic"]                           | 0      |
-| "Brave New World"       | "Aldous Huxley"             | 1931 | ["Dystopian", "Science Fiction", "Classic"]                | 11     |
-| "The Hobbit"            | "John Ronald Reuel Tolkien" | 1937 | ["Fantasy", "Classic"]                                     | 17     |
+| "Brave New World"                                   | "Aldous Huxley"             | 1931 | ["Dystopian", "Science Fiction", "Classic"]                | 11     |
+| "The Hobbit"                                        | "John Ronald Reuel Tolkien" | 1937 | ["Fantasy", "Classic"]                                     | 17     |
 
 Then, list all the documents in the `book` collection.
 
@@ -41,12 +41,12 @@ Then, list all the documents in the `book` collection.
 
 ### Querying documents
 
-Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-documents/) guide. Then, implement and execute the following queries in MongoDB Shell:
+Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-documents/) guide. Then, implement and execute the following queries in the MongoDB Shell:
 
 1. Find the book named "War and Peace"
-2. Find out what's the `_id` attribute value of the book "War and Peace". Then, find the book based on that `_id`. Note that `ObjectId("507f1f77bcf86cd799439011")` is an `ObjectId` object whereas `"507f1f77bcf86cd799439011"` is a string
+2. Find the book "War and Peace" using its `_id` attribute (use the document's `_id` attribute value you got from the previous query's result). Note that `ObjectId("507f1f77bcf86cd799439011")` is an `ObjectId` object whereas `"507f1f77bcf86cd799439011"` is a string
 3. Find books which are published after the year 1900. Hint: [Comparison Query Operators
-](https://www.mongodb.com/docs/manual/reference/operator/query-comparison/#std-label-query-selectors-comparison)
+   ](https://www.mongodb.com/docs/manual/reference/operator/query-comparison/#std-label-query-selectors-comparison)
 4. Find books with more than 0 copies. Note that `0` is a number whereas `"0"` is a string
 5. Find the books written by the author "John Ronald Reuel Tolkien" before the year 1950
 6. Find the books in the "Fantasy" genre. Hint: [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/)
@@ -57,9 +57,9 @@ Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-do
 
 ### Updating documents
 
-Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-documents/) guide. Then, implement and execute the following queries in MongoDB Shell:
+Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-documents/) guide. Then, implement and execute the following queries in the MongoDB Shell:
 
-1. Change the publishing year of the book "Brave New World" to 1932
+1. Change the publishing year of the book named "Brave New World" to 1932
 2. Set the number of copies as 0 for all books written by the author "John Ronald Reuel Tolkien"
 3. Increase the number of copies of books published after 1900 by two. Hint: [$inc](https://www.mongodb.com/docs/manual/reference/operator/update/inc/) operator
 4. Add the genre "Adventure" for the book "The Hobbit". Hint: [$push](https://www.mongodb.com/docs/manual/reference/operator/update/push/#mongodb-update-up.-push) operator
@@ -70,9 +70,9 @@ Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-
 
 ### Deleting documents
 
-Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-documents/) guide. Then, implement and execute the following queries in MongoDB Shell:
+Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-documents/) guide. Then, implement and execute the following queries in the MongoDB Shell:
 
-1. Delete the book "Pride and Prejudice"
+1. Delete the book named "Pride and Prejudice"
 2. Delete all the books which have no copies
 
 > [!IMPORTANT]  
@@ -80,7 +80,7 @@ Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-
 
 ## Aggregation operations
 
-MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and aggregation functions such as `COUNT` and `SUM`. Read the [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) guide. Then, implement and execute the following aggregations in MongoDB Shell:
+MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and aggregation functions such as `COUNT` and `SUM`. Read the [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) guide. Then, implement and execute the following aggregations in the MongoDB Shell:
 
 1. Display the total number of books in the library. Hint: [$group](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/) (take a look at the [examples](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/#examples)) and [$count](https://www.mongodb.com/docs/manual/reference/operator/aggregation/count-accumulator/) operators
 2. Display the total number of book copies in the library. Hint: [$sum](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/) operator
@@ -119,8 +119,8 @@ erDiagram
 Read the [Embedded Data Versus References
 ](https://www.mongodb.com/docs/manual/data-modeling/concepts/embedding-vs-references/) guide. Then, let's consider how we could implement the reference between the `author` and the `book` collection in our database. Let's assume that we have the following documents in the `author` collection:
 
-| _id | name                        | birthYear | nationality |
-| -- | --------------------------- | --------- | ----------- |
+| \_id                                 | name                        | birthYear | nationality |
+| ------------------------------------ | --------------------------- | --------- | ----------- |
 | ObjectId("6741744df83cf4ce0abb1e9c") | "Leo Tolstoy"               | 1828      | "Russian"   |
 | ObjectId("507f1f77bcf86cd799439011") | "John Ronald Reuel Tolkien" | 1892      | "British"   |
 | ObjectId("6741745dd39e63730ea251b7") | "Aldous Huxley"             | 1894      | "British"   |
@@ -135,12 +135,12 @@ Now, in the `book` collection the `author` attribute can be an `ObjectId` object
 This is a very similar implementation to having a foreign key referencing a primary key in a relational database.
 
 <!--
-> [!WARNING] 
+> [!WARNING]
 > It is worth noting however, that MongoDB doesn't support [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) or join operations. We could for example delete an `author` document without any error and the referencing documents in the `book` collection would have an `ObjectId` in the `author` attribute, which doesn't have a corresponding document in the `author` collection. The [Data consistency](https://www.mongodb.com/docs/manual/data-modeling/data-consistency/) documentation covers the topic in more detail.
 -->
 
 > [!IMPORTANT]  
-> Exercise 7 👨‍💻: Read the [Data consistency](https://www.mongodb.com/docs/manual/data-modeling/data-consistency/) documentation. Describe, what kind of problems the lack of [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) support cause in MongoDB for example in the previous example? What kind of application-level measures would be required to achieve data consistency? Consider cases such as creating a `book` document and deleting an `author` document in the previous example.       
+> Exercise 7 👨‍💻: Read the [Data consistency](https://www.mongodb.com/docs/manual/data-modeling/data-consistency/) documentation. Describe, what kind of problems the lack of [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) support cause in MongoDB for example in the previous example? What kind of application-level measures would be required to achieve data consistency? Consider cases such as creating a `book` document and deleting an `author` document in the previous example.
 
 ## Designing data model for the project
 
