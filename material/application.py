@@ -6,11 +6,10 @@ def print_commands():
     print("\t2) Add a book")
     print("\t3) Edit a book")
     print("\t4) Delete a book")
-    print("\t5) List authors")
-    print("\t6) Add an author")
     print("\t7) Exit application")
 
 def list_books():
+    # Fetch all the books from the database and print their information
     pass
 
 def add_book():
@@ -25,15 +24,11 @@ def add_book():
     print(f"Book {name} has been added!")
 
 def edit_book():
+    # Update book's information based on user's input
     pass
 
 def delete_book():
-    pass
-
-def list_authors():
-    pass
-
-def add_author():
+    # Delete a book based on user's input
     pass
 
 print_commands()
@@ -49,10 +44,6 @@ while True:
         edit_book()
     elif command == "4":
         delete_book()
-    elif command == "5":
-        list_authors()
-    elif command == "6":
-        add_author()
     elif command == "7":
         break
     else:
