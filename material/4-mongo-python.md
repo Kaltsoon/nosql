@@ -76,6 +76,6 @@ We are done, good job! 🎉 The last thing to do is to submit the project. There
 2. Add the exercises and the project to a folder and turn it into a compressed zip folder. Add the zip folder to the Moodle submission (link below)
 
 > [!IMPORTANT]  
-> Exercise 3 👨‍💻: Submit your work to [Moodle submission](#TODO) by following the instructions above.
+> Exercise 3 👨‍💻: Submit your work to the "MongoDB with Python" Moodle submission by following the instructions above.
 
 Once you have done all the submissions (from this section and the previous sections), your work will be reviewed as soon as possible. If it takes more than two weeks for your submission to be reviewed, contact the teacher. After the review, if there are no problems with your work, you'll get the credits. Otherwise, you'll be asked to make changes and re-submit your work.
