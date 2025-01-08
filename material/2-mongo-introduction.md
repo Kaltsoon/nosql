@@ -9,7 +9,7 @@ The MongoDB database management system is a widely adopted NoSQL database manage
 Familiarize yourself with the document-oriented databases by reading the article [What is a Document Database](https://www.mongodb.com/resources/basics/databases/document-databases) and with the principles of the MongoDB database management system by reading the articles [MongoDB Basics](https://www.mongodb.com/resources/products/fundamentals/basics) and [Data Modeling](https://www.mongodb.com/docs/manual/data-modeling/). Once you have read through the articles, test your knowledge by completing the "Introduction to MongoDB database management system" Moodle quiz. After passing the quiz, move on to the next topic in this section.
 
 > [!IMPORTANT]  
-> Exercise 1 👨‍💻: Take and pass the "Introduction to MongoDB database management system" Moodle quiz related to the principles of the MongoDB database management system.
+> Exercise 1 👨‍💻: Read the articles mentioned above. Then, take and pass the "Introduction to MongoDB database management system" Moodle quiz related to the principles of the MongoDB database management system.
 
 ## Installing MongoDB on our computer
 
