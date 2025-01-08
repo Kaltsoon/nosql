@@ -132,7 +132,7 @@ Now, in the `book` collection the `author` attribute can be an `ObjectId` object
 
 | title        | author                               | year | genres                 | copies |
 | ------------ | ------------------------------------ | ---- | ---------------------- | ------ |
-| "The Hobbit" | ObjectId("507f1f77bcf86cd799439011") | 1937 | ["Fantasy", "Classic"] | 17     |
+| "The Hobbit" | ObjectId("507f1f77bcf86cd799439011") | 1937 | "Fantasy", "Classic" | 17     |
 
 This is a very similar implementation to having a foreign key referencing a primary key in a relational database.
 
