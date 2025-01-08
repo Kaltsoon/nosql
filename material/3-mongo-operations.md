@@ -18,7 +18,9 @@ Read the [Insert Documents](https://www.mongodb.com/docs/manual/tutorial/insert-
 
 | title                 | author        | year | genres                            | copies |
 | --------------------- | ------------- | ---- | --------------------------------- | ------ |
-| "Pride and Prejudice" | "Jane Austen" | 1813 | ["Romance", "Classic", "Fiction"] | 3      |
+| "Pride and Prejudice" | "Jane Austen" | 1813 | "Romance", "Classic", "Fiction" | 3      |
+
+The `genres` attribute value should be an [array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/) representing one or many genres of the book.
 
 Then, list all documents in the `book` collection. You'll notice that each document has an automatically generated `_id` attribute which act as a primary key. These values are [ObjectId](https://www.mongodb.com/docs/manual/reference/method/ObjectId/) objects, such as `ObjectId("507f1f77bcf86cd799439011")`.
 
