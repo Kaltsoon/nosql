@@ -7,7 +7,7 @@ In the third section of the course, we learn the basic database operation in the
 The [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations (create, read, update, delete) are the most common database operations in any database management system. Next, let's practice their usage in MongoDB. Before starting the exercises, open the MongoDB Compass application we used during the previous section and open the `library` database in the MongoDB Shell.
 
 > [!IMPORTANT]  
-> Exercise 1 👨‍💻: Create a file `part3` (for example a Word document) for the exercises in this section. Add the information mentioned in the exercises to the file for a later submission. You can include the database queries as text or [screenshots](https://www.take-a-screenshot.org/) of the MongoDB Shell. Once you are done with the exercises in this section, submit the file to [this Moodle submission](#TODO).
+> Exercise 1 👨‍💻: Create a file `part3` (for example a Word document) for the exercises in this section. Add the information mentioned in the exercises to the file for a later submission. You can include the database queries as text or [screenshots](https://www.take-a-screenshot.org/) of the MongoDB Shell. Once you are done with the exercises in this section, submit the file to the "Database operations in MongoDB" Moodle submission.
 
 ### Inserting documents
 
@@ -18,7 +18,9 @@ Read the [Insert Documents](https://www.mongodb.com/docs/manual/tutorial/insert-
 
 | title                 | author        | year | genres                            | copies |
 | --------------------- | ------------- | ---- | --------------------------------- | ------ |
-| "Pride and Prejudice" | "Jane Austen" | 1813 | ["Romance", "Classic", "Fiction"] | 3      |
+| "Pride and Prejudice" | "Jane Austen" | 1813 | "Romance", "Classic", "Fiction" | 3      |
+
+The `genres` attribute value should be an [array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/) representing one or many genres of the book.
 
 Then, list all documents in the `book` collection. You'll notice that each document has an automatically generated `_id` attribute which act as a primary key. These values are [ObjectId](https://www.mongodb.com/docs/manual/reference/method/ObjectId/) objects, such as `ObjectId("507f1f77bcf86cd799439011")`.
 
@@ -29,10 +31,10 @@ Insert the following documents using the `insertMany` method:
 
 | title                                               | author                      | year | genres                                                     | copies |
 | --------------------------------------------------- | --------------------------- | ---- | ---------------------------------------------------------- | ------ |
-| "War and Peace"                                     | "Leo Tolstoy"               | 1869 | ["Historical Fiction", "Classic", "Philosophical Fiction"] | 84     |
-| "The Lord of the Rings: The Fellowship of the Ring" | "John Ronald Reuel Tolkien" | 1954 | ["Fantasy", "Adventure", "Epic"]                           | 0      |
-| "Brave New World"                                   | "Aldous Huxley"             | 1931 | ["Dystopian", "Science Fiction", "Classic"]                | 11     |
-| "The Hobbit"                                        | "John Ronald Reuel Tolkien" | 1937 | ["Fantasy", "Classic"]                                     | 17     |
+| "War and Peace"                                     | "Leo Tolstoy"               | 1869 | "Historical Fiction", "Classic", "Philosophical Fiction" | 84     |
+| "The Lord of the Rings: The Fellowship of the Ring" | "John Ronald Reuel Tolkien" | 1954 | "Fantasy", "Adventure", "Epic"                           | 0      |
+| "Brave New World"                                   | "Aldous Huxley"             | 1931 | "Dystopian", "Science Fiction", "Classic"                | 11     |
+| "The Hobbit"                                        | "John Ronald Reuel Tolkien" | 1937 | "Fantasy", "Classic"                                     | 17     |
 
 Then, list all the documents in the `book` collection.
 
@@ -130,7 +132,7 @@ Now, in the `book` collection the `author` attribute can be an `ObjectId` object
 
 | title        | author                               | year | genres                 | copies |
 | ------------ | ------------------------------------ | ---- | ---------------------- | ------ |
-| "The Hobbit" | ObjectId("507f1f77bcf86cd799439011") | 1937 | ["Fantasy", "Classic"] | 17     |
+| "The Hobbit" | ObjectId("507f1f77bcf86cd799439011") | 1937 | "Fantasy", "Classic" | 17     |
 
 This is a very similar implementation to having a foreign key referencing a primary key in a relational database.
 
