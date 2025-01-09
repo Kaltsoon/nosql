@@ -12,7 +12,7 @@ Familiarize yourself with the document-oriented databases by reading the article
 - [Documents](https://www.mongodb.com/docs/manual/core/document/)
 - [Data Modeling](https://www.mongodb.com/docs/manual/data-modeling/)
 
-Once you have read through the articles, test your knowledge by completing the "Introduction to MongoDB database management system" Moodle exam. After passing the exaxm, move on to the next topic in this section.
+Once you have read through the articles, test your knowledge by completing the "Introduction to MongoDB database management system" Moodle exam. After passing the exam, move on to the next topic in this section.
 
 > [!IMPORTANT]  
 > Exercise 1 👨‍💻: Read the articles mentioned above. Then, take and pass the "Introduction to MongoDB database management system" Moodle quiz related to the principles of the MongoDB database management system.
