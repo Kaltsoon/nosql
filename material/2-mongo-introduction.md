@@ -23,7 +23,7 @@ MongoDB Compass should already be installed along with the MongoDB database mana
 
 1. Open the MongoDB Compass application and a new database connection. The default database connection setting should work for connecting the local MongoDB instance
 2. Create a database `library` and in that database create a collection `book` by following the [Manage Databases in Compass](https://www.mongodb.com/docs/compass/current/databases/) instructions
-3. Export the contents of [this](./library.json) JSON file to the `book` collection by following the [Import and Export Data](https://www.mongodb.com/docs/compass/current/import-export/) instructions
+3. Export the contents of [this](https://raw.githubusercontent.com/Kaltsoon/nosql/refs/heads/main/material/library.json) JSON file (right-click the page and choose "Save Page As...") to the `book` collection by following the [Import and Export Data](https://www.mongodb.com/docs/compass/current/import-export/) instructions. You can download the file by cliking the download icon 
 4. Open the `library` database in MongoDB Shell by clicking the name of the database in the list of databases on the left and then clicking the "Open MongoDB Shell" button
 5. Find out how to implement a query which lists all documents in a collection by reading the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-documents/) guide. While you are reading the MongoDB documentation, choose the language as "MongoDB Shell" from the "Select your language" menu. Then, execute a query which list all the documents in the `book` collection using the MongoDB Shell
 
