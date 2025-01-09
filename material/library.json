@@ -14,6 +14,13 @@
         "copies": 0
     },
     {
+        "title": "The Night Circus",
+        "author": "Erin Morgenstern",
+        "year": 2011,
+        "categories": ["Fantasy", "Romance", "Historical Fiction", "Magical Realism"],
+        "copies": 12
+    },
+    {
         "title": "The Lord of the Rings: The Two Towers",
         "author": "John Ronald Reuel Tolkien",
         "year": 1954,
@@ -31,7 +38,7 @@
         "title": "Point Counter Point",
         "author": "Aldous Huxley",
         "year": 1928,
-        "categories": ["Philosophy", "Satire", "Modernist Literature", "Fiction"],
+        "categories": ["Philosophy", "Satire", "Modernist Literature"],
         "copies": 0
     },
     {
@@ -55,10 +62,38 @@
         "copies": 8
     },
     {
+        "title": "Where the Crawdads Sing",
+        "author": "Delia Owens",
+        "year": 2018,
+        "categories": ["Mystery", "Contemporary Fiction", "Romance", "Historical Fiction"],
+        "copies": 20
+    },
+    {
         "title": "Mansfield Park",
         "author": "Jane Austen",
         "year": 1814,
         "categories": ["Romance", "Classics", "British Literature", "Drama"],
         "copies": 14
+    },
+    {
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "year": 1960,
+        "categories": ["Classics", "Historical Fiction", "Drama", "Social Issues"],
+        "copies": 12
+    },
+    {
+        "title": "Moby-Dick",
+        "author": "Herman Melville",
+        "year": 1851,
+        "categories": ["Classics", "Adventure", "American Literature", "Sea Stories"],
+        "copies": 10
+    },
+    {
+        "title": "It Ends with Us",
+        "author": "Colleen Hoover",
+        "year": 2016,
+        "categories": ["Romance", "Contemporary Fiction", "Drama", "Social Issues"],
+        "copies": 22
     }
 ]
