@@ -4,9 +4,9 @@
 
 In the second section of the course we will learn the principles of the MongoDB database management system which is one of the most widely adopted NoSQL database management systems. During this section your will learn about the principles of the data model in the MongoDB database management system, how to install the MongoDB database management system and the MongoDB Compass tool and how to create a database in the MongoDB database management system.
 
-The MongoDB database management system is a widely adopted NoSQL database management system. Based on the [State of Database](https://stateofdb.com/) survey in 2023, MongoDB was among three of most well-known and widely used database management systems along with PostgreSQL and MySQL. MongoDB is a documented-oriented database.
+The MongoDB database management system is a widely adopted NoSQL database management system. Based on the [State of Database](https://stateofdb.com/) survey in 2023, MongoDB was among three of most well-known and widely used database management systems along with PostgreSQL and MySQL.
 
-Familiarize yourself with the document-oriented databases by reading the article [What is a Document Database](https://www.mongodb.com/resources/basics/databases/document-databases) and with the principles of the MongoDB database management system by reading the following articles:
+MongoDB is a documented-oriented database. Familiarize yourself with the document-oriented databases by reading the article [What is a Document Database](https://www.mongodb.com/resources/basics/databases/document-databases) and with the principles of the MongoDB database management system by reading the following articles:
 
 - [MongoDB Basics](https://www.mongodb.com/resources/products/fundamentals/basics)
 - [Documents](https://www.mongodb.com/docs/manual/core/document/)
