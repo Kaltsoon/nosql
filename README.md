@@ -6,7 +6,7 @@ During this course we will learn the principles of NoSQL database management sys
 
 The scope of the course is 2 credits. The prerequisites for the course are the [Data Management and Databases](https://opinto-opas.haaga-helia.fi/course_unit/SOF001AS2AE) (SOF001AS2AE) and [Python Programming](https://opinto-opas.haaga-helia.fi/course_unit/SOF001AS2AE) (SOF004AS2AE) courses or similar knowledge and skills. The course has no lessons, instead the course is completed by studying the material and completing the compulsory exercises independently. On top of the exercises, the acquired knowledge and skills are applied in practice by developing a simple programming project with Python.
 
-The course assesment is either approved or rejected. An approved completion of the course requires completing the exercises and implementing a project of an appropriate scope of complexity. The four sections of the course describe the requirements of completing the section in more detail. You can complete the course at your own pace and request the credits once the requirements are met.
+The course assesment is either pass or fail. A passing completion of the course requires completing _all the exercises_ and _implementing a project of an appropriate scope of complexity_. The four sections of the course describe the requirements of completing the section in more detail. You can complete the course at your own pace and request the credits once the requirements are met.
 
 👉 [Start the course](./material/1-nosql-introduction.md)
 
