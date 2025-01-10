@@ -1,4 +1,4 @@
-print("📖 Welcome to the library application!")
+print("Welcome to the library application!")
 
 def print_commands():
     print("Commands:")
@@ -8,10 +8,6 @@ def print_commands():
     print("\t4) Delete a book")
     print("\t7) Exit application")
 
-def list_books():
-    # Fetch all the books from the database and print their information
-    pass
-
 def add_book():
     name = input("Name:")
     year = input("Year:")
@@ -19,16 +15,20 @@ def add_book():
     copies = input("Number of copies:")
     author = input("Author ID:")
     
-    # Save the book to the database
+    # Insert the book into the database
     
     print(f"Book {name} has been added!")
 
+def list_books():
+    # Fetch all the books from the database and print their information
+    pass
+
 def edit_book():
-    # Update book's information based on user's input
+    # Update the book's information based on the user's input
     pass
 
 def delete_book():
-    # Delete a book based on user's input
+    # Delete a book based on the user's input
     pass
 
 print_commands()
