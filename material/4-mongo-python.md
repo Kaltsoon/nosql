@@ -57,7 +57,7 @@ db.book.delete_one({ _id: ObjectId(book_id_to_delete) })
 
 ### Relationships between documents
 
-Consider how you establish connections between collections. For example, creating a `book` with an `author` could be implemented in the following way:
+Consider how you establish relationships between documents, e.g. author of a book. For example, creating a `book` with an `author` could be implemented in the following way:
 
 ```python
 from pymongo import MongoClient
