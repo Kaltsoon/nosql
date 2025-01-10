@@ -150,7 +150,7 @@ Now that we know about the MongoDB data model and the basic database operations,
 
 - Should consist of at least two collections
 - At least two collections should have a relationship (using e.g. a similar "foreign key"-like implementation as in the previous example)
-- At least two collections should each have at least three attributes (excluding the `_id` attribute) with more than one different data type (e.g. not only string-type attributes)
+- At least two collections should each have at least three attributes (on top of the `_id` attribute) with more than one different data type (e.g. not only string-type attributes)
 
 Here are a couple of example project ideas for inspiration:
 
