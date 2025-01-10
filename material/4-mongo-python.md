@@ -54,10 +54,10 @@ from bson.objectid import ObjectId
 book_id_to_delete = "6780b2d277f48b749b940ee4"
 
 # ❌ Using a string won't work, the following won't delete the correct document
-db.book.delete_one({ _id: book_id_to_delete })
+db.book.delete_one({ "_id": book_id_to_delete })
 
 # ✔️ Using an ObjectId object will work
-db.book.delete_one({ _id: ObjectId(book_id_to_delete) })
+db.book.delete_one({ "_id": ObjectId(book_id_to_delete) })
 ```
 
 ### Relationships between documents
