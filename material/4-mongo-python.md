@@ -15,8 +15,7 @@ Next, go through the [tutorial](https://pymongo.readthedocs.io/en/stable/tutoria
 
 1. Create a Python program which imports the `pymongo` library
 2. Initialize a `MongoClient` object and see that the database connection works
-3. Print all the documents in one of the collections you inserted test data for in the previous section
-4. Try out the other operations in the tutorial
+3. Print all the documents in one of the collections you inserted test data for in the previous section using the [find](https://www.w3schools.com/python/python_mongodb_find.asp) method
 
 Execute the program after each step and see that there are no errors.
 
@@ -30,9 +29,33 @@ Now that we know the basics of PyMongo, let's implement a database application f
 - _Some kind of user interface_. The easiest way is to implement a command-line user interface that reads user input from the command line with the [input](https://www.w3schools.com/python/ref_func_input.asp) function and prints information with the [print](https://www.w3schools.com/python/ref_func_print.asp) function. You can use [this](./application.py) Python program as a starting point. If you want, you can also do something fancier, like a web application using [Flask](https://flask.palletsprojects.com/en/3.0.x/quickstart/)
 - Usage of _all CRUD operations_ for at least two collections
 
-### Where to start?
+Implement the application _one simple feature at a time_ and confirm that it works before moving on to the next feature. Starting with a create feature of one of the collections is a good place to start. Use the MongoDB Compass to verify that different features work, for example by checking that a document is added to a collection using the create feature.
 
-Implement the application _one simple feature at a time_ and confirm that it works before moving on to the next feature. Starting with a create feature of one of the collections is a good place to start. Read the [Inserting a document](https://pymongo.readthedocs.io/en/stable/tutorial.html#inserting-a-document) documentation for implementation instructions. Use the MongoDB Compass to verify that different features work, for example by checking that a document is added to a collection using the create feature.
+These PyMongo guides will be useful while implementing the CRUD features:
+
+- [Insert Document](https://www.w3schools.com/python/python_mongodb_insert.asp)
+- [Find Documents](https://www.w3schools.com/python/python_mongodb_find.asp)
+- [Update Documents](https://www.w3schools.com/python/python_mongodb_update.asp)
+- [Delete Documents](https://www.w3schools.com/python/python_mongodb_delete.asp)
+
+### Working with the `_id` primary key
+
+The `_id` primary key is useful for referencing a specific document e.g. when deleting or updating it. We just need to remember that the value of the `_id` attribute is an `ObjectId` object:
+
+```python
+from pymongo import MongoClient
+from bson.objectid import ObjectId
+
+book_id_to_delete = "6780b2d277f48b749b940ee4"
+
+# ❌ Using a string won't work, the following won't delete the correct document
+db.book.delete_one({ _id: book_id_to_delete })
+
+# ✔️ Using an ObjectId object will work
+db.book.delete_one({ _id: ObjectId(book_id_to_delete) })
+```
+
+### Relationships between documents
 
 Consider how you establish connections between collections. For example, creating a `book` with an `author` could be implemented in the following way:
 
