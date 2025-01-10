@@ -39,7 +39,7 @@ Insert the following documents using the `insertMany` method:
 Then, list all the documents in the `book` collection.
 
 > [!IMPORTANT]  
-> Exercise 2 👨‍💻: Save the mentioned two (`insert` and `insertMany`) queries to the file.
+> Exercise 2 👨‍💻: Save the mentioned two (`insert` and `insertMany`) queries to the submission file.
 
 ### Querying documents
 
@@ -55,7 +55,7 @@ Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-do
 7. Find the books written by either the author "Jane Austen" or "Aldous Huxley"
 
 > [!IMPORTANT]  
-> Exercise 3 👨‍💻: Save the mentioned seven queries to the file.
+> Exercise 3 👨‍💻: Save the mentioned seven queries to the submission file.
 
 ### Updating documents
 
@@ -68,7 +68,7 @@ Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-
 5. Remove the genre "Classic" from the book "War and Peace". Hint: [$pull](https://www.mongodb.com/docs/manual/reference/operator/update/pull/) operator
 
 > [!IMPORTANT]  
-> Exercise 4 👨‍💻: Save the mentioned five queries to the file.
+> Exercise 4 👨‍💻: Save the mentioned five queries to the submission file.
 
 ### Deleting documents
 
@@ -78,7 +78,7 @@ Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-
 2. Delete all the books which have no copies
 
 > [!IMPORTANT]  
-> Exercise 5 👨‍💻: Save the mentioned two queries to the file.
+> Exercise 5 👨‍💻: Save the mentioned two queries to the submission file.
 
 ## Aggregation operations
 
@@ -91,7 +91,7 @@ MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and a
 5. Display the number of book copies in the "Fantasy" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
 
 > [!IMPORTANT]  
-> Exercise 6 👨‍💻: Save the mentioned five queries to the file.
+> Exercise 6 👨‍💻: Save the mentioned five queries to the submission file.
 
 ## Data modeling – embedding data or using references
 
@@ -163,7 +163,7 @@ Come up with your own database or use the ideas above. Feel free to make any mod
 > The library database used in the previous exercises isn't suitable for the project.
 
 > [!IMPORTANT]  
-> Exercise 8 👨‍💻: Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) for your project's data model in the format you prefer. Include the names of the entities, their relationships, their attributes, and data types. Add an image of the diagram to the file.
+> Exercise 8 👨‍💻: Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) for your project's data model in the format you prefer. Include the names of the entities, their relationships, their attributes, and data types. Add an image of the diagram to the submission file.
 
 > [!IMPORTANT]  
 > Exercise 9 👨‍💻: Create a database for your project and add the collections in the MongoDB Compass. Then, insert a few documents into each collection as test data using the MongoDB Shell. Revisit [Manage Databases in Compass](https://www.mongodb.com/docs/compass/current/databases/), [Manage Collections in Compass](https://www.mongodb.com/docs/compass/current/collections/) and [Insert Documents](https://www.mongodb.com/docs/manual/tutorial/insert-documents/) guides if you have trouble.
