@@ -146,7 +146,12 @@ This is a very similar implementation to having a foreign key referencing a prim
 
 ## Designing data model for the project
 
-Now that we know about the MongoDB data model and the basic database operations, it is time to design a small database of our own. The database should consist of _at least two collections_. Here are a couple of examples for inspiration:
+Now that we know about the MongoDB data model and the basic database operations, it is time to design a small database of our own. These are the requirements for the project's data model:
+
+- Should consist of at least two collections
+- At least two collections should have a relationship (implemented e.g. in a similar manner as in the example above)
+
+Here are a couple of example project ideas for inspiration:
 
 - Your fellow students need a database for storing information about the courses they have completed. A student has a first name, last name, city (e.g. "Helsinki"), major subject (e.g. "Computer science"), and one or more minor subjects. Students have many course completions. A course completion has a course name, teacher's name, credits, year, semester (e.g. "Spring"), and grade
 - Your friend forgot to buy the drinks for the party again and they could use a shopping list database. A shopping list has a name, description, status (either "complete" or "incomplete"), and the name of the shopper. A shopping list contains many items the shopper should buy from the store. Items have a name (e.g. "Milk"), quantity (e.g. 2), one or more categories (e.g. "Dairy products"), and a purchased status (is the item purchased or not)
