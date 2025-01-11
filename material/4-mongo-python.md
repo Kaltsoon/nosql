@@ -19,8 +19,12 @@ Next, go through the [tutorial](https://pymongo.readthedocs.io/en/stable/tutoria
 
 1. Create a Python program which imports the `pymongo` library
 2. Initialize a `MongoClient` object and see that the database connection works
-3. Print all the documents in one of the collections you inserted test data for in the previous section using the [find](https://www.w3schools.com/python/python_mongodb_find.asp) method
-4. Try out other operations, e.g. by inserting a document into a collection
+3. Print all the documents in one of the collections you inserted documents for in the previous section using the [find](https://www.w3schools.com/python/python_mongodb_find.asp) method. You can iterate the return value of the method using a `for` loop. The iterated items are [dictionaries](https://www.w3schools.com/python/python_dictionaries.asp) with the same attributes as the document:
+   ```python
+   for book in db.book.find():
+     print(f"Title: {book["title"]}, author: {book["author"]}, year: {book["year"]}")
+   ```
+5. Try out other operations, e.g. by inserting a document into a collection
 
 Execute the program after each step and see that there are no errors.
 
