@@ -47,12 +47,11 @@ Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-do
 
 1. Find the book named "War and Peace"
 2. Find the book "War and Peace" using its `_id` attribute (use the document's `_id` attribute value you got from the previous query's result). Note that `ObjectId("507f1f77bcf86cd799439011")` is an `ObjectId` object whereas `"507f1f77bcf86cd799439011"` is a string
-3. Find books which are published after the year 1900. Hint: [Comparison Query Operators
-   ](https://www.mongodb.com/docs/manual/reference/operator/query-comparison/#std-label-query-selectors-comparison)
-4. Find books with more than 0 copies. Note that `0` is a number whereas `"0"` is a string
-5. Find the books written by the author "John Ronald Reuel Tolkien" before the year 1950
-6. Find the books with the "Drama" or the "Fantasy" genre. Hint: [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/)
-7. Find the books written by either the author "Jane Austen" or "Aldous Huxley"
+3. Find the books which have more than 5 copies. Hint: [Comparison Query Operators](https://www.mongodb.com/docs/manual/reference/operator/query-comparison/#std-label-query-selectors-comparison)
+4. Find the books written by the author "John Ronald Reuel Tolkien" before the year 1950
+5. Find the books written by either the author "Jane Austen" or "Aldous Huxley". Hint: [Logical Query Operators](https://www.mongodb.com/docs/manual/reference/operator/query-logical/)
+6. Find the books that are written after the year 1900 and before the year 2000
+7. Find the books with the "Drama" or the "Fantasy" genre. Hint: [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/)
 
 > [!IMPORTANT]  
 > Exercise 3 👨‍💻: Save the mentioned seven queries to the submission file.
