@@ -27,7 +27,7 @@ Then, list all documents in the `book` collection and make sure that the inserte
 > [!WARNING]  
 > Let MongoDB automatically generate a unique value for the `_id` attribute. The attribute will act as a primary key for the document.
 
-Insert the following documents using the `insertMany` method:
+Insert the following documents simultaneously using the `insertMany` method:
 
 | title                                               | author                      | year | genres                                                   | copies | ebook |
 | --------------------------------------------------- | --------------------------- | ---- | -------------------------------------------------------- | ------ | ----- |
@@ -114,6 +114,7 @@ erDiagram
         ObjectId author
         int year
         int copies
+        boolean ebook
         string[] genres
     }
 ```
@@ -130,7 +131,7 @@ Read the [Embedded Data Versus References
 
 Now, in the `book` collection the `author` attribute can be an `ObjectId` object referencing the corresponding document's `_id` attribute in the `author` collection. For example:
 
-| _id                                  | title        | author                               | year | genres               | copies | ebook |
+| \_id                                 | title        | author                               | year | genres               | copies | ebook |
 | ------------------------------------ | ------------ | ------------------------------------ | ---- | -------------------- | ------ | ----- |
 | ObjectId("6784c8cdd2cb986c92dbd4ab") | "The Hobbit" | ObjectId("507f1f77bcf86cd799439011") | 1937 | "Fantasy", "Classic" | 17     | true  |
 
