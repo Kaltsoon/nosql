@@ -22,7 +22,7 @@ Read the [Insert Documents](https://www.mongodb.com/docs/manual/tutorial/insert-
 
 The `ebook` attribute value should be a boolean representing whether the book is an ebook version of the book or not. The `genres` attribute value should be an [array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/) representing one or many genres of the book.
 
-Then, list all documents in the `book` collection. You'll notice that each document has an automatically generated `_id` attribute which act as a primary key. These values are [ObjectId](https://www.mongodb.com/docs/manual/reference/method/ObjectId/) objects, such as `ObjectId("507f1f77bcf86cd799439011")`.
+Then, list all documents in the `book` collection and make sure that the inserted documents have the correct information. You'll notice that each document has an automatically generated `_id` attribute which act as a primary key. These values are [ObjectId](https://www.mongodb.com/docs/manual/reference/method/ObjectId/) objects, such as `ObjectId("507f1f77bcf86cd799439011")`.
 
 > [!WARNING]  
 > Let MongoDB automatically generate a unique value for the `_id` attribute. The attribute will act as a primary key for the document.
@@ -130,9 +130,9 @@ Read the [Embedded Data Versus References
 
 Now, in the `book` collection the `author` attribute can be an `ObjectId` object referencing the corresponding document's `_id` attribute in the `author` collection. For example:
 
-| title        | author                               | year | genres               | copies | ebook |
-| ------------ | ------------------------------------ | ---- | -------------------- | ------ | ----- |
-| "The Hobbit" | ObjectId("507f1f77bcf86cd799439011") | 1937 | "Fantasy", "Classic" | 17     | true  |
+| _id                                  | title        | author                               | year | genres               | copies | ebook |
+| ------------------------------------ | ------------ | ------------------------------------ | ---- | -------------------- | ------ | ----- |
+| ObjectId("6784c8cdd2cb986c92dbd4ab") | "The Hobbit" | ObjectId("507f1f77bcf86cd799439011") | 1937 | "Fantasy", "Classic" | 17     | true  |
 
 This is a very similar implementation to having a foreign key referencing a primary key in a relational database.
 
