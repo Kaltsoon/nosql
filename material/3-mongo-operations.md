@@ -51,7 +51,7 @@ Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-do
    ](https://www.mongodb.com/docs/manual/reference/operator/query-comparison/#std-label-query-selectors-comparison)
 4. Find books with more than 0 copies. Note that `0` is a number whereas `"0"` is a string
 5. Find the books written by the author "John Ronald Reuel Tolkien" before the year 1950
-6. Find the books in the "Fantasy" genre. Hint: [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/)
+6. Find the books with the "Drama" or the "Fantasy" genre. Hint: [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/)
 7. Find the books written by either the author "Jane Austen" or "Aldous Huxley"
 
 > [!IMPORTANT]  
@@ -65,7 +65,7 @@ Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-
 2. Set the number of copies as 0 for all books written by the author "John Ronald Reuel Tolkien"
 3. Increase the number of copies of books published after 1900 by two. Hint: [$inc](https://www.mongodb.com/docs/manual/reference/operator/update/inc/) operator
 4. Add the genre "Adventure" for the book "The Hobbit". Hint: [$push](https://www.mongodb.com/docs/manual/reference/operator/update/push/#mongodb-update-up.-push) operator
-5. Remove the genre "Classic" from the book "War and Peace". Hint: [$pull](https://www.mongodb.com/docs/manual/reference/operator/update/pull/) operator
+5. Remove the genre "Classics" from the book "Anna Karenina". Hint: [$pull](https://www.mongodb.com/docs/manual/reference/operator/update/pull/) operator
 
 > [!IMPORTANT]  
 > Exercise 4 👨‍💻: Save the mentioned five queries to the submission file.
@@ -88,7 +88,7 @@ MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and a
 2. Display the total number of book copies in the library. Hint: [$sum](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/) operator
 3. Display the number of books by each author
 4. Display the number of book copies by each author
-5. Display the number of book copies in the "Fantasy" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
+5. Display the number of book copies in the "Romance" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
 
 > [!IMPORTANT]  
 > Exercise 6 👨‍💻: Save the mentioned five queries to the submission file.
