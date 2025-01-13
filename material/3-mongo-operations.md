@@ -51,7 +51,7 @@ Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-do
 4. Find the books written by the author "John Ronald Reuel Tolkien" before the year 1950
 5. Find the books written by either the author "Jane Austen" or "Aldous Huxley". Hint: [Logical Query Operators](https://www.mongodb.com/docs/manual/reference/operator/query-logical/)
 6. Find the books that are written after the year 1900 and before the year 2000
-7. Find the books with the "Drama" or the "Fantasy" genre. Hint: [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/)
+7. Find the books with the "Fantasy" genre. Hint: [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/)
 
 > [!IMPORTANT]  
 > Exercise 3 👨‍💻: Save the mentioned seven queries to the submission file.
