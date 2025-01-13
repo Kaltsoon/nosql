@@ -105,13 +105,13 @@ erDiagram
         ObjectId _id
         string name
         string nationality
-        int birthYear
+        int birth_year
     }
 
     Book {
         ObjectId _id
         string name
-        ObjectId author
+        ObjectId author_id
         int year
         int copies
         boolean ebook
@@ -122,16 +122,16 @@ erDiagram
 Read the [Embedded Data Versus References
 ](https://www.mongodb.com/docs/manual/data-modeling/concepts/embedding-vs-references/) guide. Then, let's consider how we could implement the reference between the `author` and the `book` collection in our database. Let's assume that we have the following documents in the `author` collection:
 
-| \_id                                 | name                        | birthYear | nationality |
-| ------------------------------------ | --------------------------- | --------- | ----------- |
-| ObjectId("6741744df83cf4ce0abb1e9c") | "Leo Tolstoy"               | 1828      | "Russian"   |
-| ObjectId("507f1f77bcf86cd799439011") | "John Ronald Reuel Tolkien" | 1892      | "British"   |
-| ObjectId("6741745dd39e63730ea251b7") | "Aldous Huxley"             | 1894      | "British"   |
-| ObjectId("6741746bbc9c119bcafc58ee") | "Jane Austen"               | 1775      | "British"   |
+| \_id                                 | name                        | birth_year | nationality |
+| ------------------------------------ | --------------------------- | ---------- | ----------- |
+| ObjectId("6741744df83cf4ce0abb1e9c") | "Leo Tolstoy"               | 1828       | "Russian"   |
+| ObjectId("507f1f77bcf86cd799439011") | "John Ronald Reuel Tolkien" | 1892       | "British"   |
+| ObjectId("6741745dd39e63730ea251b7") | "Aldous Huxley"             | 1894       | "British"   |
+| ObjectId("6741746bbc9c119bcafc58ee") | "Jane Austen"               | 1775       | "British"   |
 
-Now, in the `book` collection the `author` attribute can be an `ObjectId` object referencing the corresponding document's `_id` attribute in the `author` collection. For example:
+Now, in the `book` collection the `author_id` attribute can be an `ObjectId` object referencing the corresponding document's `_id` attribute in the `author` collection. For example:
 
-| \_id                                 | title        | author                               | year | genres               | copies | ebook |
+| \_id                                 | title        | author_id                            | year | genres               | copies | ebook |
 | ------------------------------------ | ------------ | ------------------------------------ | ---- | -------------------- | ------ | ----- |
 | ObjectId("6784c8cdd2cb986c92dbd4ab") | "The Hobbit" | ObjectId("507f1f77bcf86cd799439011") | 1937 | "Fantasy", "Classic" | 17     | true  |
 
@@ -168,5 +168,8 @@ Come up with your own database or use the ideas above. Feel free to make any mod
 
 > [!IMPORTANT]  
 > Exercise 9 👨‍💻: Create a database for your project and add the collections in the MongoDB Compass. Then, insert a few documents into each collection as test data using the MongoDB Shell. Take a screenshot of the database view in the MongoDB Compass (visible after clicking the database name on the connections list) and add it to the submission file. Revisit [Manage Databases in Compass](https://www.mongodb.com/docs/compass/current/databases/), [Manage Collections in Compass](https://www.mongodb.com/docs/compass/current/collections/) and [Insert Documents](https://www.mongodb.com/docs/manual/tutorial/insert-documents/) guides if you have trouble.
+
+> [!WARNING]  
+> Don't use whitespace (e.g. space between words) in database, collection or attributes names. You can use the `_` symbol as a word separator e.g. attribute name `birth_year`, _not_ `birth year`.
 
 ⏭️ [Move on to the final section](./4-mongo-python.md)
