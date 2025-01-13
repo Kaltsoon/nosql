@@ -45,19 +45,19 @@ These PyMongo guides will be useful while implementing the CRUD features:
 
 ### Working with the `_id` primary key
 
-The `_id` primary key is useful for referencing a specific document e.g. when deleting or updating it. We just need to remember that the value of the `_id` attribute is an `ObjectId` object:
+The `_id` primary key is useful for referencing a specific document e.g. when finding, deleting or updating it. We just need to remember that the value of the `_id` attribute should be an `ObjectId` object:
 
 ```python
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 
-book_id_to_delete = "6780b2d277f48b749b940ee4"
+book_id_to_find = "6780b2d277f48b749b940ee4"
 
-# ❌ Using a string won't work, the following won't delete the correct document
-db.book.delete_one({ "_id": book_id_to_delete })
+# ❌ Using a string won't work and the following code won't find the correct document
+db.book.find_one({ "_id": book_id_to_find })
 
 # ✔️ Using an ObjectId object will work
-db.book.delete_one({ "_id": ObjectId(book_id_to_delete) })
+db.book.find_one({ "_id": ObjectId(book_id_to_find) })
 ```
 
 ### Relationships between documents
