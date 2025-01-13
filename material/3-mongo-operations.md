@@ -84,11 +84,11 @@ Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-
 
 MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and aggregation functions such as `COUNT` and `SUM`. Read the [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) guide. Then, implement and execute the following aggregations in the MongoDB Shell:
 
-1. Display the total number of books in the library. Hint: [$group](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/) and [$count](https://www.mongodb.com/docs/manual/reference/operator/aggregation/count-accumulator/) operators
-2. Display the total number of book copies in the library. Hint: [$sum](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/) operator
+1. Display the total number of books. Hint: [$group](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/) and [$count](https://www.mongodb.com/docs/manual/reference/operator/aggregation/count-accumulator/) operators
+2. Display the total number of book copies. Hint: [$sum](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/) operator
 3. Display the number of books by each author
 4. Display the number of book copies by each author
-5. Display the number of book copies in the "Romance" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
+5. Display the total number of book copies of books that are ebooks and in the "Romance" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
 
 > [!IMPORTANT]  
 > Exercise 6 👨‍💻: Save the mentioned five queries to the submission file.
