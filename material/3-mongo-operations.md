@@ -16,11 +16,11 @@ The [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operat
 
 Read the [Insert Documents](https://www.mongodb.com/docs/manual/tutorial/insert-documents/) guide. Then, insert a single document to the `book` collection with the following details using the `insertOne` method:
 
-| title                 | author        | year | genres                            | copies |
-| --------------------- | ------------- | ---- | --------------------------------- | ------ |
-| "Pride and Prejudice" | "Jane Austen" | 1813 | "Romance", "Classic", "Fiction" | 3      |
+| title                 | author        | year | genres                          | copies | ebook |
+| --------------------- | ------------- | ---- | ------------------------------- | ------ | ----- |
+| "Pride and Prejudice" | "Jane Austen" | 1813 | "Romance", "Classic", "Fiction" | 3      | false |
 
-The `genres` attribute value should be an [array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/) representing one or many genres of the book.
+The `ebook` attribute value should be a boolean representing whether the book is an ebook version of the book or not. The `genres` attribute value should be an [array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/) representing one or many genres of the book.
 
 Then, list all documents in the `book` collection. You'll notice that each document has an automatically generated `_id` attribute which act as a primary key. These values are [ObjectId](https://www.mongodb.com/docs/manual/reference/method/ObjectId/) objects, such as `ObjectId("507f1f77bcf86cd799439011")`.
 
@@ -29,12 +29,12 @@ Then, list all documents in the `book` collection. You'll notice that each docum
 
 Insert the following documents using the `insertMany` method:
 
-| title                                               | author                      | year | genres                                                     | copies |
-| --------------------------------------------------- | --------------------------- | ---- | ---------------------------------------------------------- | ------ |
-| "War and Peace"                                     | "Leo Tolstoy"               | 1869 | "Historical Fiction", "Classic", "Philosophical Fiction" | 84     |
-| "The Lord of the Rings: The Fellowship of the Ring" | "John Ronald Reuel Tolkien" | 1954 | "Fantasy", "Adventure", "Epic"                           | 0      |
+| title                                               | author                      | year | genres                                                   | copies | ebook |
+| --------------------------------------------------- | --------------------------- | ---- | -------------------------------------------------------- | ------ | ----- |
+| "War and Peace"                                     | "Leo Tolstoy"               | 1869 | "Historical Fiction", "Classic", "Philosophical Fiction" | 84     | true  |
+| "The Lord of the Rings: The Fellowship of the Ring" | "John Ronald Reuel Tolkien" | 1954 | "Fantasy", "Adventure", "Epic"                           | 0      | false |
 | "Brave New World"                                   | "Aldous Huxley"             | 1931 | "Dystopian", "Science Fiction", "Classic"                | 11     |
-| "The Hobbit"                                        | "John Ronald Reuel Tolkien" | 1937 | "Fantasy", "Classic"                                     | 17     |
+| "The Hobbit"                                        | "John Ronald Reuel Tolkien" | 1937 | "Fantasy", "Classic"                                     | 17     | true  |
 
 Then, list all the documents in the `book` collection.
 
@@ -130,9 +130,9 @@ Read the [Embedded Data Versus References
 
 Now, in the `book` collection the `author` attribute can be an `ObjectId` object referencing the corresponding document's `_id` attribute in the `author` collection. For example:
 
-| title        | author                               | year | genres                 | copies |
-| ------------ | ------------------------------------ | ---- | ---------------------- | ------ |
-| "The Hobbit" | ObjectId("507f1f77bcf86cd799439011") | 1937 | "Fantasy", "Classic" | 17     |
+| title        | author                               | year | genres               | copies | ebook |
+| ------------ | ------------------------------------ | ---- | -------------------- | ------ | ----- |
+| "The Hobbit" | ObjectId("507f1f77bcf86cd799439011") | 1937 | "Fantasy", "Classic" | 17     | true  |
 
 This is a very similar implementation to having a foreign key referencing a primary key in a relational database.
 
