@@ -33,7 +33,7 @@ Insert the following documents using the `insertMany` method:
 | --------------------------------------------------- | --------------------------- | ---- | -------------------------------------------------------- | ------ | ----- |
 | "War and Peace"                                     | "Leo Tolstoy"               | 1869 | "Historical Fiction", "Classic", "Philosophical Fiction" | 84     | true  |
 | "The Lord of the Rings: The Fellowship of the Ring" | "John Ronald Reuel Tolkien" | 1954 | "Fantasy", "Adventure", "Epic"                           | 0      | false |
-| "Brave New World"                                   | "Aldous Huxley"             | 1931 | "Dystopian", "Science Fiction", "Classic"                | 11     |
+| "Brave New World"                                   | "Aldous Huxley"             | 1931 | "Dystopian", "Science Fiction", "Classic"                | 11     | false |
 | "The Hobbit"                                        | "John Ronald Reuel Tolkien" | 1937 | "Fantasy", "Classic"                                     | 17     | true  |
 
 Then, list all the documents in the `book` collection.

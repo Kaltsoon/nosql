@@ -75,7 +75,7 @@ def add_book():
   author = input("Author ID:")
 
   book = {
-    # Other attributes...
+    # Other keys matching the document's attributes...
     # We need to use an ObjectId object as the author attribute value
     "author": ObjectId(author)
   }
@@ -98,12 +98,12 @@ If you want to expand your application here are some ideas for optional requirem
 
 ## Submitting the course work
 
-We are done, good job! 🎉 The last thing to do is to submit the project. There are two ways to do it:
+You are done, good job! 🎉 The last thing to do is to submit the project. There are two ways to do it:
 
 1. Create a _public_ [GitHub](https://github.com/) repository for the exercises and the project. This is the recommended way because it adds another cool project to your portfolio. But, if you don't know anything about Git or GitHub, you don't have to learn it for this course. Add the link to the GitHub repository to the Moodle submission (link below)
-2. Add the exercises and the project to a folder and turn it into a compressed zip folder. Add the zip folder to the Moodle submission (link below)
+2. Add the project code to a folder and turn it into a compressed zip folder. Add the zip folder to the Moodle submission (link below)
 
 > [!IMPORTANT]  
-> Exercise 3 👨‍💻: Submit your work to the "MongoDB with Python" Moodle submission by following the instructions above.
+> Exercise 3 👨‍💻: Submit your project work to the "MongoDB with Python" Moodle submission by following the instructions above.
 
 Once you have done all the submissions (from this section and the previous sections), your work will be reviewed as soon as possible. If it takes more than two weeks for your submission to be reviewed, contact the teacher. After the review, if there are no problems with your work, you'll get the credits. Otherwise, you'll be asked to make changes and re-submit your work.
