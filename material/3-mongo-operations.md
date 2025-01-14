@@ -151,7 +151,7 @@ Here are a couple of example project ideas for inspiration:
 
 > _"Your friend forgot to buy the snacks for the party again and they could use a shopping list database. A shopping list has a name, description, completion status (is the shopping list completed or not), the name of the store (e.g. "Lidl"), and the name of the shopper. A shopping list contains many items the shopper should buy from the store. Item has a name (e.g. "Chips"), a brand (e.g. "Pringles"), quantity (e.g. 2), one or more categories (e.g. "Dairy products" or "Snacks"), and a purchased status (is the item purchased or not)"_
 
-> _"Your teacher needs a database for storing students' grades in different courses. A course has a name, teacher's name, credits, year, semeter (e.g. "Spring"), language (e.g. "English") and one more topics (e.g. "Python" or "MongoDB"). A course has many gradings for different students. A grading has a student's name, student number, grade (between 0 and 5), and comment (free form textual comment regarding the grading)."_
+> _"Your teacher needs a database for keeping track on students' grades in different courses. A course has a name, teacher's name, credits, year, semeter (e.g. "Spring"), language (e.g. "English") and one more topics (e.g. "Python" or "MongoDB"). A course has many gradings for different students. A grading has a student's name, student number, grade (between 0 and 5), and comment (free form textual comment regarding the grading)."_
 
 Come up with your own database or use the ideas above. Feel free to make any modifications. Once you have designed the database schema, create a database and the collections in MongoDB Compass. Then, insert a few documents to each collections using the MongoDB Shell.
 
