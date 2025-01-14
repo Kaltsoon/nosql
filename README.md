@@ -8,6 +8,10 @@ The scope of the course is 2 credits. The prerequisites for the course are the [
 
 The course assesment is either pass or fail. A passing completion of the course requires completing _all the exercises_ and _implementing a project of an appropriate scope of complexity_. The four sections of the course describe the requirements of completing the section in more detail. You can complete the course at your own pace and request the credits once the requirements are met.
 
+<!-- DEADLINE -->
+> [!WARNING]  
+> Individual sections of the course don't have deadlines, instead there's a single final deadline for all course work on TODO.
+
 👉 [Start the course](./material/1-nosql-introduction.md)
 
 ## 🎓 Learning objectives

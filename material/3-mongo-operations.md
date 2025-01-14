@@ -136,11 +136,6 @@ Now, in the `book` collection the `author_id` attribute can be an `ObjectId` obj
 
 This is a very similar implementation to having a foreign key referencing a primary key in a relational database.
 
-<!--
-> [!WARNING]
-> It is worth noting however, that MongoDB doesn't support [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) or join operations. We could for example delete an `author` document without any error and the referencing documents in the `book` collection would have an `ObjectId` in the `author` attribute, which doesn't have a corresponding document in the `author` collection. The [Data consistency](https://www.mongodb.com/docs/manual/data-modeling/data-consistency/) documentation covers the topic in more detail.
--->
-
 > [!IMPORTANT]  
 > Exercise 7 👨‍💻: Read the [Data consistency](https://www.mongodb.com/docs/manual/data-modeling/data-consistency/) documentation. Describe, what kind of problems the lack of [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) support cause in MongoDB for example in the previous example? What kind of application-level measures would be required to achieve data consistency? Consider cases such as creating a `book` document and deleting an `author` document in the previous example.
 
@@ -157,18 +152,18 @@ Here are a couple of example project ideas for inspiration:
 - Your fellow students need a database for storing information about the courses they have completed. A student has a first name, last name, city (e.g. "Helsinki"), major subject (e.g. "Computer science"), and one or more minor subjects. Students have many course completions. A course completion has a course name, teacher's name, credits, year, semester (e.g. "Spring"), and grade
 - Your friend forgot to buy the drinks for the party again and they could use a shopping list database. A shopping list has a name, description, status (either "complete" or "incomplete"), and the name of the shopper. A shopping list contains many items the shopper should buy from the store. Items have a name (e.g. "Milk"), quantity (e.g. 2), one or more categories (e.g. "Dairy products"), and a purchased status (is the item purchased or not)
 
-Come up with your own database or use the ideas above. Feel free to make any modifications. Once you have designed the database schema, insert some data into the database with the MongoDB Shell.
+Come up with your own database or use the ideas above. Feel free to make any modifications. Once you have designed the database schema, create a database and the collections in MongoDB Compass. Then, insert a few documents to each collections using the MongoDB Shell.
 
 > [!WARNING]  
-> The library database used in the previous exercises isn't suitable for the project.
+> The library database used in the previous exercises isn't suitable for the project. Come up with your own project idea or use and modify the examples above.
 
 > [!IMPORTANT]  
 > Exercise 8 👨‍💻: Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) for your project's data model in the format you prefer. Include the names of the entities, their relationships, their attributes, and data types. Add an image of the diagram to the submission file.
 
-> [!IMPORTANT]  
-> Exercise 9 👨‍💻: Create a database for your project and add the collections in the MongoDB Compass. Then, insert a few documents into each collection as test data using the MongoDB Shell. Take a screenshot of the database view in the MongoDB Compass (visible after clicking the database name on the connections list) and add it to the submission file. Revisit [Manage Databases in Compass](https://www.mongodb.com/docs/compass/current/databases/), [Manage Collections in Compass](https://www.mongodb.com/docs/compass/current/collections/) and [Insert Documents](https://www.mongodb.com/docs/manual/tutorial/insert-documents/) guides if you have trouble.
-
 > [!WARNING]  
 > Don't use whitespace (e.g. space between words) in database, collection or attributes names. You can use the `_` symbol as a word separator e.g. attribute name `birth_year`, _not_ `birth year`.
+
+> [!IMPORTANT]  
+> Exercise 9 👨‍💻: Create a database for your project and add the collections in the MongoDB Compass. Then, insert a few documents into each collection as test data using the MongoDB Shell. Take a screenshot of the database view in the MongoDB Compass (visible after clicking the database name on the connections list) and add it to the submission file. Revisit [Manage Databases in Compass](https://www.mongodb.com/docs/compass/current/databases/), [Manage Collections in Compass](https://www.mongodb.com/docs/compass/current/collections/) and [Insert Documents](https://www.mongodb.com/docs/manual/tutorial/insert-documents/) guides if you have trouble.
 
 ⏭️ [Move on to the final section](./4-mongo-python.md)
