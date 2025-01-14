@@ -149,8 +149,9 @@ Now that we know about the MongoDB data model and the basic database operations,
 
 Here are a couple of example project ideas for inspiration:
 
-- Your fellow students need a database for storing information about the courses they have completed. A student has a first name, last name, city (e.g. "Helsinki"), major subject (e.g. "Computer science"), and one or more minor subjects. Students have many course completions. A course completion has a course name, teacher's name, credits, year, semester (e.g. "Spring"), and grade
-- Your friend forgot to buy the drinks for the party again and they could use a shopping list database. A shopping list has a name, description, status (either "complete" or "incomplete"), and the name of the shopper. A shopping list contains many items the shopper should buy from the store. Items have a name (e.g. "Milk"), quantity (e.g. 2), one or more categories (e.g. "Dairy products"), and a purchased status (is the item purchased or not)
+> _"Your friend forgot to buy the snacks for the party again and they could use a shopping list database. A shopping list has a name, description, completion status (is the shopping list completed or not), the name of the store, and the name of the shopper. A shopping list contains many items the shopper should buy from the store. Item has a name (e.g. "Chips"), a brand (e.g. "Pringles"), quantity (e.g. 2), one or more categories (e.g. "Dairy products"), and a purchased status (is the item purchased or not)"_
+
+> _"Your fellow students need a database for storing information about the courses they have completed. A student has a first name, last name, city (e.g. "Helsinki"), major subject (e.g. "Computer science"), and one or more minor subjects. Students have many course completions. A course completion has a course name, teacher's name, credits, year, semester (e.g. "Spring"), and grade (between 0 and 5)"_
 
 Come up with your own database or use the ideas above. Feel free to make any modifications. Once you have designed the database schema, create a database and the collections in MongoDB Compass. Then, insert a few documents to each collections using the MongoDB Shell.
 
