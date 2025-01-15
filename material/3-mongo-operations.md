@@ -147,22 +147,22 @@ Now that we know about the MongoDB data model and the basic database operations,
 - At least two collections should have a relationship (using e.g. a similar "foreign key"-like implementation as in the previous example)
 - At least two collections should each have at least three attributes (on top of the `_id` attribute) with more than one different data type (e.g. not only string-type attributes)
 
-Here are a couple of example project ideas for inspiration:
+Here are some examples of project ideas for inspiration:
 
 > _"Your friend forgot to buy the snacks for the party again and they could use a shopping list database. A shopping list has a name, description, completion status (is the shopping list completed or not), the name of the store (e.g. "Lidl"), and the name of the shopper. A shopping list contains many items the shopper should buy from the store. Item has a name (e.g. "Chips"), a brand (e.g. "Pringles"), quantity (e.g. 2), one or more categories (e.g. "Dairy products" or "Snacks"), and a purchased status (is the item purchased or not)"_
 
-> _"Your teacher needs a database for keeping track on students' grades in different courses. A course has a name, teacher's name, credits, year, semeter (e.g. "Spring"), language (e.g. "English") and one more topics (e.g. "Python" or "MongoDB"). A course has many gradings for different students. A grading has a student's name, student number, grade (between 0 and 5), and comment (free form textual comment regarding the grading)."_
+> _"Your teacher needs a database to track students' grades in different courses. A course has a name, teacher's name, credits, year, semester (e.g. "Spring"), language (e.g. "English"), and one more topics (e.g. "Python" or "MongoDB"). A course has many gradings for different students. A student grading has a student's name, student number, grade (between 0 and 5), and comment (free form textual comment regarding the grading)."_
 
 Come up with your own database or use the ideas above. Feel free to make any modifications. Once you have designed the database schema, create a database and the collections in MongoDB Compass. Then, insert a few documents to each collections using the MongoDB Shell.
 
 > [!WARNING]  
-> The library database used in the previous exercises isn't suitable for the project. Come up with your own project idea or use and modify the examples above.
+> The library database used in the previous exercises isn't suitable for the project. Come up with your own project idea or use the examples above with possible modifications.
 
 > [!IMPORTANT]  
 > Exercise 8 👨‍💻: Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) for your project's data model in the format you prefer. Include the names of the entities, their relationships, their attributes, and data types. Add an image of the diagram to the submission file.
 
 > [!WARNING]  
-> Don't use whitespace (e.g. space between words) in database, collection or attributes names. You can use the `_` symbol as a word separator e.g. attribute name `birth_year`, _not_ `birth year`.
+> Don't use whitespace (e.g. space between words) in database, collection, or attribute names. You can use the `_` symbol as a word separator e.g. attribute name `birth_year`, _not_ `birth year`.
 
 > [!IMPORTANT]  
 > Exercise 9 👨‍💻: Create a database for your project and add the collections in the MongoDB Compass. Then, insert a few documents into each collection as test data using the MongoDB Shell. Take a screenshot of the database view in the MongoDB Compass (visible after clicking the database name on the connections list) and add it to the submission file. Revisit [Manage Databases in Compass](https://www.mongodb.com/docs/compass/current/databases/), [Manage Collections in Compass](https://www.mongodb.com/docs/compass/current/collections/) and [Insert Documents](https://www.mongodb.com/docs/manual/tutorial/insert-documents/) guides if you have trouble.
