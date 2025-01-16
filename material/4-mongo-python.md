@@ -108,6 +108,6 @@ You are done, good job! 🎉 The last thing to do is to submit the project. Ther
 
 Once you have done all the submissions (from this section and the previous sections), your work will be reviewed after the final deadline. If it takes more than two weeks for your submission to be reviewed, contact the teacher. After the review, if there are no problems with your work, you'll get the credits. Otherwise, you'll be asked to make changes and re-submit your work.
 
-<!-- DEADLINE -->
+<!-- TODO -->
 > [!WARNING]  
 > The final deadline for the course work is on TODO.
