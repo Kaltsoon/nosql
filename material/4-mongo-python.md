@@ -36,12 +36,14 @@ Now that we know the basics of PyMongo, let's implement a database application f
 
 Implement the application _one simple feature at a time_ and confirm that it works before moving on to the next feature. Starting with a create feature of one of the collections is a good place to start. Use the MongoDB Compass to verify that different features work, for example by checking that a document is added to a collection using the create feature.
 
-These PyMongo guides will be useful while implementing the CRUD features:
+These PyMongo guides will be useful while implementing the CRUD and other features:
 
 - [Insert Document](https://www.w3schools.com/python/python_mongodb_insert.asp)
 - [Find Documents](https://www.w3schools.com/python/python_mongodb_find.asp)
 - [Update Documents](https://www.w3schools.com/python/python_mongodb_update.asp)
 - [Delete Documents](https://www.w3schools.com/python/python_mongodb_delete.asp)
+- [Sorting Documents](https://www.w3schools.com/python/python_mongodb_sort.asp)
+- [Aggregation Pipelines](https://www.w3schools.com/mongodb/mongodb_aggregations_intro.php)
 
 ### Working with the `_id` primary key
 
