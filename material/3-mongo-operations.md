@@ -101,7 +101,7 @@ Let's consider the case where we would need to store more author-related informa
   "_id": "6784c8cdd2cb986c92dbd4ab",
   "title": "The Hobbit",
   "year": 1937,
-  "genre": ["Fantasy", "Classic"],
+  "genres": ["Fantasy", "Classic"],
   "copies": 17,
   "ebook": true,
   "author": {
@@ -151,6 +151,20 @@ Now, in the `book` collection the `author_id` attribute can be an `ObjectId` obj
 | \_id                                 | title        | author_id                            | year | genres               | copies | ebook |
 | ------------------------------------ | ------------ | ------------------------------------ | ---- | -------------------- | ------ | ----- |
 | ObjectId("6784c8cdd2cb986c92dbd4ab") | "The Hobbit" | ObjectId("507f1f77bcf86cd799439011") | 1937 | "Fantasy", "Classic" | 17     | true  |
+
+Here's the same document in the JSON format:
+
+```json
+{
+  "_id": "6784c8cdd2cb986c92dbd4ab",
+  "title": "The Hobbit",
+  "year": 1937,
+  "genres": ["Fantasy", "Classic"],
+  "copies": 17,
+  "ebook": true,
+  "author_id": "507f1f77bcf86cd799439011"
+}
+```
 
 This is a very similar implementation to having a foreign key referencing a primary key in a relational database.
 
