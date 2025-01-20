@@ -98,7 +98,7 @@ Let's consider the case where we would need to store more author-related informa
 
 ```json
 {
-  "_id": ObjectId("6784c8cdd2cb986c92dbd4ab"),
+  "_id": "6784c8cdd2cb986c92dbd4ab",
   "title": "The Hobbit",
   "year": 1937,
   "genre": ["Fantasy", "Classic"],
