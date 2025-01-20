@@ -94,7 +94,25 @@ MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and a
 
 ## Data modeling – embedding data or using references
 
-Let's consider the case where we would need to store more author-related information to the `book` collection, such as the author's nationality and year of birth. We would need to consider whether adding new attributes to the `book` collection or adding a new `author` collection and referencing it from the `book` collection documents. The first approach has issues with data duplication because we would have the same author information in multiple documents causing wasted storage space and high risk of data inconsistency. The latter approach would resemble a foreign key referencing a primary key in a relational database schema and would not introduce similar issues as with the first approach.
+Let's consider the case where we would need to store more author-related information to the `book` collection, such as the author's nationality and year of birth. We would need to consider whether adding new attributes to the `book` collection or adding a new `author` collection and referencing it from the `book` collection documents. With the first approach, we could represent the author as an object with the required information. Let's for example consider the following `book` document:
+
+```json
+{
+  "_id": ObjectId("6784c8cdd2cb986c92dbd4ab"),
+  "title": "The Hobbit",
+  "year": 1937,
+  "genre": ["Fantasy", "Classic"],
+  "copies": 17,
+  "ebook": true,
+  "author": {
+    "name": "John Ronald Reuel Tolkien",
+    "birth_year": 1892,
+    "nationality": "British"
+  }
+}
+```
+
+The first approach has issues with data duplication because we would have the same author information in multiple documents (e.g. all books of the author John Ronald Reuel Tolkien) causing wasted storage space and high risk of data inconsistency. The latter approach would resemble a foreign key referencing a primary key in a relational database schema and would not introduce similar issues as with the first approach. The following database diagram visualizes the database structure in the mentioned approach:
 
 ```mermaid
 erDiagram
