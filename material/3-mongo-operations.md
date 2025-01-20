@@ -60,11 +60,11 @@ Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-do
 
 Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-documents/) guide. Then, implement and execute the following queries in the MongoDB Shell:
 
-1. Change the publishing year of the book named "Brave New World" to 1932
+1. Change the publishing year of the book named "Brave New World" to 1932 and the ebook status to true
 2. Set the number of copies as 0 for all books written by the author "John Ronald Reuel Tolkien"
-3. Increase the number of copies of books published after 1900 by two. Hint: [$inc](https://www.mongodb.com/docs/manual/reference/operator/update/inc/) operator
-4. Add the genre "Adventure" for the book "The Hobbit". Hint: [$push](https://www.mongodb.com/docs/manual/reference/operator/update/push/#mongodb-update-up.-push) operator
-5. Remove the genre "Classics" from the book "Anna Karenina". Hint: [$pull](https://www.mongodb.com/docs/manual/reference/operator/update/pull/) operator
+3. Increase the number of copies of books published after 1900 by two, _without reading the current value_. Hint: [$inc](https://www.mongodb.com/docs/manual/reference/operator/update/inc/) operator
+4. Add the genre "Adventure" for the book "The Hobbit", _without reading the current value_. Hint: [$push](https://www.mongodb.com/docs/manual/reference/operator/update/push/#mongodb-update-up.-push) operator
+5. Remove the genre "Classics" from the book "Anna Karenina", _without reading the current value_. Hint: [$pull](https://www.mongodb.com/docs/manual/reference/operator/update/pull/) operator
 
 > [!IMPORTANT]  
 > Exercise 4 👨‍💻: Save the mentioned five queries to the submission file.

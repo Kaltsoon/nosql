@@ -56,6 +56,14 @@
         "ebook": false
     },
     {
+        "title": "War and Peace",
+        "author": "Leo Tolstoy",
+        "year": 1869,
+        "categories": ["Historical Fiction", "Classic Literature", "War", "Philosophy"],
+        "copies": 12,
+        "ebook": true
+    },
+    {
         "title": "Sense and Sensibility",
         "author": "Jane Austen",
         "year": 1811,
@@ -100,13 +108,47 @@
         "author": "Herman Melville",
         "year": 1851,
         "categories": ["Classics", "Adventure", "American Literature", "Sea Stories"],
-        "copies": 10
+        "copies": 10,
+        "ebook": false
     },
     {
         "title": "It Ends with Us",
         "author": "Colleen Hoover",
         "year": 2016,
         "categories": ["Romance", "Contemporary Fiction", "Drama", "Social Issues"],
-        "copies": 22
+        "copies": 22,
+        "ebook": true
+    },
+    {
+        "title": "Verity",
+        "author": "Colleen Hoover",
+        "year": 2018,
+        "categories": ["Thriller", "Romantic Suspense", "Mystery", "Psychological Fiction"],
+        "copies": 15,
+        "ebook": false
+    },
+    {
+        "title": "Brave New World",
+        "author": "Aldous Huxley",
+        "year": 1932,
+        "categories": ["Dystopian Fiction", "Science Fiction", "Classic Literature", "Social Commentary"],
+        "copies": 20,
+        "ebook": false
+    },
+    {
+        "title": "Ugly Love",
+        "author": "Colleen Hoover",
+        "year": 2014,
+        "categories": ["Romance", "Contemporary Fiction", "Drama"],
+        "copies": 18,
+        "ebook": false
+    },
+    {
+        "title": "Island",
+        "author": "Aldous Huxley",
+        "year": 1962,
+        "categories": ["Utopian Fiction", "Philosophy", "Classic Literature", "Social Commentary"],
+        "copies": 43,
+        "ebook": true
     }
 ]
