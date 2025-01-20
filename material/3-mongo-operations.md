@@ -62,7 +62,7 @@ Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-
 
 1. Change the publishing year of the book named "Brave New World" to 1932 and the ebook status to true
 2. Set the number of copies as 0 for all books written by the author "John Ronald Reuel Tolkien"
-3. Increase the number of copies of books published after 1900 by two, _without reading the current value_. Hint: [$inc](https://www.mongodb.com/docs/manual/reference/operator/update/inc/) operator
+3. Increase the number of copies of books published after 1900 by two, _without reading the current values_. Hint: [$inc](https://www.mongodb.com/docs/manual/reference/operator/update/inc/) operator
 4. Add the genre "Adventure" for the book "The Hobbit", _without reading the current value_. Hint: [$push](https://www.mongodb.com/docs/manual/reference/operator/update/push/#mongodb-update-up.-push) operator
 5. Remove the genre "Classics" from the book "Anna Karenina", _without reading the current value_. Hint: [$pull](https://www.mongodb.com/docs/manual/reference/operator/update/pull/) operator
 
@@ -144,7 +144,7 @@ This is a very similar implementation to having a foreign key referencing a prim
 Now that we know about the MongoDB data model and the basic database operations, it is time to design a small database of our own. These are the requirements for the project's data model:
 
 - Should consist of at least two collections
-- At least two collections should have a relationship (using e.g. a similar "foreign key"-like implementation as in the previous example)
+- At least one relationship between two collections should be implemented using an id reference (like with the `book` and `author` collections in the example above). Otherwise, feel free to use embedded documents as well
 - At least two collections should each have at least three attributes (on top of the `_id` attribute) with more than one different data type (e.g. not only string-type attributes)
 
 Here are some examples of project ideas for inspiration:
