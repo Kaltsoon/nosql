@@ -136,8 +136,7 @@ erDiagram
     }
 ```
 
-Read the [Embedded Data Versus References
-](https://www.mongodb.com/docs/manual/data-modeling/concepts/embedding-vs-references/) guide. Then, let's consider how we could implement the reference between the `author` and the `book` collection in our database. Let's assume that we have the following documents in the `author` collection:
+Read the [Embedded Data Versus References](https://www.mongodb.com/docs/manual/data-modeling/concepts/embedding-vs-references/) guide. Then, let's consider how we could implement the relationship between the `author` and the `book` collection in our database using a reference. Let's assume that we have the following documents in the `author` collection:
 
 | \_id                                 | name                        | birth_year | nationality |
 | ------------------------------------ | --------------------------- | ---------- | ----------- |
@@ -166,10 +165,10 @@ Here's the same document in the JSON format:
 }
 ```
 
-This is a very similar implementation to having a foreign key referencing a primary key in a relational database.
+This is a very similar implementation to having a foreign key referencing a primary key in a relational database. It is worth noting however, that _in MongoDB there's no foreign key concept_ and because of that, no foreign key constraints.
 
 > [!IMPORTANT]  
-> Exercise 7 👨‍💻: Read the [Data consistency](https://www.mongodb.com/docs/manual/data-modeling/data-consistency/) documentation. Describe, what kind of problems the lack of [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) support cause in MongoDB for example in the previous example? What kind of application-level measures would be required to achieve data consistency? Consider cases such as creating a `book` document and deleting an `author` document in the previous example.
+> Exercise 7 👨‍💻: Read the [Data consistency](https://www.mongodb.com/docs/manual/data-modeling/data-consistency/) documentation. Describe, what kind of problems the lack of [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) support cause in MongoDB for example in the previous example? What kind of application-level measures would be required to achieve data consistency? You can consider cases such as creating a `book` document and deleting an `author` document in the previous example.
 
 ## Designing data model for the project
 
