@@ -51,7 +51,7 @@ Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-do
 4. Find the books written by the author "John Ronald Reuel Tolkien" before the year 1950
 5. Find the books written by either the author "Jane Austen" or "Aldous Huxley". Hint: [Logical Query Operators](https://www.mongodb.com/docs/manual/reference/operator/query-logical/)
 6. Find the books that are written after the year 1900 and before the year 2000
-7. Find the books of either the "Fantasy" or the "Drama" genre. Hint: [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/)
+7. Find the books that have the "Fantasy" genre. Hint: [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/)
 
 > [!IMPORTANT]  
 > Exercise 3 👨‍💻: Save the mentioned seven queries to the submission file.
@@ -170,7 +170,7 @@ This is a very similar implementation to having a foreign key referencing a prim
 > [!IMPORTANT]  
 > Exercise 7 👨‍💻: Read the [Data consistency](https://www.mongodb.com/docs/manual/data-modeling/data-consistency/) documentation. Describe, what kind of problems the lack of [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) support cause in MongoDB for example in the previous example? What kind of application-level measures would be required to achieve data consistency? You can consider cases such as creating a `books` collection document and deleting an `authors` collection document in the previous example.
 
-> [!TIP]  
+> [!NOTE]  
 > The [$lookup](https://www.mongodb.com/docs/manual/reference/operator/aggregation/lookup/) aggregation operation is the closest thing to RDMS's joins in MongoDB. It can be used to "join" documents from other collections using a reference key (e.g. joining an `authors` collection document into a `books` collection document based on the `author_id` attribute).
 
 ## Designing data model for the project
