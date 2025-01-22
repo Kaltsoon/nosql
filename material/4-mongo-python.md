@@ -56,15 +56,15 @@ from bson.objectid import ObjectId
 book_id_to_find = "6780b2d277f48b749b940ee4"
 
 # ❌ Using a string won't work and the following code won't find the correct document
-db.book.find_one({ "_id": book_id_to_find })
+db.books.find_one({ "_id": book_id_to_find })
 
 # ✔️ Using an ObjectId object will work
-db.book.find_one({ "_id": ObjectId(book_id_to_find) })
+db.books.find_one({ "_id": ObjectId(book_id_to_find) })
 ```
 
 ### Relationships between documents
 
-Consider how you establish relationships between documents, e.g. author of a book. For example, creating a `book` with an `author` could be implemented in the following way:
+Consider how you establish relationships between documents, e.g. author of a book. For example, creating a `books` collection document with an author could be implemented in the following way:
 
 ```python
 from pymongo import MongoClient
@@ -82,7 +82,7 @@ def add_book():
     "author": ObjectId(author)
   }
 
-  db.book.insert_one(book)
+  db.books.insert_one(book)
 ```
 
 In this case, the author could also be provided in a more user-friendly way by providing the author's full name and using it to find the corresponding author's `_id` attribute value.
