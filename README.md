@@ -33,5 +33,5 @@ The course advances through four sections in the following order. Complete the p
 
 1. [Introduction to NoSQL database management systems](./material/1-nosql-introduction.md)
 2. [Introduction to MongoDB database management system](./material/2-mongo-introduction.md)
-3. [Database operations in MongoDB](./material/3-mongo-operations.md)
+3. [Database operations and data model in MongoDB](./material/3-mongo-operations.md)
 4. [MongoDB with Python](./material/4-mongo-python.md)
