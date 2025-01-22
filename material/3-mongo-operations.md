@@ -1,6 +1,6 @@
 # Database operations and data model in MongoDB
 
-In the third section of the course, we learn the basic database operation in the MongoDB database management system. We will also cover the core concepts of the MongoDB data model. During this section, you will learn how to perform CRUD and aggregation operations in the MongoDB database and how to use embedded documents and document references in the MongoDB data model.
+In the third section of the course, we learn the basic database operation in the MongoDB database management system. We will also cover the core concepts of the MongoDB data model. During this section, you will learn how to perform CRUD and aggregation operations in the MongoDB database and how to use embedded documents and document references in the MongoDB data model. You will also design and set up a database for your project.
 
 ## CRUD operations
 
