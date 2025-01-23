@@ -196,7 +196,7 @@ Come up with your own database or use the ideas above. Feel free to make any mod
 > Exercise 8 👨‍💻: Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) for your project's data model in the format you prefer. Include the names of the entities, their relationships, their attributes, and data types. Add an image of the diagram to the submission file.
 
 > [!WARNING]  
-> Don't use whitespace (e.g. space between words) in database, collection, or attribute names. You can use the `_` symbol as a word separator e.g. attribute name `birth_year`, _not_ `birth year`. Collection names are commonly in plural form e.g. collection name `books`, not `book`.
+> Don't use whitespace (e.g. space between words) in database, collection, or attribute names. You can use the `_` symbol as a word separator e.g. attribute name `birth_year`, _not_ `birth year`. Collection names are commonly in plural form e.g. collection name `books`, _not_ `book`.
 
 > [!IMPORTANT]  
 > Exercise 9 👨‍💻: Create a database for your project and add the collections in the MongoDB Compass. Then, insert a few documents into each collection as test data using the MongoDB Shell. Take a screenshot of the database view in the MongoDB Compass (visible after clicking the database name on the connections list) and add it to the submission file. Revisit [Manage Databases in Compass](https://www.mongodb.com/docs/compass/current/databases/), [Manage Collections in Compass](https://www.mongodb.com/docs/compass/current/collections/) and [Insert Documents](https://www.mongodb.com/docs/manual/tutorial/insert-documents/) guides if you have trouble.
