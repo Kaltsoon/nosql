@@ -112,7 +112,7 @@ Let's consider the case where we would need to store more author-related informa
 }
 ```
 
-The first approach has issues with data duplication because we would have the same author information in multiple documents (e.g. all books of the author John Ronald Reuel Tolkien) causing wasted storage space and high risk of data inconsistency. The latter approach would resemble a foreign key referencing a primary key in a relational database schema and would not introduce similar issues as with the first approach. The following database diagram visualizes the database structure in the mentioned approach:
+The first approach has issues with data duplication because we would have the same author information in multiple documents (e.g. all books of the author John Ronald Reuel Tolkien) causing wasted storage space and high risk of data inconsistency (e.g. while updating author's information). The latter approach would resemble a foreign key referencing a primary key in a relational database schema and would not introduce similar issues as with the first approach. The following database diagram visualizes the database structure in the mentioned approach:
 
 ```mermaid
 erDiagram
@@ -165,7 +165,9 @@ Here's the same document in the JSON format:
 }
 ```
 
-This is a very similar implementation to having a foreign key referencing a primary key in a relational database. It is worth noting however, that _in MongoDB there's no foreign key concept_ and because of that, no foreign key constraints.
+This is a very similar implementation to having a foreign key referencing a primary key in a relational database. It is worth noting, however, that _in MongoDB there's no foreign key concept_ and because of that, no foreign key constraints.
+
+The [MongoDB Relationships](https://dev.to/chafroudtarek/mongodb-relationshipsone-to-oneone-to-manymany-to-many-njc) article covers more examples of different kinds of relationships between collections, for example, how to implement many-to-many relationships. The article describes the reference approach, but it is always possible to use embedded documents as well. However, it is worth noting the drawbacks mentioned above.
 
 > [!IMPORTANT]  
 > Exercise 7 👨‍💻: Read the [Data consistency](https://www.mongodb.com/docs/manual/data-modeling/data-consistency/) documentation. Describe, what kind of problems the lack of [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) support cause in MongoDB for example in the previous example? What kind of application-level measures would be required to achieve data consistency? You can consider cases such as creating a `books` collection document and deleting an `authors` collection document in the previous example.
@@ -187,7 +189,7 @@ Here are some examples of project ideas for inspiration:
 
 > _"Your teacher needs a database to track students' grades in different courses. A course has a name, teacher's name, credits, year, semester (e.g. "Spring"), language (e.g. "English"), and one more topics (e.g. "Python" or "MongoDB"). A course has many gradings for different students. A student grading has a student's name, student number, grade (between 0 and 5), and comment (teacher's free form textual comment regarding the grading)."_
 
-Come up with your own database or use the ideas above. Feel free to make any modifications. Once you have designed the database schema, create a database and the collections in MongoDB Compass. Then, insert a few documents to each collection using the MongoDB Shell.
+Come up with your own database or use the ideas above. Feel free to make any modifications. Once you have designed the database schema, create a database and the collections in MongoDB Compass. Then, insert a few documents into each collection using the MongoDB Shell.
 
 > [!WARNING]  
 > The library database used in the previous exercises isn't suitable for the project. Come up with your own project idea or use the examples above with possible modifications.
