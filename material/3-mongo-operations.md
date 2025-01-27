@@ -77,7 +77,7 @@ Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-
 Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-documents/) guide. Then, implement and execute the following queries in the MongoDB Shell:
 
 > [!NOTE]
-> Choose the deete operation based on the number of documents you intend to delete (one or many). This avoids accidently deleting too many documents.
+> Choose the delete operation based on the number of documents you intend to delete (one or many). This avoids accidently deleting too many documents.
 
 1. Delete the book "Pride and Prejudice"
 2. Delete all the books which have no copies and are ebooks
