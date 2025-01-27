@@ -65,7 +65,7 @@ Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-
 
 1. Change the publishing year of the book "Brave New World" to 1932 and the ebook status to true
 2. Set the number of copies as 0 for all books written by the author "John Ronald Reuel Tolkien"
-3. Increase the number of copies of books published after 1900 by two, _without reading the current values_. Hint: [$inc](https://www.mongodb.com/docs/manual/reference/operator/update/inc/) operator
+3. Increase the number of copies of books published after the year 1900 by two, _without reading the current values_. Hint: [$inc](https://www.mongodb.com/docs/manual/reference/operator/update/inc/) operator
 4. Add the genre "Adventure" for the book "The Hobbit", _without reading the current value_. Hint: [$push](https://www.mongodb.com/docs/manual/reference/operator/update/push/#mongodb-update-up.-push) operator
 5. Remove the genre "Classics" from the book "Anna Karenina", _without reading the current value_. Hint: [$pull](https://www.mongodb.com/docs/manual/reference/operator/update/pull/) operator
 
@@ -80,7 +80,7 @@ Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-
 > Choose the delete operation based on the number of documents you intend to delete (one or many). This avoids accidently deleting too many documents.
 
 1. Delete the book "Pride and Prejudice"
-2. Delete all the books which have no copies and are ebooks
+2. Delete all the books which have no copies
 
 > [!IMPORTANT]  
 > Exercise 5 👨‍💻: Save the mentioned two queries to the submission file.
