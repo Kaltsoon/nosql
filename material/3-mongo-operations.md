@@ -51,7 +51,7 @@ Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-do
 4. Find the books written by the author "John Ronald Reuel Tolkien" before the year 1950
 5. Find the books written by either the author "Jane Austen" or "Aldous Huxley". Hint: [Logical Query Operators](https://www.mongodb.com/docs/manual/reference/operator/query-logical/)
 6. Find the books that are written after the year 1900 and before the year 2000
-7. Find the books that have the "Fantasy" genre. Hint: [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/)
+7. Find the books that have either the "Fantasy" or the "Drama" genre. Hint: [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/)
 
 > [!IMPORTANT]  
 > Exercise 3 👨‍💻: Save the mentioned seven queries to the submission file.
@@ -59,6 +59,9 @@ Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-do
 ### Updating documents
 
 Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-documents/) guide. Then, implement and execute the following queries in the MongoDB Shell:
+
+> [!NOTE]
+> Choose the update operation based on the number of documents you intend to update (one or many).
 
 1. Change the publishing year of the book "Brave New World" to 1932 and the ebook status to true
 2. Set the number of copies as 0 for all books written by the author "John Ronald Reuel Tolkien"
@@ -72,6 +75,9 @@ Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-
 ### Deleting documents
 
 Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-documents/) guide. Then, implement and execute the following queries in the MongoDB Shell:
+
+> [!NOTE]
+> Choose the deete operation based on the number of documents you intend to delete (one or many). This avoids accidently deleting too many documents.
 
 1. Delete the book "Pride and Prejudice"
 2. Delete all the books which have no copies
