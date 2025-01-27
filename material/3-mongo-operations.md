@@ -80,7 +80,7 @@ Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-
 > Choose the deete operation based on the number of documents you intend to delete (one or many). This avoids accidently deleting too many documents.
 
 1. Delete the book "Pride and Prejudice"
-2. Delete all the books which have no copies
+2. Delete all the books which have no copies and are ebooks
 
 > [!IMPORTANT]  
 > Exercise 5 👨‍💻: Save the mentioned two queries to the submission file.

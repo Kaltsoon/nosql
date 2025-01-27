@@ -13,7 +13,7 @@
         "year": 1886,
         "categories": ["Philosophy", "Psychology", "Russian Literature", "Classics"],
         "copies": 0,
-        "ebook": false
+        "ebook": true
     },
     {
         "title": "The Night Circus",
@@ -150,5 +150,13 @@
         "categories": ["Utopian Fiction", "Philosophy", "Classic Literature", "Social Commentary"],
         "copies": 43,
         "ebook": true
-    }
+    },
+    {
+      "title": "The Echoes of Evermore",
+      "author": "Lila Hart",
+      "year": 2023,
+      "categories": ["Fantasy", "Adventure", "Romance"],
+      "copies": 0,
+      "ebook": true
+  }
 ]
