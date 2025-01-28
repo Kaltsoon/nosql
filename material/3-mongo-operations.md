@@ -47,7 +47,7 @@ Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-do
 
 1. Find the book "War and Peace"
 2. Find the book "War and Peace" using its `_id` attribute (use the document's `_id` attribute value you got from the previous query's result). Note that `ObjectId("507f1f77bcf86cd799439011")` is an `ObjectId` object whereas `"507f1f77bcf86cd799439011"` is a string
-3. Find the books which have more than 5 copies. Hint: [Comparison Query Operators](https://www.mongodb.com/docs/manual/reference/operator/query-comparison/#std-label-query-selectors-comparison)
+3. Find the books which have more than 15 copies. Hint: [Comparison Query Operators](https://www.mongodb.com/docs/manual/reference/operator/query-comparison/#std-label-query-selectors-comparison)
 4. Find the books written by the author "John Ronald Reuel Tolkien" before the year 1950
 5. Find the books written by either the author "Jane Austen" or "Aldous Huxley". Hint: [Logical Query Operators](https://www.mongodb.com/docs/manual/reference/operator/query-logical/)
 6. Find the books that are written after the year 1900 and before the year 2000
@@ -65,7 +65,7 @@ Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-
 
 1. Change the publishing year of the book "Brave New World" to 1932 and the ebook status to true
 2. Set the number of copies as 0 for all books written by the author "John Ronald Reuel Tolkien"
-3. Increase the number of copies of books published after the year 1900 by two, _without reading the current values_. Hint: [$inc](https://www.mongodb.com/docs/manual/reference/operator/update/inc/) operator
+3. Increase the number of copies of books published after the year 1930 by two, _without reading the current values_. Hint: [$inc](https://www.mongodb.com/docs/manual/reference/operator/update/inc/) operator
 4. Add the genre "Adventure" for the book "The Hobbit", _without reading the current value_. Hint: [$push](https://www.mongodb.com/docs/manual/reference/operator/update/push/#mongodb-update-up.-push) operator
 5. Remove the genre "Classics" from the book "Anna Karenina", _without reading the current value_. Hint: [$pull](https://www.mongodb.com/docs/manual/reference/operator/update/pull/) operator
 

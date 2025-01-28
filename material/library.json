@@ -158,5 +158,29 @@
       "categories": ["Fantasy", "Adventure", "Romance"],
       "copies": 0,
       "ebook": true
+  },
+  {
+    "title": "The Shadow of Starlight",
+    "author": "Lila Hart",
+    "year": 2022,
+    "categories": ["Fantasy", "Dark Fantasy", "Mystery"],
+    "copies": 9,
+    "ebook": true
+  },
+  {
+    "title": "Whispers of the Wildwood",
+    "author": "Lila Hart",
+    "year": 2024,
+    "categories": ["Fantasy", "Adventure", "Mythology"],
+    "copies": 20,
+    "ebook": false
+  },
+  {
+    "title": "The Dawn of Serenity",
+    "author": "Leo Tolstoy",
+    "year": 1899,
+    "categories": ["Philosophy", "Historical Fiction", "Drama"],
+    "copies": 0,
+    "ebook": true
   }
 ]
