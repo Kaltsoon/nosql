@@ -11,7 +11,7 @@ The [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operat
 
 ### Inserting documents
 
-> [!TIP]  
+> [!WARNING]  
 > While you are reading the MongoDB documentation, choose the language as "MongoDB Shell" from the "Select your language" menu.
 
 Read the [Insert Documents](https://www.mongodb.com/docs/manual/tutorial/insert-documents/) guide. Then, insert a single document to the `books` collection with the following details using the `insertOne` method:
@@ -33,8 +33,8 @@ Insert the following documents simultaneously using the `insertMany` method:
 | --------------------------------------------------- | --------------------------- | ---- | -------------------------------------------------------- | ------ | ----- |
 | "War and Peace"                                     | "Leo Tolstoy"               | 1869 | "Historical Fiction", "Classic", "Philosophical Fiction" | 84     | true  |
 | "The Lord of the Rings: The Fellowship of the Ring" | "John Ronald Reuel Tolkien" | 1954 | "Fantasy", "Adventure", "Epic"                           | 0      | false |
-| "Brave New World"                                   | "Aldous Huxley"             | 1931 | "Dystopian", "Science Fiction", "Classic"                | 11     | false |
-| "The Hobbit"                                        | "John Ronald Reuel Tolkien" | 1937 | "Fantasy", "Classic"                                     | 17     | true  |
+| "Brave New World"                                   | "Aldous Huxley"             | 1932 | "Dystopian", "Science Fiction", "Classic"                | 20     | true  |
+| "The Hobbit"                                        | "John Ronald Reuel Tolkien" | 1930 | "Fantasy", "Adventure", "Classic"                        | 17     | false |
 
 Then, list all the documents in the `books` collection.
 
@@ -45,12 +45,16 @@ Then, list all the documents in the `books` collection.
 
 Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-documents/) guide. Then, implement and execute the following queries in the MongoDB Shell:
 
-1. Find the book "War and Peace"
-2. Find the book "War and Peace" using its `_id` attribute (use the document's `_id` attribute value you got from the previous query's result). Note that `ObjectId("507f1f77bcf86cd799439011")` is an `ObjectId` object whereas `"507f1f77bcf86cd799439011"` is a string
-3. Find the books which have more than 15 copies. Hint: [Comparison Query Operators](https://www.mongodb.com/docs/manual/reference/operator/query-comparison/#std-label-query-selectors-comparison)
-4. Find the books written by the author "John Ronald Reuel Tolkien" before the year 1950
-5. Find the books written by either the author "Jane Austen" or "Aldous Huxley". Hint: [Logical Query Operators](https://www.mongodb.com/docs/manual/reference/operator/query-logical/)
-6. Find the books that are written after the year 1900 and before the year 2000
+<!--
+Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-documents/) and the [cursor.sort()](https://www.mongodb.com/docs/manual/reference/method/cursor.sort/) guides. Then, implement and execute the following queries in the MongoDB Shell:
+-->
+
+1. Find the book "To Kill a Mockingbird"
+2. Find the book "To Kill a Mockingbird" using its `_id` attribute (use the document's `_id` attribute value you got from the previous query's result). Note that `ObjectId("507f1f77bcf86cd799439011")` is an `ObjectId` object whereas `"507f1f77bcf86cd799439011"` is a string
+3. Find the books that have more than fifteen copies. Hint: [Comparison Query Operators](https://www.mongodb.com/docs/manual/reference/operator/query-comparison/#std-label-query-selectors-comparison) <!-- Sort the books in ascending order by the number copies -->
+4. Find the books written by the author "Leo Tolstoy" before the year 1890 <!-- Sort the books in descending order by the publishing year  -->
+5. Find the books written by either the author "Jane Austen" or "Aldous Huxley". Hint: [Logical Query Operators](https://www.mongodb.com/docs/manual/reference/operator/query-logical/) <!-- Sort the books in ascending order by the author's name and in descending order by the publishing year -->
+6. Find the books that are published after the year 1900 and before the year 2000
 7. Find the books that have either the "Fantasy" or the "Drama" genre. Hint: [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/)
 
 > [!IMPORTANT]  
@@ -63,11 +67,11 @@ Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-
 > [!NOTE]
 > Choose the update operation based on the number of documents you intend to update (one or many).
 
-1. Change the publishing year of the book "Brave New World" to 1932 and the ebook status to true
-2. Set the number of copies as 0 for all books written by the author "John Ronald Reuel Tolkien"
-3. Increase the number of copies of books published after the year 1930 by two, _without reading the current values_. Hint: [$inc](https://www.mongodb.com/docs/manual/reference/operator/update/inc/) operator
-4. Add the genre "Adventure" for the book "The Hobbit", _without reading the current value_. Hint: [$push](https://www.mongodb.com/docs/manual/reference/operator/update/push/#mongodb-update-up.-push) operator
-5. Remove the genre "Classics" from the book "Anna Karenina", _without reading the current value_. Hint: [$pull](https://www.mongodb.com/docs/manual/reference/operator/update/pull/) operator
+1. Change the publishing year of the book "The Hobbit" to 1937 and the ebook status to true
+2. Set the number of copies as zero for all books written by the author "John Ronald Reuel Tolkien"
+3. Increase the number of copies of books published after the year 1920 by two, _without reading the current values_. Hint: [$inc](https://www.mongodb.com/docs/manual/reference/operator/update/inc/) operator
+4. Add the genre "Adventure" for the book "Moby-Dick", _without reading the current value_. Hint: [$push](https://www.mongodb.com/docs/manual/reference/operator/update/push/#mongodb-update-up.-push) operator <!-- Add the genre "American literature" for all books written by the author "Colleen Hoover" -->
+5. Remove the genre "Classic" from the book "Anna Karenina", _without reading the current value_. Hint: [$pull](https://www.mongodb.com/docs/manual/reference/operator/update/pull/) operator <!-- Remove the genre "Non-fiction" from the book "Island" -->
 
 > [!IMPORTANT]  
 > Exercise 4 👨‍💻: Save the mentioned five queries to the submission file.
@@ -77,10 +81,10 @@ Read the [Update Documents](https://www.mongodb.com/docs/manual/tutorial/update-
 Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-documents/) guide. Then, implement and execute the following queries in the MongoDB Shell:
 
 > [!NOTE]
-> Choose the delete operation based on the number of documents you intend to delete (one or many). This avoids accidently deleting too many documents.
+> Choose the delete operation based on the number of documents you intend to delete (one or many). This avoids accidentally deleting too many documents.
 
 1. Delete the book "Pride and Prejudice"
-2. Delete all the books which have no copies
+2. Delete all the books which have no copies and are ebooks
 
 > [!IMPORTANT]  
 > Exercise 5 👨‍💻: Save the mentioned two queries to the submission file.
@@ -89,11 +93,12 @@ Read the [Delete Documents](https://www.mongodb.com/docs/manual/tutorial/remove-
 
 MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and aggregation functions such as `COUNT` and `SUM`. Read the [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) guide. Then, implement and execute the following aggregations in the MongoDB Shell:
 
-1. Display the total number of books. Hint: [$group](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/) and [$count](https://www.mongodb.com/docs/manual/reference/operator/aggregation/count-accumulator/) operators
+1. Display the total number of books. Hint: [$group](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/) and [$count](https://www.mongodb.com/docs/manual/reference/operator/aggregation/count-accumulator/) operators including the examples in both guides
 2. Display the total number of book copies. Hint: [$sum](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/) operator
 3. Display the number of books by each author
-4. Display the number of book copies by each author
-5. Display the total number of book copies of books that are ebooks and in the "Romance" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator
+4. Display the number of book copies by each author <!-- Sort the authors by the number of their book copies. Hint: [$sort](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sort/) -->
+5. Display the total number of book copies of books that are not ebooks and have the "Romance" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator. Pay attention to the order of the aggregation operations (that is, the order of the aggregation operation objects in the argument array)
+6. ⭐ Bonus: display the publishing year of each author's first and latest book. Hint: [$min](https://www.mongodb.com/docs/manual/reference/operator/aggregation/min/) and [$max](https://www.mongodb.com/docs/manual/reference/operator/aggregation/max/) operators
 
 > [!IMPORTANT]  
 > Exercise 6 👨‍💻: Save the mentioned five queries to the submission file.

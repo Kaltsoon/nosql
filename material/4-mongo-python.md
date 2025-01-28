@@ -6,6 +6,12 @@ In the fourth section of the course, we learn how to use MongoDB with Python pro
 
 PyMongo is a Python library containing tools for working with MongoDB and is the recommended way to work with MongoDB from Python. With PyMongo, we can execute similar database operations as we did with the MongoDB Shell, but using Python. This is handy when we want to implement database applications instead of just executing queries.
 
+```mermaid
+flowchart LR
+    app(Python application)-- Database query --> db[(MongoDB Database)]
+    db-- Query response --> app
+```
+
 First things first, we need to install the PyMongo library. On Windows computer execute (type in the command and press the <kbd>Enter</kbd> key) the following command in the [PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.4) application and on macOS computer in the [Terminal](https://support.apple.com/en-gb/guide/terminal/welcome/mac) application:
 
 ```bash
@@ -36,14 +42,13 @@ Now that we know the basics of PyMongo, the last part of the course is to implem
 
 Implement the application _one simple feature at a time_ and confirm that it works before moving on to the next feature. Starting with a create feature of one of the collections is a good place to start. Use the MongoDB Compass to verify that different features work, for example by checking that a document is added to a collection while using the create feature.
 
-These PyMongo guides will be useful while implementing the CRUD and other features:
+These PyMongo guides will be useful while implementing the CRUD features:
 
 - [Insert Document](https://www.w3schools.com/python/python_mongodb_insert.asp)
 - [Find Documents](https://www.w3schools.com/python/python_mongodb_find.asp)
 - [Update Documents](https://www.w3schools.com/python/python_mongodb_update.asp)
 - [Delete Documents](https://www.w3schools.com/python/python_mongodb_delete.asp)
-- [Sorting Documents](https://www.w3schools.com/python/python_mongodb_sort.asp)
-- [Aggregation Pipelines](https://www.w3schools.com/mongodb/mongodb_aggregations_intro.php)
+- [Sort Documents](https://www.w3schools.com/python/python_mongodb_sort.asp)
 
 ### Working with the `_id` primary key
 
@@ -76,6 +81,8 @@ def add_book():
   # Request other attributes from the user...
   author = input("Author ID:")
 
+  # Before inserting, we can also check that the author document exists to enforce referential integrity
+
   book = {
     # Other keys matching the document's attributes...
     # We need to use an ObjectId object as the author attribute value
@@ -92,7 +99,7 @@ In this case, the author could also be provided in a more user-friendly way by p
 If you want to expand your application here are some ideas for optional requirements:
 
 - Filtering information (e.g. searching books based on name, author, category, or other properties)
-- Statistics (e.g. number of books of each author)
+- Statistics (e.g. number of books of each author). The [Aggregation Pipelines](https://www.w3schools.com/mongodb/mongodb_aggregations_intro.php) guide has examples of aggregation operations with PyMongo
 - Instead of a local MongoDB database, create a database in the [MongoDB Atlas](https://www.mongodb.com/products/platform/cloud) and [connect to it in your application](https://pymongo.readthedocs.io/en/stable/atlas.html). NB: If you are going to publish the source code of your project (e.g. in GitHub), make sure to use an [envinronment variable](https://www.geeksforgeeks.org/using-python-environment-variables-with-python-dotenv/) for the database connection string
 
 > [!IMPORTANT]  
