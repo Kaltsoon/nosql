@@ -15,7 +15,7 @@ MongoDB is a documented-oriented database. Familiarize yourself with document-or
 Once you have read through the articles, test your knowledge by completing the "Introduction to MongoDB database management system" Moodle exam. After passing the exam, move on to the next topic in this section.
 
 > [!IMPORTANT]  
-> Exercise 1 👨‍💻: Read the articles mentioned above. Then, take and pass the "Introduction to MongoDB database management system" multiple choice Moodle exam related to the principles of the MongoDB database management system. You have 45 minutes to complete the exam and you can retake it two times in case you fail.
+> Exercise 1 👨‍💻: Read the three articles mentioned above. Then, take and pass the "Introduction to MongoDB database management system" multiple choice Moodle exam related to the principles of the MongoDB database management system. You have 45 minutes to complete the exam and you can retake it two times in case you fail.
 
 ## Installing MongoDB on our computer
 
@@ -24,6 +24,12 @@ So that we can start practicing the usage of MongoDB we need to install the data
 ## User interfaces for MongoDB
 
 [MongoDB Compass](https://www.mongodb.com/products/tools/compass) is a graphical user interface for operating MongoDB. Other user interfaces for the purpose are e.g. [MongoDB Shell](https://www.mongodb.com/docs/mongodb-shell/) and [MongoDB Vs Code extension]( https://www.mongodb.com/products/tools/vs-code). We will be using MongoDB Compass and the integrated MongoDB Shell in our examples.
+
+```mermaid
+flowchart LR
+    compass(MongoDB Compass)-- Database query --> db[(MongoDB Database)]
+    db-- Query response --> compass
+```
 
 MongoDB Compass should already be installed along with the MongoDB database management system installed previously. If not, you can install it [here](https://www.mongodb.com/try/download/compass). Once installed, do the following:
 
@@ -36,8 +42,11 @@ MongoDB Compass should already be installed along with the MongoDB database mana
 > [!IMPORTANT]  
 > Exercise 2 👨‍💻: Create a file (for example a Word document) and include a [screenshot](https://www.take-a-screenshot.org/) of the query and its result in the MongoDB Shell mentioned in step 5 to the file. Submit the file to the "Introduction to MongoDB database management system" Moodle submission in PDF format.
 
+> [!NOTE]
+> Bonus sections and exercises in the material (marked with ⭐) are optional and can be used to deepen your MongoDB knowledge.
+
 ## ⭐ Bonus: MongoDB database in the cloud
 
-[MongoDB Atlas](https://www.mongodb.com/atlas) is a cloud-based database service provided by MongoDB, Inc., that allows users to deploy, manage, and scale MongoDB databases with ease. It provides a free plan for hosting the MongoDB database in the cloud which is accessible to the outside world. This is useful while developing for example a web application used by multiple users.
+[MongoDB Atlas](https://www.mongodb.com/atlas) is a cloud-based database service provided by MongoDB, Inc., that allows users to deploy, manage, and scale MongoDB databases with ease. It provides a free plan for hosting the MongoDB database in the cloud which is accessible to the outside world. This is useful while developing for example a web application used by multiple users. The [Connect via Compass](https://www.mongodb.com/docs/atlas/compass-connection/) guide provides instructions on how to connect to a cloud-hosted MongoDB database using MongoDB Compass.
 
 ⏭️ [Move on to the next section](./3-mongo-operations.md)
