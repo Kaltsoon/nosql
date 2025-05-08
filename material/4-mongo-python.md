@@ -115,8 +115,8 @@ You are done, good job! 🎉 The last thing to do is to submit the project. Ther
 > [!IMPORTANT]  
 > Exercise 3 👨‍💻: Submit your project work to the "MongoDB with Python" Moodle submission by following the instructions above.
 
-Once you have done all the submissions in Moodle (from this section and the previous sections), your work will be reviewed after the final deadline. After the review, if there are no problems with your work, you'll get the credits. Otherwise, you'll be asked to make changes and resubmit your work. _Final deadline is strict_ and submissions made after it won't be reviewed and no credits will be granted.
+Once you have done all the submissions in Moodle (from this section and the previous sections), your work will be reviewed after the final deadline. After the review, if there are no problems with your work, you'll get the credits. Otherwise, you'll be asked to make changes and resubmit your work.
 
 <!-- TODO -->
 > [!WARNING]  
-> The final deadline for the coursework is on TODO.
+> The final deadline for the coursework is on TODO. _Final deadline is strict_ and submissions made after it won't be reviewed and no credits will be granted.
