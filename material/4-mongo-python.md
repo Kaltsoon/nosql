@@ -1,6 +1,6 @@
 # MongoDB with Python
 
-In the fourth section of the course, we learn how to use MongoDB with Python programming language. During this section, you will learn how to build a database application using Python and the PyMongo library.
+In the fourth section of the course, we learn how to use MongoDB with the Python programming language. During this section, you will learn how to build a database application using Python and the PyMongo library.
 
 ## PyMongo
 
@@ -12,7 +12,7 @@ flowchart LR
     db-- Query response --> app
 ```
 
-First things first, we need to install the PyMongo library. On Windows computer execute (type in the command and press the <kbd>Enter</kbd> key) the following command in the [PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.4) application and on macOS computer in the [Terminal](https://support.apple.com/en-gb/guide/terminal/welcome/mac) application:
+First things first, we need to install the PyMongo library. On a Windows computer, execute (type in the command and press the <kbd>Enter</kbd> key) the following command in the [PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.4) application, and on a macOS computer in the [Terminal](https://support.apple.com/en-gb/guide/terminal/welcome/mac) application:
 
 ```bash
 python -m pip install pymongo
@@ -35,12 +35,12 @@ Execute the program after each step and see that there are no errors.
 
 ## Database application
 
-Now that we know the basics of PyMongo, the last part of the course is to implement a database application for our project. At this point, you should have already designed the database schema and inserted some test data to the database. Use Python and PyMongo to implement a database application which uses the database. These are the requirements for the application:
+Now that we know the basics of PyMongo, the last part of the course is to implement a database application for our project. At this point, you should have already designed the database schema and inserted some test data to the database. Use Python and PyMongo to implement a database application that uses the database. These are the requirements for the application:
 
 - _Some kind of user interface_. The easiest way is to implement a command-line user interface that reads user input from the command line with the [input](https://www.w3schools.com/python/ref_func_input.asp) function and prints information with the [print](https://www.w3schools.com/python/ref_func_print.asp) function. You can use [this](./application.py) Python application as a starting point. If you want, you can also do something fancier, like a web application using [Flask](https://flask.palletsprojects.com/en/3.0.x/quickstart/)
 - Usage of _all CRUD operations_ for at least two collections
 
-Implement the application _one simple feature at a time_ and confirm that it works before moving on to the next feature. Starting with a create feature of one of the collections is a good place to start. Use the MongoDB Compass to verify that different features work, for example by checking that a document is added to a collection while using the create feature.
+Implement the application _one simple feature at a time_ and confirm that it works before moving on to the next feature. Starting with a create feature of one of the collections is a good place to start. Use the MongoDB Compass to verify that different features work, for example, by checking that a document is added to a collection while using the create feature.
 
 These PyMongo guides will be useful while implementing the CRUD features:
 
@@ -96,27 +96,27 @@ In this case, the author could also be provided in a more user-friendly way by p
 
 ### ⭐ Bonus: ideas for additional features
 
-If you want to expand your application here are some ideas for optional requirements:
+If you want to expand your application, here are some ideas for optional requirements:
 
-- Filtering information (e.g. searching books based on name, author, category, or other properties)
-- Statistics (e.g. number of books of each author). The [Aggregation Pipelines](https://www.w3schools.com/mongodb/mongodb_aggregations_intro.php) guide has examples of aggregation operations with PyMongo
-- Instead of a local MongoDB database, create a database in the [MongoDB Atlas](https://www.mongodb.com/products/platform/cloud) and [connect to it in your application](https://pymongo.readthedocs.io/en/stable/atlas.html). NB: If you are going to publish the source code of your project (e.g. in GitHub), make sure to use an [envinronment variable](https://www.geeksforgeeks.org/using-python-environment-variables-with-python-dotenv/) for the database connection string
+- Filtering information (e.g,. searching books based on name, author, category, or other properties)
+- Statistics (e.g., number of books of each author). The [Aggregation Pipelines](https://www.w3schools.com/mongodb/mongodb_aggregations_intro.php) guide has examples of aggregation operations with PyMongo
+- Instead of a local MongoDB database, create a database in the [MongoDB Atlas](https://www.mongodb.com/products/platform/cloud) and [connect to it in your application](https://pymongo.readthedocs.io/en/stable/atlas.html). NB: If you are going to publish the source code of your project (e.g., in GitHub), make sure to use an [environment variable](https://www.geeksforgeeks.org/using-python-environment-variables-with-python-dotenv/) for the database connection string
 
 > [!IMPORTANT]  
 > Exercise 2 👨‍💻: Implement a Python database application based on the requirements.
 
-## Submitting the course work
+## Submitting the coursework
 
 You are done, good job! 🎉 The last thing to do is to submit the project. There are two ways to do it:
 
-1. Create a _public_ [GitHub](https://github.com/) repository for the exercises and the project. This is the recommended way because it adds another cool project to your portfolio. But, if you don't know anything about Git or GitHub, you don't have to learn it for this course. Add the link to the GitHub repository to the "MongoDB with Python" Moodle submission
+1. Create a _public_ [GitHub](https://github.com/) repository for the exercises and the project. This is the recommended way because it adds another cool project to your portfolio. But if you don't know anything about Git or GitHub, you don't have to learn it for this course. Add the link to the GitHub repository to the "MongoDB with Python" Moodle submission
 2. Add the project code to a folder and turn it into a compressed zip folder. Add the zip folder to the "MongoDB with Python" Moodle submission
 
 > [!IMPORTANT]  
 > Exercise 3 👨‍💻: Submit your project work to the "MongoDB with Python" Moodle submission by following the instructions above.
 
-Once you have done all the submissions (from this section and the previous sections), your work will be reviewed after the final deadline. If it takes more than two weeks for your submission to be reviewed, contact the teacher. After the review, if there are no problems with your work, you'll get the credits. Otherwise, you'll be asked to make changes and re-submit your work.
+Once you have done all the submissions in Moodle (from this section and the previous sections), your work will be reviewed after the final deadline. After the review, if there are no problems with your work, you'll get the credits. Otherwise, you'll be asked to make changes and resubmit your work. _Final deadline is strict_ and submissions made after it won't be reviewed and no credits will be granted.
 
 <!-- TODO -->
 > [!WARNING]  
-> The final deadline for the course work is on TODO.
+> The final deadline for the coursework is on TODO.
