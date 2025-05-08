@@ -141,9 +141,9 @@ In this approach, the `author` attribute contains an [embedded document](https:/
 >     "street": "111 Elm Street",    
 >     "city": "Springfield",    
 >     "state": "Ohio",    
->      "country": "US",    
->      "zip": "00000"    
->    }
+>     "country": "US",    
+>     "zip": "00000"    
+>   }
 > }
 > ```
  
