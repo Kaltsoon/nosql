@@ -98,14 +98,19 @@ MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and a
 3. Display the number of books by each author
 4. Display the number of book copies by each author <!-- Sort the authors by the number of their book copies in descending order and by their name in ascending order. Hint: [$sort](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sort/) -->
 5. Display the total number of book copies of books that are not ebooks and have the "Romance" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator. Pay attention to the order of the aggregation operations (that is, the order of the aggregation operation objects in the argument array)
-6. ⭐ Bonus: display the publishing year of each author's first and latest book. Hint: find suitable [aggregation operators](https://www.mongodb.com/docs/manual/reference/operator/aggregation/) for finding the minimum and maximum value of documents
+6. ⭐ Bonus: Display the publishing year of each author's first and latest book. Hint: find suitable [aggregation operators](https://www.mongodb.com/docs/manual/reference/operator/aggregation/) for finding the minimum and maximum value of documents
 
 > [!IMPORTANT]  
 > Exercise 6 👨‍💻: Save the mentioned five queries to the submission file.
 
 ## Data modeling – embedding data or using references
 
-Let's consider the case where we would need to store more author-related information to the `books` collection, such as the author's nationality and year of birth. We would need to consider whether adding new attributes to the `books` collection or adding a new `authors` collection and referencing it from the `books` collection documents. With the first approach, we could represent the author as an object with the required information. Let's for example consider the following `books` document:
+Let's consider the case where we would need to store more author-related information to the `books` collection, such as the author's nationality and year of birth. We would need to consider two alternative implementations:
+
+1. Adding new attributes to the `books` collection
+2. Adding a new `authors` collection and referencing it from the `books` collection documents
+
+With the first approach, we could represent the author as an object with the required information. Let's, for example, consider the following `books` document:
 
 ```json
 {
@@ -123,7 +128,26 @@ Let's consider the case where we would need to store more author-related informa
 }
 ```
 
-The first approach has issues with data duplication because we would have the same author information in multiple documents (e.g. all books of the author John Ronald Reuel Tolkien) causing wasted storage space and high risk of data inconsistency (e.g. while updating author's information). The latter approach would resemble a foreign key referencing a primary key in a relational database schema and would not introduce similar issues as with the first approach. The following database diagram visualizes the database structure in the mentioned approach:
+In this approach, the `author` attribute contains an [embedded document](https://www.mongodb.com/resources/products/fundamentals/embedded-mongodb). This approach has issues with data duplication because we would have the same author information in multiple documents (e.g., all books of the author John Ronald Reuel Tolkien), causing wasted storage space and a high risk of data inconsistency (e.g., while updating the author's information).
+
+> [!TIP]
+> Embedded documents are more suitable, for example, in cases where the embedded data isn't repeated within the collection, and updating it doesn't reflect other documents. For example, a user's home address information:
+> ```json
+> {
+>   "_id": "681c99f43c05bd6eec367321",
+>   "first_name": "John",
+>   "last_name": "Doe",
+>   "address": {    
+>     "street": "111 Elm Street",    
+>     "city": "Springfield",    
+>     "state": "Ohio",    
+>      "country": "US",    
+>      "zip": "00000"    
+>    }
+> }
+> ```
+ 
+The second approach would resemble a foreign key referencing a primary key in a relational database schema and would not introduce similar issues as with the first approach. The following database diagram visualizes the database structure in the mentioned approach:
 
 ```mermaid
 erDiagram
@@ -156,7 +180,7 @@ Read the [Embedded Data Versus References](https://www.mongodb.com/docs/manual/d
 | ObjectId("6741745dd39e63730ea251b7") | "Aldous Huxley"             | 1894       | "British"   |
 | ObjectId("6741746bbc9c119bcafc58ee") | "Jane Austen"               | 1775       | "British"   |
 
-Now, in the `books` collection the `author_id` attribute can be an `ObjectId` object referencing the corresponding document's `_id` attribute in the `authors` collection. For example:
+Now, in the `books` collection, the `author_id` attribute can be an `ObjectId` object referencing the corresponding document's `_id` attribute in the `authors` collection. For example:
 
 | \_id                                 | title        | author_id                            | year | genres               | copies | ebook |
 | ------------------------------------ | ------------ | ------------------------------------ | ---- | -------------------- | ------ | ----- |
@@ -176,15 +200,15 @@ Here's the same document in the JSON format:
 }
 ```
 
-This is a very similar implementation to having a foreign key referencing a primary key in a relational database. It is worth noting, however, that _in MongoDB there's no foreign key concept_ and because of that, no foreign key constraints.
+This is a very similar implementation to having a foreign key referencing a primary key in a relational database. It is worth noting, however, that _in MongoDB, there's no foreign key concept_ and because of that, no foreign key constraints.
 
 The [MongoDB Relationships](https://dev.to/chafroudtarek/mongodb-relationshipsone-to-oneone-to-manymany-to-many-njc) article covers more examples of different kinds of relationships between collections, for example, how to implement many-to-many relationships. The article describes the reference approach, but it is always possible to use embedded documents as well. However, it is worth noting the possible drawbacks mentioned above.
 
 > [!IMPORTANT]  
-> Exercise 7 👨‍💻: Read the [Data consistency](https://www.mongodb.com/docs/manual/data-modeling/data-consistency/) documentation. Describe, what kind of problems the lack of [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) support cause in MongoDB for example in the previous example? What kind of application-level measures would be required to achieve data consistency? You can consider cases such as creating a `books` collection document and deleting an `authors` collection document in the previous example.
+> Exercise 7 👨‍💻: Read the [Data consistency](https://www.mongodb.com/docs/manual/data-modeling/data-consistency/) documentation. Describe what kind of problems the lack of [referential integrity](https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential) support causes in MongoDB, for example, in the previous example? What kind of application-level measures would be required to achieve data consistency? You can consider cases such as creating a `books` collection document and deleting an `authors` collection document in the previous example.
 
 > [!NOTE]  
-> The [$lookup](https://www.mongodb.com/docs/manual/reference/operator/aggregation/lookup/) aggregation operation is the closest thing to RDMS's joins in MongoDB. It can be used to "join" documents from other collections using a reference key (e.g. joining an `authors` collection document into a `books` collection document based on the `author_id` attribute).
+> The [$lookup](https://www.mongodb.com/docs/manual/reference/operator/aggregation/lookup/) aggregation operation is the closest thing to RDMS's joins in MongoDB. It can be used to "join" documents from other collections using a reference key (e.g., joining an `authors` collection document into a `books` collection document based on the `author_id` attribute).
 
 ## Designing data model for the project
 
@@ -192,13 +216,13 @@ Now that we know about the MongoDB data model and the basic database operations,
 
 - Should consist of at least two collections
 - At least one relationship between two collections should be implemented using an id reference (like with the `books` and `authors` collections in the example above). Otherwise, feel free to use embedded documents as well
-- At least two collections should each have at least three attributes (on top of the `_id` attribute) with more than one different data type (e.g. not only string-type attributes)
+- At least two collections should each have at least three attributes (on top of the `_id` attribute) with more than one different data type (e.g., not only string-type attributes)
 
 Here are some examples of project ideas for inspiration:
 
-> _"Your friend forgot to buy the snacks for the party again and they could use a shopping list database. A shopping list has a name, description, completion status (is the shopping list completed or not), the name of the store (e.g. "Lidl"), and the name of the shopper. A shopping list contains many items the shopper should buy from the store. Item has a name (e.g. "Chips"), a brand (e.g. "Pringles"), quantity (e.g. 2), one or more tags (e.g. "Dairy products" or "Snacks"), and a purchased status (is the item purchased or not)."_
+> _"Your friend forgot to buy the snacks for the party again, and they could use a shopping list database. A shopping list has a name, description, completion status (is the shopping list completed or not), the name of the store (e.g., "Lidl"), and the name of the shopper. A shopping list contains many items the shopper should buy from the store. Item has a name (e.g. "Chips"), a brand (e.g. "Pringles"), quantity (e.g. 2), one or more tags (e.g. "Dairy products" or "Snacks"), and a purchased status (is the item purchased or not)."_
 
-> _"Your teacher needs a database to track students' grades in different courses. A course has a name, teacher's name, credits, year, semester (e.g. "Spring"), language (e.g. "English"), and one more topics (e.g. "Python" or "MongoDB"). A course has many gradings for different students. A student grading has a student's name, student number, grade (between 0 and 5), and comment (teacher's free form textual comment regarding the grading)."_
+> _"Your teacher needs a database to track students' grades in different courses. A course has a name, a teacher's name, credits, year, semester (e.g. "Spring"), language (e.g. "English"), and one more topic (e.g. "Python" or "MongoDB"). A course has many grades for different students. A student's grading has a student's name, student number, grade (between 0 and 5), and comment (teacher's free-form textual comment regarding the grading)."_
 
 Come up with your own database or use the ideas above. Feel free to make any modifications. Once you have designed the database schema, create a database and the collections in MongoDB Compass. Then, insert a few documents into each collection using the MongoDB Shell.
 
