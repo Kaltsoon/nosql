@@ -128,7 +128,7 @@ With the first approach, we could represent the author as an object with the req
 }
 ```
 
-In this approach, the `author` attribute contains an [embedded document](https://www.mongodb.com/resources/products/fundamentals/embedded-mongodb). This approach has issues with data duplication because we would have the same author information in multiple documents (all books of the author John Ronald Reuel Tolkien), causing wasted storage space and a high risk of data inconsistency (e.g., while updating the author's information).
+In this approach, the `author` attribute contains an [embedded document](https://www.mongodb.com/resources/products/fundamentals/embedded-mongodb). In our case, this approach has issues with data duplication because we would have the same author information in multiple documents (e.g., all books of the author John Ronald Reuel Tolkien), causing wasted storage space and a high risk of data inconsistency (e.g., while updating the author's information).
 
 > [!TIP]
 > Embedded documents are more suitable, for example, in cases where the embedded data isn't repeated within the collection, and updating it doesn't reflect other documents. For example, a user's home address information:
