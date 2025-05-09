@@ -105,6 +105,8 @@ MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and a
 
 ## Data modeling – embedding data or using references
 
+Now that we know how basic database operations are performed in MongoDB, it is time to discuss data modeling. MongoDB's data model is very flexible, and there are usually many different ways to achieve the same kind of data requirements. To understand the core concepts and how to establish relationships in the MongoDB data model, start by reading the [Embedded Data Versus References](https://www.mongodb.com/docs/manual/data-modeling/concepts/embedding-vs-references/) guide.
+
 Let's consider the case where we would need to store more author-related information to the `books` collection, such as the author's nationality and year of birth. We would need to consider two alternative implementations:
 
 1. Adding new attributes to the `books` collection
@@ -128,7 +130,7 @@ With the first approach, we could represent the author as an object with the req
 }
 ```
 
-In this approach, the `author` attribute contains an [embedded document](https://www.mongodb.com/resources/products/fundamentals/embedded-mongodb). In our case, this approach has issues with data duplication because we would have the same author information in multiple documents (e.g., all books of the author John Ronald Reuel Tolkien), causing wasted storage space and a high risk of data inconsistency (e.g., while updating the author's information).
+In this approach, the `author` attribute contains an _embedded document_. In our case, this approach has issues with data duplication because we would have the same author information in multiple documents (e.g., all books of the author John Ronald Reuel Tolkien), causing wasted storage space and a high risk of data inconsistency (e.g., while updating the author's information).
 
 > [!TIP]
 > Embedded documents are more suitable, for example, in cases where the embedded data isn't repeated within the collection, and updating it doesn't reflect other documents. For example, a user's home address information:
@@ -147,7 +149,7 @@ In this approach, the `author` attribute contains an [embedded document](https:/
 > }
 > ```
  
-The second approach would resemble a foreign key referencing a primary key in a relational database schema and would not introduce similar issues as with the first approach. The following database diagram visualizes the database structure in the mentioned approach:
+The second approach would use a _reference_ to establish the relationship. The basic idea is similar to having a foreign key referencing a primary key in a relational database schema. The benefit of this approach is that it would not introduce issues similar to those of the first approach. The following database diagram visualizes the database structure in the second approach:
 
 ```mermaid
 erDiagram
@@ -171,7 +173,7 @@ erDiagram
     }
 ```
 
-Read the [Embedded Data Versus References](https://www.mongodb.com/docs/manual/data-modeling/concepts/embedding-vs-references/) guide. Then, let's consider how we could implement the relationship between the `authors` and the `books` collection in our database using a reference. Let's assume that we have the following documents in the `authors` collection:
+Let's consider how we could implement the relationship between the `authors` and the `books` collection in our database using a reference. Let's assume that we have the following documents in the `authors` collection:
 
 | \_id                                 | name                        | birth_year | nationality |
 | ------------------------------------ | --------------------------- | ---------- | ----------- |
