@@ -1,13 +1,13 @@
 # Database operations and data model in MongoDB
 
-In the third section of the course, we learn the basic database operation in the MongoDB database management system. We will also cover the core concepts of the MongoDB data model. During this section, you will learn how to perform CRUD and aggregation operations in the MongoDB database and how to use embedded documents and document references in the MongoDB data model. You will also design and set up a database for your project.
+In the third section of the course, we learn the basic database operations in the MongoDB database management system. We will also cover the core concepts of the MongoDB data model. During this section, you will learn how to perform CRUD and aggregation operations in the MongoDB database and how to use embedded documents and document references in the MongoDB data model. You will also design and set up a database for your project.
 
 ## CRUD operations
 
 The [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations (create, read, update, delete) are the most common database operations in any database management system. Next, let's practice their usage in MongoDB. Before starting the exercises, open the MongoDB Compass application we used during the previous section and open the `library` database in the MongoDB Shell.
 
 > [!IMPORTANT]  
-> Exercise 1 👨‍💻: Create a file (for example a Word document) for the exercises in this section. Add the information mentioned in the exercises to the file for a later submission. You can include the database queries as text or [screenshots](https://www.take-a-screenshot.org/) of the MongoDB Shell. Once you are done with the exercises in this section, submit the file to the "Database operations in MongoDB" Moodle submission in PDF format.
+> Exercise 1 👨‍💻: Create a file (for example, a Word document) for the exercises in this section. Add the information mentioned in the exercises to the file for a later submission. You can include the database queries as text or [screenshots](https://www.take-a-screenshot.org/) of the MongoDB Shell. Once you are done with the exercises in this section, submit the file to the "Database operations in MongoDB" Moodle submission in PDF format.
 
 ### Inserting documents
 
@@ -214,15 +214,15 @@ The [MongoDB Relationships](https://dev.to/chafroudtarek/mongodb-relationshipson
 
 ## Designing data model for the project
 
-Now that we know about the MongoDB data model and the basic database operations, it is time to design a small database of our own. These are the requirements for the project's data model:
+Now that we know about the MongoDB data model and the basic database operations, it is time to design a small MongoDB database of our own. These are the requirements for the project's data model:
 
 - Should consist of at least two collections
 - At least one relationship between two collections should be implemented using an id reference (like with the `books` and `authors` collections in the example above). Otherwise, feel free to use embedded documents as well
 - At least two collections should each have at least three attributes (on top of the `_id` attribute) with more than one different data type (e.g., not only string-type attributes)
 
-Here are some examples of project ideas for inspiration:
+Here are two examples of project ideas for inspiration:
 
-> _"Your friend forgot to buy the snacks for the party again, and they could use a shopping list database. A shopping list has a name, description, completion status (is the shopping list completed or not), the name of the store (e.g., "Lidl"), and the name of the shopper. A shopping list contains many items the shopper should buy from the store. Item has a name (e.g. "Chips"), a brand (e.g. "Pringles"), quantity (e.g. 2), one or more tags (e.g. "Dairy products" or "Snacks"), and a purchased status (is the item purchased or not)."_
+> _"Your friend forgot to buy the snacks for the party again, and they could use a shopping list database. A shopping list has a name, description, completion status (is the shopping list completed or not), the name of the store (e.g., "Lidl"), and the name of the shopper. A shopping list contains many items that the shopper should buy from the store. Item has a name (e.g. "Chips"), a brand (e.g. "Pringles"), quantity (e.g. 2), one or more tags (e.g. "Dairy products" or "Snacks"), and a purchased status (is the item purchased or not)."_
 
 > _"Your teacher needs a database to track students' grades in different courses. A course has a name, a teacher's name, credits, year, semester (e.g. "Spring"), language (e.g. "English"), and one more topic (e.g. "Python" or "MongoDB"). A course has many grades for different students. A student's grading has a student's name, student number, grade (between 0 and 5), and comment (teacher's free-form textual comment regarding the grading)."_
 
@@ -235,9 +235,9 @@ Come up with your own database or use the ideas above. Feel free to make any mod
 > Exercise 8 👨‍💻: Implement an [entity relationship diagram](https://www.lucidchart.com/pages/er-diagrams) for your project's data model in the format you prefer. Include the names of the entities, their relationships, their attributes, and data types. Add an image of the diagram to the submission file.
 
 > [!WARNING]  
-> Don't use whitespace (e.g. space between words) in database, collection, or attribute names. You can use the `_` symbol as a word separator e.g. attribute name `birth_year`, _not_ `birth year`. Collection names are commonly in plural form e.g. collection name `books`, _not_ `book`.
+> Don't use whitespace (e.g., space between words) in database, collection, or attribute names. You can use the `_` symbol as a word separator, e.g., attribute name `birth_year`, _not_ `birth year`. Collection names are commonly in plural form, e.g., collection name `books`, _not_ `book`.
 
 > [!IMPORTANT]  
-> Exercise 9 👨‍💻: Create a database for your project and add the collections in the MongoDB Compass. Then, insert a few documents into each collection as test data using the MongoDB Shell. Take a screenshot of the database view in the MongoDB Compass (visible after clicking the database name on the connections list) and add it to the submission file. Revisit [Manage Databases in Compass](https://www.mongodb.com/docs/compass/current/databases/), [Manage Collections in Compass](https://www.mongodb.com/docs/compass/current/collections/) and [Insert Documents](https://www.mongodb.com/docs/manual/tutorial/insert-documents/) guides if you have trouble.
+> Exercise 9 👨‍💻: Create a database for your project and add the collections in the MongoDB Compass. Then, insert a few documents into each collection as test data using the MongoDB Shell. Take a screenshot of the database view in the MongoDB Compass (visible after clicking the database name on the connections list) and add it to the submission file. Revisit [Manage Databases in Compass](https://www.mongodb.com/docs/compass/current/databases/), [Manage Collections in Compass](https://www.mongodb.com/docs/compass/current/collections/), and [Insert Documents](https://www.mongodb.com/docs/manual/tutorial/insert-documents/) guides if you have trouble.
 
 ⏭️ [Move on to the final section](./4-mongo-python.md)
