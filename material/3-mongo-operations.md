@@ -134,6 +134,7 @@ In this approach, the `author` attribute contains an _embedded document_. In our
 
 > [!TIP]
 > Embedded documents are more suitable, for example, in cases where the embedded data isn't repeated within the collection, and updating it doesn't reflect other documents. For example, a user's home address information:
+>
 > ```json
 > {
 >   "_id": "681c99f43c05bd6eec367321",
@@ -148,7 +149,7 @@ In this approach, the `author` attribute contains an _embedded document_. In our
 >   }
 > }
 > ```
- 
+
 The second approach would use a _reference_ to establish the relationship. The basic idea is similar to having a foreign key referencing a primary key in a relational database schema. The benefit of this approach is that it would not introduce issues similar to those of the first approach. The following database diagram visualizes the database structure in the second approach:
 
 ```mermaid
