@@ -1,5 +1,8 @@
 # Introduction to NoSQL Databases
 
+> [!WARNING]  
+> Read this section carefully before heading further into the materials!
+
 What are NoSQL database management systems, and how do they differ from relational database management systems? What is the MongoDB database management system, and how can it be used to store and manage data? How can MongoDB be used with the Python programming language to implement a database application? The purpose of this course is to answer these and other questions related to NoSQL database management systems.
 
 During this course, we will learn the principles of NoSQL database management systems, how they differ from relational database management systems and what their benefits, challenges, and practical applications are. The course covers in more detail the principles of a widely adopted MongoDB database management system and how to use it in database application development with the Python programming language.
@@ -8,11 +11,9 @@ The scope of the course is 2 credits. The prerequisites for the course are the [
 
 The course assessment is either pass or fail. A passing completion of the course requires completing _all the exercises_ and _implementing a project of an appropriate scope of complexity_. The four sections of the course describe the requirements of completing each section in more detail. You can complete the course at your own pace and request the credits once the requirements are met.
 
-<!-- TODO -->
-> [!WARNING]  
-> _To confirm the course participation, pass the "Introduction to NoSQL database management systems" Moodle exam before Thursday 30.10. at 23:59_. Otherwise, individual sections of the course don't have deadlines, but instead, there's a single _final deadline for all coursework on Sunday 13.12. at 23:59_.
+## ⚠️ Deadlines
 
-👉 [Start the course](./material/1-nosql-introduction.md)
+_To confirm the course participation, pass the "Introduction to NoSQL database management systems" Moodle exam before Thursday 30.10. at 23:59_ (details in the first, [Introduction to NoSQL database management systems](./material/1-nosql-introduction.md), section). Otherwise, individual sections of the course don't have deadlines, but instead, there's a single _final deadline for all coursework on Sunday 13.12. at 23:59_.
 
 ## 🎓 Learning objectives
 
@@ -35,3 +36,5 @@ The course advances through four sections in the following order. Complete the p
 2. [Introduction to MongoDB database management system](./material/2-mongo-introduction.md)
 3. [Database operations and data model in MongoDB](./material/3-mongo-operations.md)
 4. [MongoDB with Python](./material/4-mongo-python.md)
+
+👉 [Start the course](./material/1-nosql-introduction.md)
