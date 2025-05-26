@@ -10,7 +10,7 @@ The course assessment is either pass or fail. A passing completion of the course
 
 <!-- TODO -->
 > [!WARNING]  
-> _To confirm the course participation, pass the "Introduction to NoSQL database management systems" Moodle exam before TODO_. Otherwise, individual sections of the course don't have deadlines, but instead, there's a single final deadline for all coursework on TODO.
+> _To confirm the course participation, pass the "Introduction to NoSQL database management systems" Moodle exam before Thursday 30.10. at 23:59_. Otherwise, individual sections of the course don't have deadlines, but instead, there's a single _final deadline for all coursework on Sunday 13.12. at 23:59_.
 
 👉 [Start the course](./material/1-nosql-introduction.md)
 
