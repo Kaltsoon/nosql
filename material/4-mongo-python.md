@@ -21,17 +21,48 @@ python -m pip install pymongo
 > [!TIP]  
 > If the command doesn't work, try the `python3` command instead of the `python` command. The correct command depends on the Python installation.
 
-Next, go through the [tutorial](https://pymongo.readthedocs.io/en/stable/tutorial.html) in _small steps_:
+Next, let's do some simple MongoDB operations with PyMongo in _small steps_:
 
-1. Create a Python program which imports the `pymongo` library
-2. Initialize a `MongoClient` object and see that the database connection works
-3. Print all the documents in one of the collections you inserted documents for in the previous section using the [find](https://www.w3schools.com/python/python_mongodb_find.asp) method. You can iterate the return value of the method using a `for` loop. The iterated items are [dictionaries](https://www.w3schools.com/python/python_dictionaries.asp) in which the keys match the document's attributes
-4. Try out other operations, e.g. by inserting a document into a collection
+1️⃣ Create a Python program which imports the `pymongo` library:
+
+```python
+from pymongo import MongoClient
+```
+
+2️⃣ In that program, initialize a `MongoClient` object and see that the database connection works:
+
+```python
+from pymongo import MongoClient
+
+client = MongoClient("mongodb://localhost:27017/")
+# Change "library" to match the name of your database
+db = client["library"]
+```
+
+3️⃣ Print all the documents in one of the collections you inserted documents for in the previous section using the [find](https://www.w3schools.com/python/python_mongodb_find.asp) method. You can iterate the return value of the method using a `for` loop. The iterated items are [dictionaries](https://www.w3schools.com/python/python_dictionaries.asp) in which the keys match the document's attributes:
+
+```python
+from pymongo import MongoClient
+
+client = MongoClient("mongodb://localhost:27017/")
+# Change "library" to match the name of your database
+db = client["library"]
+# Change the collection name to match the name of your collection
+books = db.books.find()
+
+for book in books:
+  # Documents are generally turned into dictionaries in which there's a key for each attribute
+  # The following code prints the value of the "title" attribute
+  print(book["title"])
+  # Try printing all the attributes of a document
+```
+
+4️⃣ Try out other operations, e.g. by [inserting a document](https://www.w3schools.com/python/python_mongodb_insert.asp) into a collection
 
 Execute the program after each step and see that there are no errors.
 
 > [!IMPORTANT]  
-> Exercise 1 👨‍💻: Try out the database connection and the basic MongoDB operations using the `pymongo` library with your project's database by following the steps above. There's no need to include this prototyping code in the submission.
+> Exercise 1 👨‍💻: Try out the database connection and the basic MongoDB operations using the `pymongo` library with your project's database by following the steps above. There's no need to include this prototyping code in the submission. Instead, use this code as a starting point for your database application.  
 
 ## Database application
 
@@ -40,7 +71,7 @@ Now that we know the basics of PyMongo, the last part of the course is to implem
 - _Some kind of user interface_. The easiest way is to implement a command-line user interface that reads user input from the command line with the [input](https://www.w3schools.com/python/ref_func_input.asp) function and prints information with the [print](https://www.w3schools.com/python/ref_func_print.asp) function. You can use [this](./application.py) Python application as a starting point. If you want, you can also do something fancier, like a web application using [Flask](https://flask.palletsprojects.com/en/3.0.x/quickstart/)
 - Usage of _all CRUD operations_ for at least two collections
 
-Implement the application _one simple feature at a time_ and confirm that it works before moving on to the next feature. Starting with a create feature of one of the collections is a good place to start. Use the MongoDB Compass to verify that different features work, for example, by checking that a document is added to a collection while using the create feature.
+Implement the application _one simple feature at a time_ and confirm that it works before moving on to the next feature. Starting with a create feature (inserting a document) of one of the collections is a good place to start. Use the MongoDB Compass to verify that different features work, for example, by checking that a document is added to a collection while using the create feature.
 
 These PyMongo guides will be useful while implementing the CRUD features:
 
@@ -57,6 +88,8 @@ The `_id` primary key is useful for referencing a specific document e.g. when fi
 ```python
 from pymongo import MongoClient
 from bson.objectid import ObjectId
+
+# ...
 
 book_id_to_find = "6780b2d277f48b749b940ee4"
 
@@ -79,14 +112,14 @@ from bson.objectid import ObjectId
 
 def add_book():
   # Request other attributes from the user...
-  author = input("Author ID:")
+  author_id = input("Author ID:")
 
-  # Before inserting, we can also check that the author document exists to enforce referential integrity
+  # 💡 Before inserting, we can also check that the author document exists to enforce referential integrity
 
   book = {
     # Other keys matching the document's attributes...
     # We need to use an ObjectId object as the author attribute value
-    "author": ObjectId(author)
+    "author": ObjectId(author_id)
   }
 
   db.books.insert_one(book)
@@ -96,7 +129,7 @@ In this case, the author could also be provided in a more user-friendly way by p
 
 ### ⭐ Bonus: ideas for additional features
 
-If you want to expand your application, here are some ideas for optional requirements:
+If you want to expand your application, here are some ideas for optional features:
 
 - Filtering information (e.g,. searching books based on name, author, category, or other properties)
 - Statistics (e.g., number of books of each author). The [Aggregation Pipelines](https://www.w3schools.com/mongodb/mongodb_aggregations_intro.php) guide has examples of aggregation operations with PyMongo

@@ -26,7 +26,7 @@ After completing this course, you know how to...
 - Install the MongoDB database management system and the MongoDB Compass tool
 - Create a database in the MongoDB database management system
 - Perform database operations in the MongoDB database
-- Implement a Python application that operates on a MongoDB database
+- Implement a simple Python application that operates on a MongoDB database
 
 ## 📖 Contents
 

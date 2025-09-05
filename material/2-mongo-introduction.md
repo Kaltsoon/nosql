@@ -15,7 +15,7 @@ MongoDB is a document-oriented database. Familiarize yourself with document-orie
 Once you have read through the articles, test your knowledge by completing the "Introduction to MongoDB database management system" Moodle exam. After passing the exam, move on to the next topic in this section.
 
 > [!IMPORTANT]  
-> Exercise 1 👨‍💻: Read the four articles mentioned above. Then, take and pass the "Introduction to MongoDB database management system" multiple-choice Moodle exam related to the principles of the MongoDB database management system. You have 45 minutes to complete the exam, and you can retake it two times in case you fail.
+> Exercise 1 👨‍💻: Read the four articles mentioned above. Then, take and pass the "Introduction to MongoDB database management system" multiple-choice Moodle exam related to the principles of the MongoDB database management system. You have 45 minutes to complete the exam, and you can retake it two times in case you fail. Passing grade requires at least 10/13 points.
 
 ## Installing MongoDB on our computer
 
@@ -33,14 +33,14 @@ flowchart LR
 
 MongoDB Compass should already be installed along with the MongoDB database management system installed previously. If not, you can install it [here](https://www.mongodb.com/try/download/compass). Once installed, do the following:
 
-1. Open the MongoDB Compass application and a new database connection. The default database connection setting should work for connecting the local MongoDB instance
+1. Open the MongoDB Compass application and add a new database connection by clicking the "Add a new connection" button. The default database connection settings should work for connecting the local MongoDB instance, so you can just click the "Save & Connect" button. The new connection should appear on the "Connections" list. From now on you can just hover the connection on the list and click the "Connect" button to connect the database
 2. Create a database `library` and in that database create a collection `books` by following the [Manage Databases in Compass](https://www.mongodb.com/docs/compass/current/databases/) instructions
 3. Export the contents of [this](https://raw.githubusercontent.com/Kaltsoon/nosql/refs/heads/main/material/library.json) JSON file (right-click the page and choose "Save Page As...") to the `books` collection by following the [Import and Export Data](https://www.mongodb.com/docs/compass/current/import-export/) instructions
-4. Open the `library` database in MongoDB Shell by clicking the name of the database in the list of databases on the left and then clicking the "Open MongoDB Shell" button
-5. Find out how to implement a query which lists all documents in a collection by reading the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-documents/) guide. While you are reading the MongoDB documentation, choose the language as "MongoDB Shell" from the "Select your language" menu. Then, execute a query that lists all the documents in the `books` collection using the MongoDB Shell
+4. Open the `library` database in MongoDB Shell by clicking the name of the database in the list of databases on the left and then clicking the "Open MongoDB Shell" button. To make sure that the MongoDB Shell is using the correct database, type in `use library` to the MongoDB Shell and press the <kbd>Enter</kbd> key to execute the command. Now the the command input line should start with "library" (name of the used database)
+5. Find out how to implement a query which lists all documents in a collection by reading the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-documents/) guide. While you are reading the MongoDB documentation, choose the language as "MongoDB Shell" from the "Select your language" menu. Then, execute a query that lists all the documents in the `books` collection using the MongoDB Shell by writing the query and pressing the <kbd>Enter</kbd> key to execute it. Inspect the structure of documents in the query result.
 
 > [!IMPORTANT]  
-> Exercise 2 👨‍💻: Create a file (for example a Word document) and include a [screenshot](https://www.take-a-screenshot.org/) of the query and its result in the MongoDB Shell mentioned in step 5 to the file. Submit the file to the "MongoDB database management system setup" Moodle submission in PDF format.
+> Exercise 2 👨‍💻: Install MongoDB along with the MongoDB Compass and complete the five steps mentioned above. Create a Word document and include a [screenshot](https://www.take-a-screenshot.org/) of the query and its result in the MongoDB Shell mentioned in step 5 to the file. Submit the file to the "MongoDB database management system setup" Moodle submission in PDF format.
 
 > [!NOTE]
 > Bonus sections and exercises in the material (marked with ⭐) are optional and can be used to deepen your MongoDB knowledge.

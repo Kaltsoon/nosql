@@ -6,8 +6,11 @@ In the third section of the course, we learn the basic database operations in th
 
 The [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations (create, read, update, delete) are the most common database operations in any database management system. Next, let's practice their usage in MongoDB. Before starting the exercises, open the MongoDB Compass application we used during the previous section and open the `library` database in the MongoDB Shell.
 
+> [!WARNING]  
+> Make sure that the MongoDB Shell is using the `library` database by executing the `use library` command. The command input line should start with "library" (name of the used database).
+
 > [!IMPORTANT]  
-> Exercise 1 👨‍💻: Create a file (for example, a Word document) for the exercises in this section. Add the information mentioned in the exercises to the file for a later submission. You can include the database queries as text or [screenshots](https://www.take-a-screenshot.org/) of the MongoDB Shell. Once you are done with the exercises in this section, submit the file to the "Database operations in MongoDB" Moodle submission in PDF format.
+> Exercise 1 👨‍💻: Create a new Word document for the exercises in this section. Add the information mentioned in the exercises to the file for a later submission. You can include the database queries as text or [screenshots](https://www.take-a-screenshot.org/) of the MongoDB Shell. Once you are done with the exercises in this section, submit the file to the "Database operations in MongoDB" Moodle submission in PDF format.
 
 ### Inserting documents
 
@@ -20,7 +23,12 @@ Read the [Insert Documents](https://www.mongodb.com/docs/manual/tutorial/insert-
 | --------------------- | ------------- | ---- | ------------------------------- | ------ | ----- |
 | "Pride and Prejudice" | "Jane Austen" | 1813 | "Romance", "Classic", "Fiction" | 3      | false |
 
-The `ebook` attribute value should be a boolean representing whether the book is an ebook version of the book or not. The `genres` attribute value should be an [array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/) representing one or many genres of the book.
+The data should be in the following format:
+
+- The `title` and `author` attribute values should be strings
+- The `copies` and `year` attribute values should be integers
+- The `genres` attribute value should be an [array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/) of strings representing one or many genres of the book
+- The `ebook` attribute value should be a boolean representing whether the book is an ebook version of the book or not
 
 Then, list all documents in the `books` collection and make sure that the inserted documents have the correct information. You'll notice that each document has an automatically generated `_id` attribute which act as a primary key. These values are [ObjectId](https://www.mongodb.com/docs/manual/reference/method/ObjectId/) objects, such as `ObjectId("507f1f77bcf86cd799439011")`.
 
@@ -43,17 +51,13 @@ Then, list all the documents in the `books` collection.
 
 ### Querying documents
 
-Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-documents/) guide. Then, implement and execute the following queries in the MongoDB Shell:
-
-<!--
-Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-documents/) and the [cursor.sort()](https://www.mongodb.com/docs/manual/reference/method/cursor.sort/) guides. Then, implement and execute the following queries in the MongoDB Shell:
--->
+Read the [Query Documents](https://www.mongodb.com/docs/manual/tutorial/query-documents/) and the [Sorting documents](https://www.geeksforgeeks.org/mongodb/mongodb-sort-method/) guides. Then, implement and execute the following queries in the MongoDB Shell:
 
 1. Find the book "To Kill a Mockingbird"
 2. Find the book "To Kill a Mockingbird" using its `_id` attribute (use the document's `_id` attribute value you got from the previous query's result). Note that `ObjectId("507f1f77bcf86cd799439011")` is an `ObjectId` object whereas `"507f1f77bcf86cd799439011"` is a string
-3. Find the books that have more than fifteen copies. Hint: [Comparison Query Operators](https://www.mongodb.com/docs/manual/reference/operator/query-comparison/#std-label-query-selectors-comparison) <!-- Sort the books in ascending order by the number copies -->
-4. Find the books written by the author "Leo Tolstoy" before the year 1890 <!-- Sort the books in descending order by the publishing year  -->
-5. Find the books written by either the author "Jane Austen" or "Aldous Huxley". Hint: [Logical Query Operators](https://www.mongodb.com/docs/manual/reference/operator/query-logical/) <!-- Sort the books in ascending order by the author's name and in descending order by the publishing year -->
+3. Find the books that have more than fifteen copies. Hint: [Comparison Query Operators](https://www.geeksforgeeks.org/mongodb/mongodb-comparison-query-operators/). Sort the books in _ascending_ order by the number copies
+4. Find the books written by the author "Leo Tolstoy" before the year 1890. Sort the books in _descending_ order by the publishing year
+5. Find the books written by either the author "Jane Austen" or "Aldous Huxley". Hint: [Logical Query Operators](https://www.geeksforgeeks.org/mongodb/mongodb-comparison-query-operators/).
 6. Find the books that are published after the year 1950 and before the year 2020
 7. Find the books that have either the "Thriller" or the "Drama" genre. Hint: [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/)
 
@@ -96,7 +100,7 @@ MongoDB supports similar aggregation operations as SQL's `GROUP BY` clause and a
 1. Display the total number of books. Hint: [$group](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/) and [$count](https://www.mongodb.com/docs/manual/reference/operator/aggregation/count-accumulator/) operators including the examples in both guides
 2. Display the total number of book copies. Hint: [$sum](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sum/) operator
 3. Display the number of books by each author
-4. Display the number of book copies by each author <!-- Sort the authors by the number of their book copies in descending order and by their name in ascending order. Hint: [$sort](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sort/) -->
+4. Display the number of book copies by each author
 5. Display the total number of book copies of books that are not ebooks and have the "Romance" category. Hint: [$match](https://www.mongodb.com/docs/manual/reference/operator/aggregation/match/) operator. Pay attention to the order of the aggregation operations (that is, the order of the aggregation operation objects in the argument array)
 6. ⭐ Bonus: Display the publishing year of each author's first and latest book. Hint: find suitable [aggregation operators](https://www.mongodb.com/docs/manual/reference/operator/aggregation/) for finding the minimum and maximum value of documents
 
@@ -150,7 +154,7 @@ In this approach, the `author` attribute contains an _embedded document_. In our
 > }
 > ```
 
-The second approach would use a _reference_ to establish the relationship. The basic idea is similar to having a foreign key referencing a primary key in a relational database schema. The benefit of this approach is that it would not introduce issues similar to those of the first approach. The following database diagram visualizes the database structure in the second approach:
+The second approach would use a _reference_ to establish the relationship. The basic idea is similar to having a foreign key referencing a primary key in a relational database schema. In our case, the benefit of this approach is avoiding data duplication. The following database diagram visualizes the database structure in the second approach:
 
 ```mermaid
 erDiagram
@@ -223,9 +227,9 @@ Now that we know about the MongoDB data model and the basic database operations,
 
 Here are two examples of project ideas for inspiration:
 
-> _"Your friend forgot to buy the snacks for the party again, and they could use a shopping list database. A shopping list has a name, description, completion status (is the shopping list completed or not), the name of the store (e.g., "Lidl"), and the name of the shopper. A shopping list contains many items that the shopper should buy from the store. Item has a name (e.g. "Chips"), a brand (e.g. "Pringles"), quantity (e.g. 2), one or more tags (e.g. "Dairy products" or "Snacks"), and a purchased status (is the item purchased or not)."_
+> _"Your friend forgot to buy the snacks for the party again, and they could use a shopping list database. A shopping list has a name, completion status (is the shopping list completed or not), the name of the store (e.g., "Lidl"), and the name of the shopper. A shopping list contains many items that the shopper should buy from the store. Item has a name (e.g. "Chips"), a brand (e.g. "Pringles"), quantity (e.g. 2), one or more tags (e.g. "Dairy products" or "Snacks"), and a purchased status (is the item purchased or not)."_
 
-> _"Your teacher needs a database to track students' grades in different courses. A course has a name, a teacher's name, credits, year, semester (e.g. "Spring"), language (e.g. "English"), and one more topic (e.g. "Python" or "MongoDB"). A course has many grades for different students. A student's grading has a student's name, student number, grade (between 0 and 5), and comment (teacher's free-form textual comment regarding the grading)."_
+> _"Your teacher needs a database to track students' grades in different courses. A course has a name, a teacher's name, credits, year, semester (e.g. "Spring") and one more topic (e.g. "Python" or "MongoDB"). A course has many grades for different students. A student's grading has a student's name, student number, grade (between 0 and 5), and comment (teacher's free-form textual comment regarding the grading)."_
 
 Come up with your own database or use the ideas above. Feel free to make any modifications. Once you have designed the database schema, create a database and the collections in MongoDB Compass. Then, insert a few documents into each collection using the MongoDB Shell.
 
