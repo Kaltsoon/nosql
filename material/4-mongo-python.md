@@ -48,7 +48,7 @@ These PyMongo guides will be useful while implementing the CRUD features:
 - [Find Documents](https://www.w3schools.com/python/python_mongodb_find.asp)
 - [Update Documents](https://www.w3schools.com/python/python_mongodb_update.asp)
 - [Delete Documents](https://www.w3schools.com/python/python_mongodb_delete.asp)
-- [Sort Documents](https://www.w3schools.com/python/python_mongodb_sort.asp)
+<!-- - [Sort Documents](https://www.w3schools.com/python/python_mongodb_sort.asp) -->
 
 ### Working with the `_id` primary key
 
@@ -79,14 +79,14 @@ from bson.objectid import ObjectId
 
 def add_book():
   # Request other attributes from the user...
-  author = input("Author ID:")
+  author_id = input("Author ID:")
 
-  # Before inserting, we can also check that the author document exists to enforce referential integrity
+  # 💡 Before inserting, we can also check that the author document exists to enforce referential integrity
 
   book = {
     # Other keys matching the document's attributes...
     # We need to use an ObjectId object as the author attribute value
-    "author": ObjectId(author)
+    "author": ObjectId(author_id)
   }
 
   db.books.insert_one(book)
