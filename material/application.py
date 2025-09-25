@@ -1,3 +1,5 @@
+# Initialize MongoDB client here so it is available for every function in this file
+
 print("Welcome to the library application!")
 
 def print_commands():
@@ -30,7 +32,7 @@ def edit_book():
     pass
 
 def delete_book():
-    # Delete a book based on the user's input
+    # Delete a book based on the user's input (e.g. the book's id)
     pass
 
 print_commands()
